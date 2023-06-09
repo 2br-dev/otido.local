@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./parts/head.html', {title: "Главная"})
+</head>
+<body>
+	@@include('./parts/header.html', {class:'dark'})
+	<main id="main">
+		<section id="hero">
+			<div class="hero-wrapper">
+				<div class="hero-content">
+					<div class="hero-text">
+						<p class="slogan">Надёжный сервис доставки питьевой воды</p>
+						<h1>Это мы можем</h1>
+					</div>
+					<ul class="capsule-wrapper">
+						<li class="capsule" id="water"><div class="lazy" data-bg="/img/capsule-water.png"></div><a href="/catalog-water.html" class="capsule-link">Питьевая <br> вода</a></li>
+						<li class="capsule" id="catalog"><div class="lazy" data-bg="/img/capsule-catalog.png"></div><a href="/catalog.html" class="capsule-link">Категории <br> товаров</a></li>
+						<li class="capsule" id="activities"><div class="lazy" data-bg="/img/activities-top.png"></div><a href="/activities.html" class="capsule-link">Активности <br> «От и До»</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="stories">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="stories-wrapper">
+							<a href="#!" class="arrow left bx bx-chevron-left"></a>
+							<ul class="stories">
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="1">
+										<img src="/img/fish/stories/thumb1.jpg" class="avatar">
+									</a>
+									<span>Акции</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="2">
+										<img src="/img/fish/stories/thumb2.jpg" class="avatar">
+									</a>
+									<span>Как заказать</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb3.jpg" class="avatar">
+									</a>
+									<span>Доставка</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb4.jpg" class="avatar">
+									</a>
+									<span>Новости</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb5.jpg" class="avatar">
+									</a>
+									<span>Новинки</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb6.jpg" class="avatar">
+									</a>
+									<span>Команда</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb7.jpg" class="avatar">
+									</a>
+									<span>Вода</span>
+								</li>
+								<li class="story">
+									<a href="#!" class="story-trigger" data-slide="3">
+										<img src="/img/fish/stories/thumb8.jpg" class="avatar">
+									</a>
+									<span>Лето 2023</span>
+								</li>
+							</ul>
+							<a href="#!" class="arrow right bx bx-chevron-right"></a>
+						</div>
+					</div>
+				</div>
+				<div class="stories-modal">
+					<div class="stories-modal-content">
+						<a href="#!" class="closer bx bx-x"></a>
+						<div class="swiper" id="stories-root">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper story">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<video class="lazy story-body" data-src="/img/fish/stories/s1.mp4" playsinline muted></video>
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb1.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<img data-src="/img/fish/stories/s2.jpg" class="lazy story-body">
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb1.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<video class="lazy story-body" data-src="/img/fish/stories/s3.mp4" playsinline muted></video>
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb1.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="prev"></div>
+										<div class="next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper story">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img data-src="/img/fish/stories/s4.jpg" class="lazy story-body">
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb2.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<video class="lazy story-body" data-src="/img/fish/stories/s5.mp4" playsinline muted></video>
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb2.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="prev"></div>
+										<div class="next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper story">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img data-src="/img/fish/stories/s6.jpg" class="lazy story-body">
+												<div class="story-content">
+													<div class="story-avatar-wrapper">
+														<img data-src="/img/fish/stories/thumb3.jpg" class="lazy">
+													</div>
+													<div class="content-wrapper">
+														Краткое описание контента, или любой необязательный текст. Текст может содержать <a href="/">ссылки</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="prev"></div>
+										<div class="next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/slider-section.html', {
+			title: 'Пить&shy;евая вода',
+			intro: 'Пей&shy;те на здо&shy;ро&shy;вье, мы ещё при&shy;ве&shy;зём!',
+			productType: 'water',
+			image: '/img/water-bg.png',
+			sectionId: 'water-slider'
+		})
+		<section id="actions">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2 class="center-align">Акции и спецпредложения</h2>
+					</div>
+					<div class="col">
+						<div class="swiper" id="actions-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="img-wrapper">
+										<a href="/action-page.html"></a>
+										<img class="responsive-img" src="/img/fish/action1.jpg" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img-wrapper">
+										<a href="/action-page.html"></a>
+										<img class="responsive-img" src="/img/fish/action2.jpg" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img-wrapper">
+										<a href="/action-page.html"></a>
+										<img class="responsive-img" src="/img/fish/action3.jpg" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img-wrapper">
+										<a href="/action-page.html"></a>
+										<img class="responsive-img" src="/img/fish/action4.jpg" alt="">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img-wrapper">
+										<a href="/action-page.html"></a>
+										<img class="responsive-img" src="/img/fish/action5.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="center-align">
+								<div class="slider-arrows">
+									<a href="#!" id="actions-prev" class="action-nav bx bx-chevron-left"></a>
+									<a href="#!" id="actions-next" class="action-nav bx bx-chevron-right"></a>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="carry">
+			<div class="image"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col xl4 l4 m6 offset-m3 s12">
+						<div class="carry-slider-wrapper">
+							<div class="swiper" id="carry-slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" data-text="детей!">
+										<img alt="" class="lazy responsive-img" data-src="/img/children.png">
+									</div>
+									<div class="swiper-slide" data-text="любимых!">
+										<img alt="" class="lazy responsive-img" data-src="/img/beloving.png">
+									</div>
+									<div class="swiper-slide" data-text="котиков!">
+										<img alt="" class="lazy responsive-img" data-src="/img/cats.png">
+									</div>
+								</div>
+							</div>
+							<a href="#!" class="bx bx-left-arrow-alt" id="carryPrev"></a>
+							<a href="#!" class="bx bx-right-arrow-alt" id="carryNext"></a>
+						</div>
+					</div>
+					<div class="col xl6 offset-xl1 l7 offset-l1 m12 s12">
+						<h2>Носите на руках не тяжёлые покупки, а своих <span class="typed"> детей!</span></h2>
+						<p>Тяжелые покупки - больше не проблема с надёжным сервисом доставки покупок «От и До». Мы понимаем, как важно иметь возможность получать товары без лишних хлопот и работаем для того, чтобы сделать вашу жизнь проще и приятнее.</p>
+						<p>Наш сервис доставки работает без выходных и предлагает широкий ассортимент товаров для вас и вашего дома. У нас вы найдете все необходимое: питьевую воду, кулеры, помпы и многое другое. Кроме того, мы предлагаем сладкие напитки, такие как лимонады, а также лечебную столовую воду. Мы работаем с ведущими производителями, чтобы гарантировать свежесть и безопасность продуктов. Закажите прямо сейчас и получите всё необходимое в удобное для вас время! Мы гарантируем быструю и надежную доставку, с тремя периодами доставки в течение дня: 10:00 — 14:00; 13:00 - 17:00 или 16:00 — 20:00. </p>
+						<p>Забудьте о проблемах с доставкой доверьте это нам. Сделайте свой выбор в пользу комфорта и удобства с сервисом надёжной доставки «От и До»!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/slider-section.html', {
+			title: 'Популярное',
+			intro: 'Эта под&shy;бор&shy;ка на&shy;сто&shy;ящая бом&shy;ба! <span class="hide-m-down">Толь&shy;ко про&shy;ве&shy;рен&shy;ные и все&shy;ми лю&shy;би&shy;мые то&shy;ва&shy;ры с бес&shy;плат&shy;ной дос&shy;тав&shy;кой!</span>',
+			productType: 'water',
+			image: '/img/popular-bg.png',
+			sectionId: 'popular-slider'
+		})
+		<section id="categories">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Категории</h2>
+					</div>
+					<div class="col s12">
+						<div class="main-categories">
+							<div class="categories-grid">
+								@@loop('./parts/category-entry.html', './data/main_categories.json')
+							</div>
+							<div class="actions">
+								<a href="/actions.html" class="lazy action" data-bg="/img/categories/actions.png">
+									<h3 class="title">Акции</h3>
+									<p class="intro">Собрали все выгодные предложения в одном месте</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="whyus">
+			<div class="container">
+				<div class="row flex">
+					<div class="col xl3 l12">
+						<h2>Что такое «От и До»?</h2>
+						<p>Надёжный сервис доставки тяжелых покупок, который заботится о Вас и Ваших близких!</p>
+					</div>
+					@@loop('./parts/point.html', './data/points.json')
+				</div>
+			</div>
+		</section>
+		<section id="feedback">
+			<div class="container">
+				<div class="row" id="illustration">
+					<div class="col xl5 offset-xl7 l6 offset-l6 m8 offset-m4 s8 offset-s2 xs12">
+						<img alt="" class="lazy responsive-img" data-src="/img/feedback.png">
+					</div>
+				</div>
+				<form action="" class="row">
+					<div class="col l8 m7 s12">
+						<div class="row">
+							<div class="col s12">
+								<h2>Напишите нам</h2>
+								<p>Оставьте ваши пожелания или предложения, и мы обязательно учтём их в нашей работе!</p>
+							</div>
+							<div class="col m6 s12">
+								<div class="input-field">
+									<input type="text" required placeholder="Фамилия, Имя, Отчество*">
+								</div>
+							</div>
+							<div class="col m6 s12">
+								<div class="input-field">
+									<input type="text" required placeholder="Телефон/Email*">
+								</div>
+							</div>
+							<div class="col s12">
+								<div class="input-field">
+									<textarea name="" id="" cols="30" rows="10" required placeholder="Текст сообщения"></textarea>
+								</div>
+							</div>
+							<div class="col s12 align-right-m-up align-center-m-down"><a href="" class="bttn">Отправить</a></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section id="news">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Новости компании</h2>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/news-entry.html', './data/news.json')
+				</div>
+				<div class="row">
+					<div class="col s12 center-align"><a href="/news.html" class="bttn">Смотреть все</a></div>
+				</div>
+			</div>
+		</section>
+		<section id="parners">
+			<div class="col s12 center-align">
+				<h2>Наши партнёры</h2>
+			</div>
+			<div class="col s12">
+				<div class="swiper partners-slider">
+					<div class="swiper-wrapper">
+						@@loop('./parts/partner.html', '../html/data/partners.json')
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

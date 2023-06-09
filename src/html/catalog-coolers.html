@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./parts/head.html', {title: "Каталог / Кулеры"})
+</head>
+<body>
+	@@include('./parts/header.html', {class:'dark'})
+	<main id="catalog">
+		<section id="small-hero"><div class="image"></div></section>
+		<section id="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs dark">
+							<li class="crumb"><i class="bx bxs-home"></i><a href="/">Главная</a></li>
+							<li class="crumb"><a href="/catalog.html">Каталог</a></li>
+							<li class="crumb current"><span>Кулеры</span></li>
+						</ul>
+						<h1 class="white-text">
+							<a class="bx bx-slider sidenav-trigger white-text hide-m-up" href="#filters-form-mobile"></a>
+							<span>Кулеры</span>
+						</h1>
+					</div>
+				</div>
+				<div class="row flex">
+					<div class="col xl2 l3 m4 hide-m-down">
+						@@include('./parts/filters.html', {suffix: 'desktop', className: 'hide-m-down', max: 3000})
+					</div>
+					<div class="col xl10 l9 m8 s12">
+						<div class="row flex">
+							@@loop('./parts/product-card.html', './data/coolers.json')
+						</div>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 center-align">
+						<ul class="pagination">
+							<li><a href="" class="bx bx-chevron-left"></a></li>
+							<li><a href="">1</a></li>
+							<li><span class="dots">…</span></li>
+							<li class="active"><a href="">15</a></li>
+							<li><a href="">16</a></li>
+							<li><a href="">17</a></li>
+							<li><span class="dots">…</span></li>
+							<li><a href="">200</a></li>
+							<li><a href="" class="bx bx-chevron-right"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/slider-section.html', {
+			title: 'Популярное',
+			intro: 'Эта под&shy;бор&shy;ка на&shy;сто&shy;ящая бом&shy;ба! <span class="hide-m-down">Толь&shy;ко про&shy;ве&shy;рен&shy;ные и все&shy;ми лю&shy;би&shy;мые то&shy;ва&shy;ры с бес&shy;плат&shy;ной дос&shy;тав&shy;кой!</span>',
+			productType: 'water',
+			image: '/img/popular-bg.png',
+			sectionId: 'popular-slider'
+		})
+	</main>
+	<form id="filters-form-mobile" class="sidenav">
+		<h2>Фильтры</h2>
+		<div class="filters">
+			<div class="param single">
+				<div class="prefix">
+					Цена
+				</div>
+			</div>
+			<div class="param single">
+				<div class="prefix">Загрузка</div>
+				<div class="values">
+					<div class="value"><input id="ml1" type="radio" checked name="loading"><label for="ml1">Нижняя</label></div>
+					<div class="value"><input id="ml2" type="radio" name="loading"><label for="ml2">Верхняя</label></div>
+				</div>
+			</div>
+			<div class="param single">
+				<div class="prefix">Тип кулера</div>
+				<div class="values">
+					<div class="value"><input id="mt1" type="radio" checked name="type"><label for="mt1">Напольный</label></div>
+					<div class="value"><input id="mt2" type="radio" name="type"><label for="mt2">Настольный</label></div>
+				</div>
+			</div>
+			<div class="param single">
+				<div class="prefix">Тип охлаждения</div>
+				<div class="values">
+					<div class="value"><input id="mc1" type="radio" checked name="cooling-type"><label for="mc1">Компрессор</label></div>
+					<div class="value"><input id="mc2" type="radio" name="cooling-type"><label for="mc2">Электронный</label></div>
+				</div>
+			</div>
+			<div class="param multichoise">
+				<div class="prefix">Охлаждение и нагрев</div>
+				<div class="values">
+					<div class="value"><input type="checkbox" id="mhit1"><label for="mhit1">Охлаждение и нагрев</label></div>
+					<div class="value"><input type="checkbox" id="mhit2"><label for="mhit2">Нагрев без охлаждения</label></div>
+					<div class="value"><input type="checkbox" id="mhit3"><label for="mhit3">Без охлаждения и нагрева</label></div>
+				</div>
+			</div>
+			<div class="param single">
+				<div class="prefix">Холодитльник</div>
+				<div class="values">
+					<div class="value"><input id="mc4" type="radio" checked name="cooler"><label for="mc4">Да</label></div>
+					<div class="value"><input id="mc5" type="radio" name="cooler"><label for="mc5">Нет</label></div>
+				</div>
+			</div>
+		</div>
+		<div class="center-align"><a href="#!" class="reset">Сбросить фильтры</a></div>
+	</form>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

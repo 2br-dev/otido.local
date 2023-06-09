@@ -1,0 +1,28 @@
+@import './parts/vars';
+@import './parts/materialize';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../node_modules/swiper/modules/effect-coverflow/effect-coverflow.scss';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade.scss';
+
+@import './parts/header';
+@import './parts/footer';
+@import './parts/helpers';
+@import './parts/typography';
+@import './parts/custom_grid';
+@import './pages/main';
+@import './pages/catalog';
+@import './pages/product';
+@import './pages/checkout';
+@import './pages/profile';
+
+.swiper-pagination{
+	z-index: 20000;
+}
+
+::-webkit-outer-spin-button,
+::-webkit-inner-spin-button{
+	display: none;
+}

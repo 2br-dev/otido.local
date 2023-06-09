@@ -1,0 +1,47 @@
+<div class="@@wrapperClass">
+	<div class="product-card">
+		@@if(context.cardType!='action'){
+			<div class="image-wrapper">
+				@@if(context.type){
+					<div class="type">@@type</div>
+				}
+				<a href="@@link">
+					<img data-src="@@img" alt="" class="lazy">
+				</a>
+				@@if(context.faved){
+					@@if(faved===true){
+						<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bxs-heart"></i></a>
+					}
+				}
+				@@if(!context.faved){
+					<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+				}
+				<div class="labels">
+					@@if(context.labels){
+						@@for(let i=0; i<labels.length; i++){
+							<i class="label lazy tooltipped" data-position="top" data-tooltip="` + labels[i].text + `" data-bg="` + labels[i].icon + `"></i>
+						}
+					}
+				</div>
+			</div>
+			<div class="info-wrapper">
+				<div class="header"><a href="@@link">@@header</a></div>
+				<div class="subheader"><a href="@@link">@@subheader</a></div>
+				<div class="prices">
+					@@if(context.prices){
+						@@for(let i=0; i<prices.length; i++){						
+							<div class="price">
+								<div class="prefix">`+prices[i].prefix+`</div>
+								<div class="value">`+prices[i].price+`</div>
+							</div>
+						}
+					}
+				</div>
+				@@include('./smart-bttn.html')
+			</div>
+		}
+		@@if(context.cardType == 'action'){
+			<a href="@@link" class="action-card lazy" data-bg="@@img"></a>
+		}
+	</div>
+</div>

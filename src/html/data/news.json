@@ -1,0 +1,26 @@
+[
+	{
+		"img":"/img/fish/news1.jpg",
+		"title": "Заголовок новости",
+		"date": "12 апреля 2022 г.",
+		"intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, odio facilis repellat nam voluptate aperiam accusantium quam itaque deleniti iure?"
+	},
+	{
+		"img":"/img/fish/news2.jpg",
+		"title": "Ещё один заголовок новости",
+		"date": "12 апреля 2022 г.",
+		"intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores aliquid commodi delectus, consequuntur qui excepturi reiciendis veritatis suscipit reprehenderit!"
+	},
+	{
+		"img":"/img/fish/news3.jpg",
+		"title": "ООООчень-очень длинный заголовок (я жеговорил, что это оооочень длинный заголовок)",
+		"date": "12 апреля 2022 г.",
+		"intro": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum laborum provident perspiciatis deleniti soluta excepturi, reprehenderit adipisci maxime tempora error?"
+	},
+	{
+		"img":"/img/fish/news4.jpg",
+		"title": "Короткий",
+		"date": "12 апреля 2022 г.",
+		"intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus voluptatum placeat optio labore ut, dolorem autem et nobis quidem architecto!"
+	}
+]

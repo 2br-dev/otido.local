@@ -1,0 +1,8 @@
+<div class="@@class">
+	@@if(context.name){
+		<a href="@@link" class="category-link" @@if(context.img){@@if(img!=''){style="background-image:url(@@img)"}}>@@name</a>
+	}
+	@@if(context.text){
+		<p class="category-text">@@text</p>
+	}
+</div>

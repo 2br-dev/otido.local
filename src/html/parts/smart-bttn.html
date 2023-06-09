@@ -1,0 +1,13 @@
+<div class="smart-bttn@@if(context.class){ @@class}">
+	<div class="avers">
+		<a href="#!" class="bttn-cart">
+			@@if(!context.text){<i class="bx bxs-cart-add"></i>}
+			@@if(context.text){<span>@@text</span>}
+		</a>
+	</div>
+	<div class="revers">
+		<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+		<div class="cart-input"><input type="number" value="0"></div>
+		<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+	</div>
+</div>

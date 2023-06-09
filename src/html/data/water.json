@@ -1,0 +1,342 @@
+[
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/arhyz-legend.png",
+		"header": "Архыз",
+		"subheader": "легенда гор",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "380₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "380₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "380₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "single",
+		"img": "/img/fish/bottles/empty-bottle.png",
+		"header": "Пустая тара",
+		"subheader": "пэт 19 литров",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "300₽"
+			}
+		],
+		"link": "/product-water.html",
+		"labels":[]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/gorgippia.png",
+		"header": "Горгиппия",
+		"subheader": "питьевая вода",
+		"faved": true,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "240₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "240₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "240₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/troizkaya.png",
+		"header": "Троицкая",
+		"subheader": "питьевая вода",
+		"faved": true,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "210₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "190₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "180₽"
+			}
+		],
+		"type": "Артезианская",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/elbrusinka.png",
+		"header": "Эльбрусинка",
+		"subheader": "детская",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "340₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "330₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "320₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/caucasian-perl.png",
+		"header": "Жемчужина",
+		"subheader": "Кавказа",
+		"faved": true,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "300₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "280₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "270₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/mountain-peak.png",
+		"header": "Горная",
+		"subheader": "вершина",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "320₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "310₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "300₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/chisto-gornaya.png",
+		"header": "#чистоГорная",
+		"subheader": "питьевая вода",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "270₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "260₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "250₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/dombay.png",
+		"header": "Домбай",
+		"subheader": "питьевая вода",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "270₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "260₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "250₽"
+			}
+		],
+		"type": "Талая",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/soft-aqua.png",
+		"header": "Софт Аква",
+		"subheader": "питьевая вода",
+		"faved": true,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "220₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "200₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "190₽"
+			}
+		],
+		"type": "Артезианская",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Новинка",
+				"icon": "/img/fresh.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/mountain-key.png",
+		"header": "Горный ключ",
+		"subheader": "питьевая вода",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "210₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "190₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "180₽"
+			}
+		],
+		"type": "Артезианская",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			}
+		]
+	},
+	{
+		"wrapperClass": "swiper-slide",
+		"cardType": "triple",
+		"img": "/img/fish/bottles/silver-droplet.png",
+		"header": "Серебряная",
+		"subheader": "капля",
+		"faved": false,
+		"prices":[
+			{
+				"prefix": "1 бут",
+				"price": "220₽"
+			},
+			{
+				"prefix": "от 2х бут",
+				"price": "200₽"
+			},
+			{
+				"prefix": "от 4х бут",
+				"price": "190₽"
+			}
+		],
+		"type": "Артезианская",
+		"link": "/product-water.html",
+		"labels":[
+			{
+				"text": "Хит продаж",
+				"icon": "/img/hot.svg"
+			},
+			{
+				"text": "Новинка",
+				"icon": "/img/fresh.svg"
+			}
+		]
+	}
+]

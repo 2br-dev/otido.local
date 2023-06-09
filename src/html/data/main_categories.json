@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Товары для животных",
+		"image": "/img/categories/pets.png",
+		"link": "/category_cooler.html",
+		"class": "accent"
+	},
+	{
+		"name": "Питьевая вода 1,5л",
+		"image": "/img/categories/water.png",
+		"link": "/category_cooler.html"
+	},
+	{
+		"name": "Все категории",
+		"link": "/catalog.html"
+	},
+	{
+		"name": "Кулеры",
+		"image": "/img/categories/coolers.png",
+		"link": "/category_cooler.html"
+	},
+	{
+		"name": "Лимонады",
+		"image": "/img/categories/lemonades.png",
+		"link": "/category_cooler.html"
+	},
+	{
+		"name": "Лечебная вода",
+		"image": "/img/categories/mineral.png",
+		"link": "/category_cooler.html"
+	}
+]

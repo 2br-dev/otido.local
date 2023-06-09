@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Страница товара (вода)</title>
+	<link rel="stylesheet" href="/css/master.css">
+</head>
+
+<body>
+	<div class="header-wrapper">
+		<div class="container">
+			<div class="logo-wrapper">
+				<a href="#mobile" class="sidenav-trigger"><i class="bx bx-menu"></i></a>
+				<a href="/" class="logo"></a>
+			</div>
+			<div class="nav-content">
+				<header>
+					<ul class="nav-left">
+						<li><a href="#mobile" class="sidenav-trigger"><i class="bx bx-menu"></i></a></li>
+						<li><a href="/" class="logo-alt"></a></li>
+						<li class="geo-selector">
+							<a href="#!">
+								<i class="bx bx-map"></i>
+								<span>Славянск-на-Кубани</span>
+								<i class="bx bx-caret-down"></i>
+							</a>
+							<ul>
+								<li><a href="#!">Анапа</a></li>
+								<li><a href="#!">Новороссийск</a></li>
+								<li><a href="#!">Крымск</a></li>
+								<li><a href="#!">Абинск</a></li>
+								<li><a href="#!">Славянск-на-Кубани</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav-right">
+						<li>
+							<a href="tel:+79186622880">
+								<i class="bx bx-phone"></i>
+								<span>+7 (918) 66-22-880</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://t.me/+79186622880">
+								<i class="bx bxl-telegram"></i>
+								<span>Telegram</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://wa.me/79186622880">
+								<i class="bx bxl-whatsapp"></i>
+								<span>WhatsApp</span>
+							</a>
+						</li>
+					</ul>
+				</header>
+				<nav>
+					<ul class="nav-left">
+						<li class="catalog-wrapper">
+							<a href="/catalog.html" class="catalog-button">
+								<i class="bx bx-menu"></i>
+								<span>Каталог</span>
+							</a>
+							<ul class="catalog-menu">
+								<li><a href="/catalog-water.html">Вода 19л</a></li>
+								<li><a href="/catalog-coolers.html">Вода 0,5-1,5л</a></li>
+								<li><a href="/catalog-coolers.html">Лечебная</a></li>
+								<li><a href="/catalog-coolers.html">Лимонады</a></li>
+								<li><a href="/catalog-coolers.html">Чай/Кофе</a></li>
+								<li><a href="/catalog-coolers.html">Кулеры</a></li>
+								<li><a href="/catalog-coolers.html">Помпы</a></li>
+								<li><a href="/catalog-coolers.html">Разное</a></li>
+								<li><a href="/catalog-coolers.html">Акции</a></li>
+								<li><a href="/catalog-coolers.html">Аксессуары</a></li>
+								<li><a href="/catalog-coolers.html">Для животных</a></li>
+							</ul>
+						</li>
+						<li><a href="/actions.html">Акции</a></li>
+						<li><a href="/payment.html">Оплата и доставка</a></li>
+						<li><a href="/service.html">Сервис</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>
+					</ul>
+					<ul class="nav-right">
+						<!-- Пустая корзина -->
+						<li class="hidden">
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>Корзина</span>
+							</a>
+						</li>
+						<!-- /Пустая корзина -->
+						<!-- Корзина с продукцией -->
+						<li>
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>10 / 2 000₽</span>
+							</a>
+							<ul>
+								<li><a href="/checkout.html">Оформить</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Очистить</a></li>
+							</ul>
+						</li>
+						<!-- /Корзина с продукцией -->
+						<!-- Зарегистрированный пользователь -->
+						<li class="hidden">
+							<a href="" class="icon-link">
+								<span>Мария</span>
+								<img src="/img/fish/avatar.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/profile.html#orders">Заказы</a></li>
+								<li><a href="/profile.html#notifications">Уведомления</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Выход</a></li>
+							</ul>
+						</li>
+						<!-- /Зарегистрированный пользователь -->
+						<!-- Гость -->
+						<li>
+							<a href="" class="icon-link">
+								<span>Войти</span>
+								<img src="/img/incognito.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="#login" class="modal-trigger waves-effect">Авторизация</a></li>
+								<li><a href="#register" class="modal-trigger waves-effect">Регистрация</a></li>
+							</ul>
+						</li>
+						<!-- /Гость -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="confirm">
+		<div class="modal-content">
+			<div class="content-header">
+				<h3>Подтверждение</h3>
+				<a href="#!" class="modal-close bx bx-x"></a>
+			</div>
+			<p>Вы уверены, что хотите продолжить?</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="bttn-flat left modal-close waves-effect">Нет</a>
+			<a href="#!" class="bttn-flat modal-close waves-effect">Да</a>
+		</div>
+	</div>
+	<div class="modal" id="login">
+		<div class="modal-content">
+			<div class="content-header">
+				<h3>Авторизация</h3>
+				<a href="#!" class="modal-close bx bx-x"></a>
+			</div>
+			<div class="inputs">
+				<div class="input-field"><input type="text" placeholder="Логин"></div>
+				<div class="input-field"><input type="password" placeholder="Пароль"></div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#register" class="bttn-flat left modal-close modal-trigger waves-effect">Нет аккаунта?</a>
+			<a href="#!" class="bttn-flat left modal-close modal-trigger waves-effect">Напомнить пароль?</a>
+			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
+		</div>
+	</div>
+	<div class="modal" id="register">
+		<div class="modal-content">
+			<div class="content-header">
+				<h3>Регистрация</h3>
+				<a href="#!" class="modal-close bx bx-x modal-close"></a>
+			</div>
+			<div class="inputs">
+				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
+				<div class="input-field"><input type="text" placeholder="Имя"></div>
+				<div class="input-field"><input type="text" placeholder="Отчество"></div>
+				<div class="input-field"><input type="tel" placeholder="Телефон"></div>
+				<div class="input-field email"><input type="email" placeholder="E-mail"></div>
+				<div class="input-field"><input type="password" placeholder="Пароль"></div>
+				<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#login" class="bttn-flat left modal-close modal-trigger waves-effect">Есть аккаунт?</a>
+			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
+		</div>
+	</div>
+	<ul class="sidenav" id="mobile">
+		<!-- Зарегистрированный пользователь, полная корзина -->
+		<li class="sidenav-header">
+			<div class="avatar">
+				<img src="/img/fish/avatar.jpg" alt="">
+			</div>
+			<div class="info">
+				<div class="name">
+					<a href="/profile.html">Маша</a>
+				</div>
+				<div class="cart">
+					<i class="bx bxs-cart"></i>
+					<span>1 / 2 000₽</span>
+				</div>
+			</div>
+			<ul class="actions">
+				<li>
+					<a href="javascript:void(0);"><i class="bx bx-dots-vertical-rounded"></i></a>
+					<ul>
+						<li><a href="/checkout.html">Корзина</a></li>
+						<li><a href="/profile.html">Профиль</a></li>
+						<li><a href="/profile.html#orders">Заказы</a></li>
+						<li><a href="/profile.html#notifications">Уведомления</a></li>
+						<li>
+							<div class="divider"></div>
+						</li>
+						<li><a href="#confirm" class="modal-trigger waves-effect">Выход</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<!-- /Зарегистрированный пользователь, полная корзина -->
+		<!-- Гость, пустая корзина -->
+		<li class="sidenav-header hidden">
+			<div class="avatar">
+				<img src="/img/incognito.jpg" alt="">
+			</div>
+			<div class="info">
+				<div class="name">
+					<a href="#login" class="modal-trigger">Гость</a>
+				</div>
+				<div class="cart">
+					<i class="bx bxs-cart"></i>
+					<span>Корзина пуста</span>
+				</div>
+			</div>
+			<ul class="actions">
+				<li>
+					<a href="javascript:void(0);"><i class="bx bx-dots-vertical-rounded"></i></a>
+					<ul>
+						<li><a href="/checkout.html">Корзина</a></li>
+						<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+						<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<!-- /Зарегистрированный пользователь, полная корзина -->
+		<li class="small"><a>Ваш город</a></li>
+		<li class="folder">
+			<a href="" class="waves-effect folder-trigger">
+				<span>Славянск-на-Кубани</span>
+				<i class="bx bx-caret-down"></i>
+			</a>
+			<ul>
+				<li><a href="">Анапа</a></li>
+				<li><a href="">Новороссийск</a></li>
+				<li><a href="">Крымск</a></li>
+				<li><a href="">Абинск</a></li>
+				<li><a href="">Славянск-на-Кубани</a></li>
+			</ul>
+		</li>
+		<li class="small"><a>Разделы каталога</a></li>
+		<li class="folder">
+			<a href="" class="waves-effect folder-trigger">
+				<span>Каталог</span>
+				<i class="bx bx-caret-down"></i>
+			</a>
+			<ul>
+				<li><a href="/catalog-water.html">Вода 19л</a></li>
+				<li><a href="/catalog-coolers.html">Вода 0,5-1,5л</a></li>
+				<li><a href="/catalog-coolers.html">Лечебная</a></li>
+				<li><a href="/catalog-coolers.html">Лимонады</a></li>
+				<li><a href="/catalog-coolers.html">Чай/Кофе</a></li>
+				<li><a href="/catalog-coolers.html">Кулеры</a></li>
+				<li><a href="/catalog-coolers.html">Помпы</a></li>
+				<li><a href="/catalog-coolers.html">Разное</a></li>
+				<li><a href="/catalog-coolers.html">Акции</a></li>
+				<li><a href="/catalog-coolers.html">Аксессуары</a></li>
+				<li><a href="/catalog-coolers.html">Для животных</a></li>
+			</ul>
+		</li>
+		<li class="small"><a>Разделы сайта</a></li>
+		<li><a href="/actions.html">Акции</a></li>
+		<li><a href="/payment.html">Оплата и доставка</a></li>
+		<li><a href="/service.html">Сервис</a></li>
+		<li><a href="/contacts.html">Контакты</a></li>
+	</ul>
+	<main id="product">
+		<section id="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs">
+							<li class="crumb"><i class="bx bxs-home"></i><a href="/">Главная</a></li>
+							<li class="crumb"><a href="/catalog.html">Каталог</a></li>
+							<li class="crumb"><a href="/catalog-water.html">Питьевая вода 19л</a></li>
+							<li class="crumb current"><span>Архыз (Легенда гор)</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row flex vcenter">
+					<div class="col xl4 offset-xl1 l4 m6 s6 offset-s3 xs8 offset-xs2">
+						<img data-src="/img/fish/bottles/arhyz-legend.png" alt="" class="lazy product-image">
+					</div>
+					<div class="col xl5 offset-xl1 offset-l1 l6 m6 s12 align-center-m-down">
+						<ul class="labels">
+							<li class="hit"><span>Хит продаж</span></li>
+							<li class="new"><span>Новинка</span></li>
+						</ul>
+						<h1>Архыз (Легенда гор)</h1>
+						<p class="descriptor">Вода питьевая минеральная</p>
+						<div class="content-prices">
+							<div class="content-price">
+								<div class="prefix">1 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+							<div class="content-price">
+								<div class="prefix">от 2 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+							<div class="content-price">
+								<div class="prefix">от 3 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+						</div>
+						<div class="smart-bttn long">
+							<div class="avers">
+								<a href="#!" class="bttn-cart">
+
+									<span>В корзину</span>
+								</a>
+							</div>
+							<div class="revers">
+								<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+								<div class="cart-input"><input type="number" value="0"></div>
+								<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+							</div>
+						</div>
+						<p>* цена указана при условии наличия оборотной тары</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<ul class="tabs">
+							<li class="tab active"><a href="#tab1">Описание</a></li>
+							<li class="tab"><a href="#tab2">Характеристики</a></li>
+							<li class="tab"><a href="#tab3">Документы</a></li>
+							<li class="indicator"></li>
+						</ul>
+						<div class="tabs-content">
+							<div id="tab1" class="tab-content active">
+								«Легенда гор Архыз» добывается на высоте 1507 м над уровнем моря на территории
+								Государственного Тебердинского Биосферного заповедника в одноименном поселке Архыз.
+								Проходя через естественный горный фильтр, она слабо минерализуется, обретая изумительный
+								вкус и уникальные полезные свойства. Образуется в результате таяния ледников
+								и благодаря этому обладает уникальной структурой, похожей на структуру воды
+								в организме человека. Поэтому она идеально усваивается и поддерживает оптимальный
+								водно-минеральный баланс. Содержит 18 природных минералов и микроэлементов среди
+								которых: магний, кальций, калий, йод.
+							</div>
+							<div id="tab2" class="tab-content">
+								<div class="chars-wrapper">
+									<div class="char">
+										<div class="name">Общая минерализация</div>
+										<div class="unit">г/л</div>
+										<div class="value">100</div>
+									</div>
+									<div class="char">
+										<div class="name">Гидрокарбонаты</div>
+										<div class="unit">мг/л</div>
+										<div class="value">50-150</div>
+									</div>
+									<div class="char">
+										<div class="name">Натрий+Калий</div>
+										<div class="unit">мг/л</div>
+										<div class="value">60</div>
+									</div>
+									<div class="char">
+										<div class="name">Кальций</div>
+										<div class="unit">мг/л</div>
+										<div class="value">40</div>
+									</div>
+									<div class="char">
+										<div class="name">Магний</div>
+										<div class="unit">мг/л</div>
+										<div class="value">25</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab3" class="tab-content">Документы</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="popular-slider" class="slider-section">
+			<div class="container">
+				<div class="row slider-wrapper flex" style="--bg:url(/img/popular-bg.png);">
+					<div class="col s12">
+						<div class="top-header">
+							<h2 class="hide-m-up">Вым могут понравится</h2>
+						</div>
+					</div>
+					<div class="col t4 xs4 s4 m4 no-padding">
+						<div class="slider-header">
+							<h2 class="hide-m-down">Вым могут понравится</h2>
+							<p>Эта под&shy;бор&shy;ка на&shy;сто&shy;ящая бом&shy;ба! <span class="hide-m-down">Толь&shy;ко про&shy;ве&shy;рен&shy;ные и все&shy;ми лю&shy;би&shy;мые то&shy;ва&shy;ры с бес&shy;плат&shy;ной дос&shy;тав&shy;кой!</span></p>
+							<div class="separator"></div>
+							<div class="slider-navi">
+								<a href="#!" class="bx bx-chevron-left" id="popular-slider-prev"></a>
+								<a href="#!" class="bx bx-chevron-right" id="popular-slider-next">
+									<svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+										<circle id="popular-slider-circle-progress" cx="55" cy="55" r="50" fill="none" stroke="#fff"></circle>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col t8 xs8 s8 m8  water-section-slider-wrapper">
+						<div class="swiper section-slider" id="popular-slider-swiper" data-section="popular-slider">
+							<div class="swiper-wrapper">
+
+
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/arhyz-legend.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Архыз</a></div>
+											<div class="subheader"><a href="/product-water.html">легенда гор</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">380₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">380₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">380₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/empty-bottle.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Пустая тара</a></div>
+											<div class="subheader"><a href="/product-water.html">пэт 19 литров</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">300₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/gorgippia.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bxs-heart"></i></a>
+
+
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Горгиппия</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">240₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">240₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">240₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Артезианская</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/troizkaya.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bxs-heart"></i></a>
+
+
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Троицкая</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">210₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">190₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">180₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/elbrusinka.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Эльбрусинка</a></div>
+											<div class="subheader"><a href="/product-water.html">детская</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">340₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">330₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">320₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/caucasian-perl.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bxs-heart"></i></a>
+
+
+
+											<div class="labels">
+
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Жемчужина</a></div>
+											<div class="subheader"><a href="/product-water.html">Кавказа</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">300₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">280₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">270₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/mountain-peak.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Горная</a></div>
+											<div class="subheader"><a href="/product-water.html">вершина</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">320₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">310₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">300₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/chisto-gornaya.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">#чистоГорная</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">270₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">260₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">250₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Талая</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/dombay.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Домбай</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">270₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">260₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">250₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Артезианская</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/soft-aqua.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bxs-heart"></i></a>
+
+
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Новинка" data-bg="/img/fresh.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Софт Аква</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">220₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">200₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">190₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Артезианская</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/mountain-key.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Горный ключ</a></div>
+											<div class="subheader"><a href="/product-water.html">питьевая вода</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">210₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">190₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">180₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-card">
+
+										<div class="image-wrapper">
+
+											<div class="type">Артезианская</div>
+
+											<a href="/product-water.html">
+												<img data-src="/img/fish/bottles/silver-droplet.png" alt="" class="lazy">
+											</a>
+
+
+											<a href="" class="fav tooltipped" data-position="top" data-tooltip="Добавить в избранное"><i class="bx bx-heart"></i></a>
+
+											<div class="labels">
+
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Хит продаж" data-bg="/img/hot.svg"></i>
+
+												<i class="label lazy tooltipped" data-position="top" data-tooltip="Новинка" data-bg="/img/fresh.svg"></i>
+
+
+											</div>
+										</div>
+										<div class="info-wrapper">
+											<div class="header"><a href="/product-water.html">Серебряная</a></div>
+											<div class="subheader"><a href="/product-water.html">капля</a></div>
+											<div class="prices">
+
+
+												<div class="price">
+													<div class="prefix">1 бут</div>
+													<div class="value">220₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 2х бут</div>
+													<div class="value">200₽</div>
+												</div>
+
+												<div class="price">
+													<div class="prefix">от 4х бут</div>
+													<div class="value">190₽</div>
+												</div>
+
+
+											</div>
+											<div class="smart-bttn">
+												<div class="avers">
+													<a href="#!" class="bttn-cart">
+														<i class="bx bxs-cart-add"></i>
+
+													</a>
+												</div>
+												<div class="revers">
+													<a href="#!" class="cart-bttn-small bx bx-minus"></a>
+													<div class="cart-input"><input type="number" value="0"></div>
+													<a href="#!" class="cart-bttn-small bx bx-plus"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="row flex">
+				<div class="col xl2 l3 m12">
+					<img class="lazy responsive-img" data-src="/img/logo_dark.svg">
+				</div>
+				<div class="col xl2 l3 m4 s6 xs12">
+					<div class="footer-header">Навигация по сайту</div>
+					<ul>
+						<li><a href="/catalog.html">Каталог</a></li>
+						<li><a href="/actions.html">Акции</a></li>
+						<li><a href="/payment.html">Оплата и доставка</a></li>
+						<li><a href="/shops.html">Магазины</a></li>
+						<li><a href="/service.html">Сервисный центр</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="col xl2 l3 m4 s6 xs12">
+					<div class="footer-header">Навигация по каталогу</div>
+					<ul>
+						<li><a href="/catalog-water.html">Вода</a></li>
+						<li><a href="/catalog-coolers.html">Тара</a></li>
+						<li><a href="/catalog-coolers.html">Кулеры</a></li>
+						<li><a href="/catalog-coolers.html">Аксессуары</a></li>
+						<li><a href="/catalog-coolers.html">Кофе</a></li>
+					</ul>
+				</div>
+				<div class="col xl3 l12 m12 s6 cookies">
+					<div class="footer-header">Важно</div>
+					<p>Компания «Аквагород» на сайте использует файлы Cookie для обеспечения удобства пользователя. Используя функционал аторизации/регистрации пользователь даёт своё согласие на сбор и обработку персональных данных в соответствии с политикой конфиденциальности</p>
+				</div>
+				<div class="col xl2 offset-xl1 l3 m4 s6 xs12">
+					<div class="footer-header">Обратная связь</div>
+					<ul>
+						<li><a href="tel:+79181277000"><i class="bx bxs-phone"></i><span>+7 (918) 127-7000</span></a></li>
+						<li><a href="mailto://shop@voda-plus.info"><i class="bx bxs-envelope-open"></i><span>shop@voda-plus.info</span></a></li>
+						<li><a href="https://t.me/+79181277000"><i class="bx bxl-telegram"></i><span>Telegram</span></a></li>
+						<li><a href="https://wa.me/+79181277000"><i class="bx bxl-whatsapp"></i><span>WhatsApp</span></a></li>
+						<li><i class="bx bxs-map"></i><span>Крымск, ул. Горная 13</span></li>
+						<li><i class="bx bxs-time-five"></i><span>Пн-Вс 8:00 - 19:01</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer-copyright">
+		<span class="copyright">© 2023, От и До</span>
+		<div class="right"><span class="credits">Дизайн, разработка – </span><a href=""><strong>2BR</strong></a></div>
+	</div>
+	<script src="/js/master.js"></script>
+</body>
+
+</html>

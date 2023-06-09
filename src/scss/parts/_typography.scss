@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..900&display=swap');
+@import './boxicons';
+
+$line-height: 1.5em;
+$header-line-height: 1.2em;
+
+body{
+	font-family: 'Nunito';
+	font-size: clamp(16px, 1vw, 21px);
+	line-height: $line-height;
+	color: $text;
+	font-weight: 300;
+	
+	& h1{
+		font-size: clamp(32px, 5vw, 81px);
+		font-weight: 900;
+		line-height: $header-line-height;
+	}
+	
+	& h2{
+		font-size: clamp(24px, 5vw, 60px);
+		font-weight: 800;
+		line-height: $header-line-height;
+	}
+	
+	& h3{
+		font-size: clamp(20px, 5vw, 40px);
+		font-weight: 700;
+		line-height: $header-line-height;
+	}
+	
+	& h4{
+		font-size: clamp(18px, 5vw, 32px);
+		font-weight: 600;
+		line-height: $header-line-height;
+	}
+	
+	& h5{
+		font-size: clamp(16px, 5vw, 21px);
+		font-weight: 500;
+		line-height: $header-line-height;
+	}
+
+	& h1{
+		color: $secondary;
+		margin-top: 0;
+	}
+
+	& h2{
+		margin: 0;
+		margin-bottom: .5em;
+		color: $secondary;
+	}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Ошибка 404'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12 center-align">
+						<img data-src="/img/500.png" class="responsive-img lazy">
+						<p>Мы уже делаем всё, чтобы ошибка была устранена! Пожалуйста, попробуйте зайти попозже, или <a href="">вернитесь на главную</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

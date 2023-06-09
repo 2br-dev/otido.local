@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Ошибка 404'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12 center-align">
+						<img data-src="/img/403.png" class="responsive-img lazy">
+						<p>У вас нет прав для просмотра данной страницы. Возможно, для её просмотра вам нужно <a href="#login" class="modal-trigger">авторизироваться</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./parts/head.html', {title: "Каталог / Вода"})
+</head>
+<body>
+	@@include('./parts/header.html', {class:'dark'})
+	<main id="catalog">
+		<section id="small-hero"><div class="image"></div></section>
+		<section id="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs dark">
+							<li class="crumb"><i class="bx bxs-home"></i><a href="/">Главная</a></li>
+							<li class="crumb"><a href="/catalog.html">Каталог</a></li>
+							<li class="crumb current"><span>Питьевая вода</span></li>
+						</ul>
+						<h1 class="white-text">Питьевая вода</h1>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product-card.html', './data/water_catalog.json')
+				</div>
+				<div class="row">
+					<div class="col s12 center-align">
+						<ul class="pagination">
+							<li><a href="" class="bx bx-chevron-left"></a></li>
+							<li><a href="">1</a></li>
+							<li><span class="dots">…</span></li>
+							<li class="active"><a href="">15</a></li>
+							<li><a href="">16</a></li>
+							<li><a href="">17</a></li>
+							<li><span class="dots">…</span></li>
+							<li><a href="">200</a></li>
+							<li><a href="" class="bx bx-chevron-right"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/slider-section.html', {
+			title: 'Популярное',
+			intro: 'Эта под&shy;бор&shy;ка на&shy;сто&shy;ящая бом&shy;ба! <span class="hide-m-down">Толь&shy;ко про&shy;ве&shy;рен&shy;ные и все&shy;ми лю&shy;би&shy;мые то&shy;ва&shy;ры с бес&shy;плат&shy;ной дос&shy;тав&shy;кой!</span>',
+			productType: 'water',
+			image: '/img/popular-bg.png',
+			sectionId: 'popular-slider'
+		})
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+[
+	{
+		"name":"Вода 19л",
+		"class":"col l3 m4 s6 xs6",
+		"link":"/catalog-water.html",
+		"img":"/img/categories/all/big-water.jpg"
+	},
+	{
+		"name":"Акции",
+		"class":"col l3 m4 s6 xs6",
+		"link":"/actions.html",
+		"img":"/img/categories/all/actions.jpg"
+	},
+	{
+		"name":"Помпы",
+		"class":"col l3 m4 s6 xs6",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/pumps.jpg"
+	},
+	{
+		"name":"Кулеры",
+		"class":"col l3 m4 s6 xs6",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/coolers.jpg"
+	},
+	{
+		"name":"Чай/кофе",
+		"class":"col l3 m4 s6 xs6 hide",
+		"link":"/catalog-coolers.html",
+		"img":""
+	},
+	{
+		"text":"Как уже неоднократно упомянуто, реплицированные с зарубежных источников, современные исследования, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.",
+		"class":"col l9 m8 s12 order-l1 order-m2 hide",
+		"link":"",
+		"img":""
+	},
+	{
+		"name":"Здоровое питание",
+		"class":"col l3 m4 s6 xs6 hide",
+		"link":"",
+		"img":""
+	},
+	{
+		"name":"Вода 0,5–1,5л",
+		"class":"col l3 m4 s6 xs6 order-m2",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/small-water.jpg"
+	},
+	{
+		"name":"Лимонад",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/lemonades.jpg"
+	},
+	{
+		"name":"Лечебная вода",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/minerals.jpg"
+	},
+	{
+		"name":"Для детей",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2 hide",
+		"link":"/catalog-coolers.html",
+		"img":""
+	},
+	{
+		"name":"Для дома",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2 hide",
+		"link":"/catalog-coolers.html",
+		"img":""
+	},
+	{
+		"name":"Для бассейнов",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2 hide",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/pools.jpg"
+	},
+	{
+		"name":"Для животных",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2 hide",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/pets.jpg"
+	},
+	{
+		"name":"Разное",
+		"class":"col l3 m4 s6 xs6 order-l1 order-m2",
+		"link":"/catalog-coolers.html",
+		"img":"/img/categories/all/misc.jpg"
+	}
+]

@@ -1,0 +1,284 @@
+main#profile{
+
+	& .profile-data{
+
+		display: flex;
+		align-items: center;
+
+		& .avatar-wrapper{
+
+			margin-right: 20px;
+
+			& img{
+				display: block;
+				border-radius: 50%;
+				width: 80px;
+			}
+		}
+
+		& .text-wrapper{
+
+			& .firstname{
+				font-size: clamp(16px, 2vmax, 26px);
+				font-weight: 700;
+			}
+
+			& .lastname{
+				font-weight: 500;
+			}
+		}
+	}
+
+	& .profile-actions{
+
+		& ul{
+			display: table;
+			font-size: 18px;
+			margin: auto;
+			margin-top: 2rem;
+
+			& li{
+				display: table-row;
+
+				& > *{
+					display: table-cell;
+				}
+				
+				& i{
+					color: $fogged;
+					padding-right: 6px;
+				}
+
+				& a{
+					padding-left: 20px;
+					color: $primary;
+					white-space: nowrap;
+
+					&:hover{
+						text-decoration: underline;
+					}
+
+					& i{
+						color: $primary;
+						margin-right: 4px;
+					}
+				}
+
+			}
+		}
+
+	}
+
+	& .header{
+
+		display: flex;
+		align-items: baseline;
+		border-bottom: 2px solid $fogged;
+
+		& h2{
+			margin: 0;
+		}
+
+		& .header-text{
+			display: block;
+			flex-grow: 1;
+		}
+	}
+
+	& .orders-table{
+
+		overflow: hidden;
+
+		& thead{
+
+			& th{
+				font-size: 16px;
+				line-height: 1.2em;
+			}
+		}
+
+		& .order-row{
+
+			position: relative;
+			transition: border .2s, background-color .2s;
+			cursor: pointer;
+			border-left: 2px solid transparent;
+
+			&:hover{
+				background-color: rgba(black, .05);
+			}
+			
+			&.open{
+
+				border-left: 2px solid $fogged;
+				
+				& td{
+					transform: translateX(-205px);
+				}
+			}
+			
+			& td{
+				padding: 10px;
+				transition: transform .4s;
+			}
+
+			& .toggle-actions{
+				border-radius: 50%;
+				padding: 10px;
+			}
+
+			& .actions{
+				margin: 0;
+				display: flex;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: fit-content;
+				height: 100%;
+				transform: translateX(110%);
+
+				& li{
+
+					& a{
+						display: flex;
+						height: 100%;
+						align-items: center;
+						color: #fff;
+						padding: 0 10px;
+						font-size: 21px;
+						transition:background-color .2s;
+
+						&.repeat{
+							background: $primary linear-gradient(to right, rgba(black, .4), transparent 30%);
+
+							&:hover{
+								background-color: $primary_hover;
+							}
+						}
+
+						&.pay{
+							background: $success linear-gradient(to right, rgba(black, .4), transparent 30%);
+
+							&:hover{
+								background-color: $success_hover;
+							}
+						}
+
+						&.reciept{
+							background: #6B5BFC linear-gradient(to right, rgba(black, .4), transparent 30%);
+
+							&:hover{
+								background-color: #a676ff;
+							}
+						}
+
+						&.geo{
+							background: $secondary linear-gradient(to right, rgba(black, .4), transparent 30%);
+
+							&:hover{
+								background-color: $secondary_hover;
+							}
+							
+						}
+
+						&.cancel{
+							background: red linear-gradient(to right, rgba(black, .4), transparent 30%);
+							&:hover{
+								background-color: #ff5858;
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		& .order-details-row{
+					
+			& td{
+				padding: 0;
+			}
+	
+			& .items{
+
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+				gap: 10px;
+				padding: 20px;
+				box-sizing: border-box;
+				display: none;
+
+				&[style*="display: block"]{
+					display: grid !important;
+				}
+	
+				@media(max-width: 600px){
+					grid-template-columns: 1fr;
+				}
+				
+				& .order-item{
+					
+					display: flex;
+					align-items: center;
+					color: $text;
+					padding: 10px;
+					box-sizing: border-box;
+					border-radius: $border-radius;
+					transition: background-color .2s, box-shadow .2s;
+	
+					& .image-wrapper{
+	
+						& img{
+							aspect-ratio: 1 / 1;
+							width: 120px;
+							object-fit: cover;
+							object-position: top center;
+							border-radius: 50%;
+							background-color: #fff;
+							transition: background-color .2s;
+						}
+					}
+	
+					& .data-wrapper{
+
+						flex-grow: 1;
+						padding-left: 20px;
+	
+						& .name{
+							font-weight: 600;
+							line-height: 1.2em;
+						}
+	
+						& .price{
+							font-size: 16px;
+							line-height: 1.2em;
+						}
+						& .count{
+							font-size: 16px;
+							line-height: 1.2em;
+						}
+					}
+
+					&:hover{
+						background-color: #fff;
+						box-shadow: 0 2px 4px rgba(black, .4);
+
+						& .image-wrapper{
+
+							& img{
+								background-color: #EEF7F8;
+								// box-shadow: 0 0 0 2px $primary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& .hide-tablet{
+		@media(max-width: 1400px){
+			display: none;
+		}
+	}
+
+}

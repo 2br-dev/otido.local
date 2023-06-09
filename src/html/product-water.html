@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Страница товара (вода)'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="product">
+		<section id="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs">
+							<li class="crumb"><i class="bx bxs-home"></i><a href="/">Главная</a></li>
+							<li class="crumb"><a href="/catalog.html">Каталог</a></li>
+							<li class="crumb"><a href="/catalog-water.html">Питьевая вода 19л</a></li>
+							<li class="crumb current"><span>Архыз (Легенда гор)</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row flex vcenter">
+					<div class="col xl4 offset-xl1 l4 m6 s6 offset-s3 xs8 offset-xs2">
+						<img data-src="/img/fish/bottles/arhyz-legend.png" alt="" class="lazy product-image">
+					</div>
+					<div class="col xl5 offset-xl1 offset-l1 l6 m6 s12 align-center-m-down">
+						<ul class="labels">
+							<li class="hit"><span>Хит продаж</span></li>
+							<li class="new"><span>Новинка</span></li>
+						</ul>
+						<h1>Архыз (Легенда гор)</h1>
+						<p class="descriptor">Вода питьевая минеральная</p>
+						<div class="content-prices">
+							<div class="content-price">
+								<div class="prefix">1 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+							<div class="content-price">
+								<div class="prefix">от 2 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+							<div class="content-price">
+								<div class="prefix">от 3 бут.</div>
+								<div class="value">380₽</div>
+							</div>
+						</div>
+						@@include('./parts/smart-bttn.html', {text: 'В корзину', class: 'long'})
+						<p>* цена указана при условии наличия оборотной тары</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<ul class="tabs">
+							<li class="tab active"><a href="#tab1">Описание</a></li>
+							<li class="tab"><a href="#tab2">Характеристики</a></li>
+							<li class="tab"><a href="#tab3">Документы</a></li>
+							<li class="indicator"></li>
+						  </ul>
+						  <div class="tabs-content">
+							<div id="tab1" class="tab-content active">
+								«Легенда гор Архыз» добывается на высоте 1507 м над уровнем моря на территории 
+								Государственного Тебердинского Биосферного заповедника в одноименном поселке Архыз. 
+								Проходя через естественный горный фильтр, она слабо минерализуется, обретая изумительный 
+								вкус и уникальные полезные свойства. Образуется в результате таяния ледников 
+								и благодаря этому обладает уникальной структурой, похожей на структуру воды 
+								в организме человека. Поэтому она идеально усваивается и поддерживает оптимальный 
+								водно-минеральный баланс. Содержит 18 природных минералов и микроэлементов среди 
+								которых: магний, кальций, калий, йод.
+							</div>
+							<div id="tab2" class="tab-content">
+								<div class="chars-wrapper">
+									<div class="char">
+										<div class="name">Общая минерализация</div>
+										<div class="unit">г/л</div>
+										<div class="value">100</div>
+									</div>
+									<div class="char">
+										<div class="name">Гидрокарбонаты</div>
+										<div class="unit">мг/л</div>
+										<div class="value">50-150</div>
+									</div>
+									<div class="char">
+										<div class="name">Натрий+Калий</div>
+										<div class="unit">мг/л</div>
+										<div class="value">60</div>
+									</div>
+									<div class="char">
+										<div class="name">Кальций</div>
+										<div class="unit">мг/л</div>
+										<div class="value">40</div>
+									</div>
+									<div class="char">
+										<div class="name">Магний</div>
+										<div class="unit">мг/л</div>
+										<div class="value">25</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab3" class="tab-content">Документы</div>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/slider-section.html', {
+			title: 'Вым могут понравится',
+			intro: 'Эта под&shy;бор&shy;ка на&shy;сто&shy;ящая бом&shy;ба! <span class="hide-m-down">Толь&shy;ко про&shy;ве&shy;рен&shy;ные и все&shy;ми лю&shy;би&shy;мые то&shy;ва&shy;ры с бес&shy;плат&shy;ной дос&shy;тав&shy;кой!</span>',
+			productType: 'water',
+			image: '/img/popular-bg.png',
+			sectionId: 'popular-slider'
+		})
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

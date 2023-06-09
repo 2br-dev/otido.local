@@ -1,0 +1,47 @@
+<form action="" id="filters-form">
+	<h2>Фильтры</h2>
+	<div class="filters">
+		<div class="param single">
+			<div class="prefix">
+				Цена
+			</div>
+		</div>
+		<div class="param single">
+			<div class="prefix">Загрузка</div>
+			<div class="values">
+				<div class="value"><input id="l1" type="radio" checked name="loading"><label for="l1">Нижняя</label></div>
+				<div class="value"><input id="l2" type="radio" name="loading"><label for="l2">Верхняя</label></div>
+			</div>
+		</div>
+		<div class="param single">
+			<div class="prefix">Тип кулера</div>
+			<div class="values">
+				<div class="value"><input id="t1" type="radio" checked name="type"><label for="t1">Напольный</label></div>
+				<div class="value"><input id="t2" type="radio" name="type"><label for="t2">Настольный</label></div>
+			</div>
+		</div>
+		<div class="param single">
+			<div class="prefix">Тип охлаждения</div>
+			<div class="values">
+				<div class="value"><input id="c1" type="radio" checked name="cooling-type"><label for="c1">Компрессор</label></div>
+				<div class="value"><input id="c2" type="radio" name="cooling-type"><label for="c2">Электронный</label></div>
+			</div>
+		</div>
+		<div class="param multichoise">
+			<div class="prefix">Охлаждение и нагрев</div>
+			<div class="values">
+				<div class="value"><input type="checkbox" id="hit1"><label for="hit1">Охлаждение и нагрев</label></div>
+				<div class="value"><input type="checkbox" id="hit2"><label for="hit2">Нагрев без охлаждения</label></div>
+				<div class="value"><input type="checkbox" id="hit3"><label for="hit3">Без охлаждения и нагрева</label></div>
+			</div>
+		</div>
+		<div class="param single">
+			<div class="prefix">Холодитльник</div>
+			<div class="values">
+				<div class="value"><input id="c4" type="radio" checked name="cooler"><label for="c4">Да</label></div>
+				<div class="value"><input id="c5" type="radio" name="cooler"><label for="c5">Нет</label></div>
+			</div>
+		</div>
+	</div>
+	<div class="center-align"><a href="#!" class="reset">Сбросить фильтры</a></div>
+</form>
