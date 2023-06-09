@@ -12507,55 +12507,55 @@ main#profile .orders-table {
           background: red linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent 30%); }
           main#profile .orders-table .order-row .actions li a.cancel:hover {
             background-color: #ff5858; }
-  main#profile .orders-table .order-details-row td {
-    padding: 0; }
-  main#profile .orders-table .order-details-row .items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    display: none; }
-    main#profile .orders-table .order-details-row .items[style*="display: block"] {
-      display: grid !important; }
-    @media (max-width: 600px) {
-      main#profile .orders-table .order-details-row .items {
-        grid-template-columns: 1fr; } }
-    main#profile .orders-table .order-details-row .items .order-item {
-      display: flex;
-      align-items: center;
-      color: #333;
-      padding: 10px;
+  main#profile .orders-table .order-details-row {
+    background-color: #fff;
+    border-left: 2px solid #00A7FF; }
+    main#profile .orders-table .order-details-row td {
+      padding: 0; }
+    main#profile .orders-table .order-details-row .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 10px;
+      padding: 20px;
       box-sizing: border-box;
-      border-radius: 10px;
-      transition: background-color .2s, box-shadow .2s; }
-      main#profile .orders-table .order-details-row .items .order-item .image-wrapper img {
-        aspect-ratio: 1 / 1;
-        width: 120px;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: top center;
-           object-position: top center;
-        border-radius: 50%;
-        background-color: #fff;
-        transition: background-color .2s; }
-      main#profile .orders-table .order-details-row .items .order-item .data-wrapper {
-        flex-grow: 1;
-        padding-left: 20px; }
-        main#profile .orders-table .order-details-row .items .order-item .data-wrapper .name {
-          font-weight: 600;
-          line-height: 1.2em; }
-        main#profile .orders-table .order-details-row .items .order-item .data-wrapper .price {
-          font-size: 16px;
-          line-height: 1.2em; }
-        main#profile .orders-table .order-details-row .items .order-item .data-wrapper .count {
-          font-size: 16px;
-          line-height: 1.2em; }
-      main#profile .orders-table .order-details-row .items .order-item:hover {
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
-        main#profile .orders-table .order-details-row .items .order-item:hover .image-wrapper img {
+      display: none; }
+      main#profile .orders-table .order-details-row .items[style*="display: block"] {
+        display: grid !important; }
+      @media (max-width: 600px) {
+        main#profile .orders-table .order-details-row .items {
+          grid-template-columns: 1fr; } }
+      main#profile .orders-table .order-details-row .items .order-item {
+        display: flex;
+        align-items: center;
+        color: #333;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        transition: background-color .2s, box-shadow .2s; }
+        main#profile .orders-table .order-details-row .items .order-item .image-wrapper img {
+          aspect-ratio: 1 / 1;
+          width: 120px;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: top center;
+             object-position: top center;
+          border-radius: 50%;
           background-color: #EEF7F8; }
+        main#profile .orders-table .order-details-row .items .order-item .data-wrapper {
+          flex-grow: 1;
+          padding-left: 20px; }
+          main#profile .orders-table .order-details-row .items .order-item .data-wrapper .name {
+            font-weight: 600;
+            line-height: 1.2em; }
+          main#profile .orders-table .order-details-row .items .order-item .data-wrapper .price {
+            font-size: 16px;
+            line-height: 1.2em; }
+          main#profile .orders-table .order-details-row .items .order-item .data-wrapper .count {
+            font-size: 16px;
+            line-height: 1.2em; }
+        main#profile .orders-table .order-details-row .items .order-item:hover {
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
 
 @media (max-width: 1400px) {
   main#profile .hide-tablet {

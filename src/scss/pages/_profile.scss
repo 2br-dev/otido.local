@@ -193,6 +193,9 @@ main#profile{
 		}
 	
 		& .order-details-row{
+
+			background-color: #fff;
+			border-left: 2px solid $secondary;
 					
 			& td{
 				padding: 0;
@@ -233,8 +236,7 @@ main#profile{
 							object-fit: cover;
 							object-position: top center;
 							border-radius: 50%;
-							background-color: #fff;
-							transition: background-color .2s;
+							background-color: #EEF7F8;
 						}
 					}
 	
@@ -261,14 +263,6 @@ main#profile{
 					&:hover{
 						background-color: #fff;
 						box-shadow: 0 2px 4px rgba(black, .4);
-
-						& .image-wrapper{
-
-							& img{
-								background-color: #EEF7F8;
-								// box-shadow: 0 0 0 2px $primary;
-							}
-						}
 					}
 				}
 			}
