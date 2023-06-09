@@ -12462,7 +12462,7 @@ main#profile .orders-table {
     main#profile .orders-table .order-row.open {
       border-left: 2px solid #828282; }
       main#profile .orders-table .order-row.open td {
-        transform: translateX(-205px); }
+        transform: translateX(-225px); }
     main#profile .orders-table .order-row td {
       padding: 10px;
       transition: transform .4s; }
