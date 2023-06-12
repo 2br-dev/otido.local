@@ -12746,8 +12746,7 @@ main#contacts .map-wrapper {
       main#contacts .map-wrapper #map {
         display: none; } }
   main#contacts .map-wrapper .addresses-wrapper {
-    margin: 20px;
-    margin-top: 50px; }
+    margin: 20px; }
     @media (min-width: 800px) {
       main#contacts .map-wrapper .addresses-wrapper {
         position: absolute;
@@ -12758,7 +12757,9 @@ main#contacts .map-wrapper {
         z-index: 2; } }
     @media (min-width: 800px) {
       main#contacts .map-wrapper .addresses-wrapper {
-        overflow: auto; } }
+        overflow: auto;
+        margin-top: 50px;
+        padding: 10px; } }
     main#contacts .map-wrapper .addresses-wrapper .contact-city {
       margin-bottom: 10px;
       border-radius: 10px;

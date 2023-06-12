@@ -54,10 +54,11 @@ main#contacts{
 			}
 
 			margin: 20px;
-			margin-top: 50px;
-
+			
 			@media(min-width: $medium){
 				overflow: auto;
+				margin-top: 50px;
+				padding: 10px;
 			}
 
 			& .contact-city{

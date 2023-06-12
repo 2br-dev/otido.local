@@ -519,7 +519,7 @@ function initMap()
 			{
 				lonArray.push(parseFloat(lon));
 				latArray.push(parseFloat(lat));
-				coordsArray.push([parseFloat(lon), parseFloat(lat)]);
+				coordsArray.push([parseFloat(lon), parseFloat(lat), element.innerText.trim()]);
 			}
 		})
 
@@ -552,9 +552,15 @@ function initMap()
 		map.setCenter(geoCenter);
 		
 
-		coordsArray.forEach((coord:Array<number>) => {
-			let placemark = new ymaps.Placemark(coord, {}, {iconColor: 'red'});
+		coordsArray.forEach((coord:any) => {
+			let placemark = new ymaps.Placemark([coord[0], coord[1]], {}, {iconColor: 'red'});
+			placemark.placemarkText = coord[2];
 			map.geoObjects.add(placemark);
+			placemark.events.add('click', (e:any) => {
+				let pl = placemark;
+				let url = `https://maps.yandex.ru?ll=${coord[1]},${coord[0]}&mode=whatshere&whatshere[point]=${coord[1]},${coord[0]}&whatshere[zoom]=17&z=17`
+				window.open(url, '_blank');
+			});
 		})
 		map.behaviors.disable('scrollZoom');
 	})
