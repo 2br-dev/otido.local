@@ -7,6 +7,7 @@ module.exports = {
 		filename: 'master.js'
 	},
 	mode: "development",
+	devtool: 'eval-source-map',
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js']
 	},

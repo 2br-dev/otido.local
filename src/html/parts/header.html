@@ -129,57 +129,9 @@
 		</div>
 	</div>
 </div>
-<div class="modal" id="confirm">
-	<div class="modal-content">
-		<div class="content-header">
-			<h3>Подтверждение</h3>
-			<a href="#!" class="modal-close bx bx-x"></a>
-		</div>
-		<p>Вы уверены, что хотите продолжить?</p>
-	</div>
-	<div class="modal-footer">
-		<a href="#!" class="bttn-flat left modal-close waves-effect">Нет</a>
-		<a href="#!" class="bttn-flat modal-close waves-effect">Да</a>
-	</div>
-</div>
-<div class="modal" id="login">
-	<div class="modal-content">
-		<div class="content-header">
-			<h3>Авторизация</h3>
-			<a href="#!" class="modal-close bx bx-x"></a>
-		</div>
-		<div class="inputs">
-			<div class="input-field"><input type="text" placeholder="Логин"></div>
-			<div class="input-field"><input type="password" placeholder="Пароль"></div>
-		</div>
-	</div>
-	<div class="modal-footer">
-		<a href="#register" class="bttn-flat left modal-close modal-trigger waves-effect">Нет аккаунта?</a>
-		<a href="#!" class="bttn-flat left modal-close modal-trigger waves-effect">Напомнить пароль?</a>
-		<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
-	</div>
-</div>
-<div class="modal" id="register">
-	<div class="modal-content">
-		<div class="content-header">
-			<h3>Регистрация</h3>
-			<a href="#!" class="modal-close bx bx-x modal-close"></a>
-		</div>
-		<div class="inputs">
-			<div class="input-field"><input type="text" placeholder="Фамилия"></div>
-			<div class="input-field"><input type="text" placeholder="Имя"></div>
-			<div class="input-field"><input type="text" placeholder="Отчество"></div>
-			<div class="input-field"><input type="tel" placeholder="Телефон"></div>
-			<div class="input-field email"><input type="email" placeholder="E-mail"></div>
-			<div class="input-field"><input type="password" placeholder="Пароль"></div>
-			<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
-		</div>
-	</div>
-	<div class="modal-footer">
-		<a href="#login" class="bttn-flat left modal-close modal-trigger waves-effect">Есть аккаунт?</a>
-		<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
-	</div>
-</div>
+@@include('./modal-confirm.html')
+@@include('./modal-login.html')
+@@include('./modal-register.html')
 <ul class="sidenav" id="mobile">
 	<!-- Зарегистрированный пользователь, полная корзина -->
 	<li class="sidenav-header">

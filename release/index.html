@@ -178,6 +178,19 @@
 				<a href="#!" class="modal-close bx bx-x modal-close"></a>
 			</div>
 			<div class="inputs">
+				<div class="input-field type-selector">
+					<div class="type-wrapper">
+						<div>
+							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="type1"><label for="type1">Частное лицо</label>
+						</div>
+						<div>
+							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="type2"><label for="type2">Организация</label>
+						</div>
+					</div>
+				</div>
+				<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
+				<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
+				<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
 				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
 				<div class="input-field"><input type="text" placeholder="Имя"></div>
 				<div class="input-field"><input type="text" placeholder="Отчество"></div>
@@ -2412,8 +2425,10 @@
 		</div>
 	</footer>
 	<div class="footer-copyright">
-		<span class="copyright">© 2023, От и До</span>
-		<div class="right"><span class="credits">Дизайн, разработка – </span><a href=""><strong>2BR</strong></a></div>
+		<div class="container">
+			<span class="copyright">© 2023, От и До</span>
+			<div class="right"><span class="credits">Дизайн, разработка – </span><a href=""><strong>2BR</strong></a></div>
+		</div>
 	</div>
 	<script src="/js/master.js"></script>
 </body>

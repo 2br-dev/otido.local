@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Контакты'})
+</head>
+<body>
+	@@include('./parts/header.html', {class: 'dark'})
+	<main id="contacts">
+		<section id="small-hero">
+			<div class="image"></div>
+		</section>
+		<section id="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 no-padding">
+						<h1>Контакты</h1>
+					</div>
+				</div>
+				<div class="map-wrapper">
+					<div class="row">
+						<div class="col hide-m-down no-padding">
+							<div id="map"></div>
+						</div>
+					</div>
+					<div class="addresses-wrapper">
+						<div class="affiliates">
+							@@loop('./parts/contact-city.html', './data/cities.json')
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="lawer-data">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Реквизиты</h2>
+					</div>
+					<div class="col l10 offset-l1 m12">
+						<div class="requisites">
+							<div class="kv-pair">
+								<div class="key">Наименование организации</div>
+								<div class="value">ИП Зюлев Виталий Павлович</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">ИНН</div>
+								<div class="value">232303842614</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">ОГРН</div>
+								<div class="value">30423235900110</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">ОКПО</div>
+								<div class="value">0138559783</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Расчётный счёт</div>
+								<div class="value">40802810730280000414 Краснодарское отделение № 8619 ПАО Сбербанк г. Краснодар</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Кор. счёт</div>
+								<div class="value">30101810100000000602</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">БИК</div>
+								<div class="value">040349602</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Юрид. адрес</div>
+								<div class="value">353440, Россия, Краснодарский край, Анапский район, г. Анапа, пер. Спасский, д. 8</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Свидетельство ИП</div>
+								<div class="value">Серия 23 № 005024101 от 07.06.2004</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Телефон</div>
+								<div class="value">+7 (918) 411-90-00</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Телефон бухгалтерии</div>
+								<div class="value">+7 (988) 08-00-949</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">E-mail</div>
+								<div class="value">voda-plus@mail.ru</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

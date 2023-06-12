@@ -1,0 +1,45 @@
+<div class="contact-city">
+	<div class="city-header-wrapper">
+		<div class="city-header">
+			<span>@@city</span>
+		</div>
+		<div class="addresses">
+			@@if(context.addresses){
+				@@for(let i=0; i<addresses.length; i++){
+					<div class="address-wrapper">
+						<div class="address-header">
+							<a href="#!" data-lon="`+addresses[i].coords.lon+`" data-lat="`+addresses[i].coords.lat+`" >
+								<span>`+addresses[i].address+`</span>
+							</a>
+						</div>
+						<div class="address-info">
+							<div class="address-image">
+								<img alt="" class="responsive-img" src="`+addresses[i].image+`">
+							</div>
+							<div class="info-wrapper">
+								@@if(`+addresses[i].officeTime+`){
+									<div class="kv-pair">
+										<div class="key">Время работы</div>
+										<div class="value">`+addresses[i].officeTime+`</div>
+									</div>
+								}
+								@@if(`+addresses[i].callTime+`){
+									<div class="kv-pair">
+										<div class="key">Приём звонков</div>
+										<div class="value">`+addresses[i].callTime+`</div>
+									</div>
+								}
+								@@if(`+addresses[i].phone+`){
+									<div class="kv-pair">
+										<div class="key">Приём заявок</div>
+										<div class="value">`+addresses[i].phone+`</div>
+									</div>
+								}
+							</div>
+						</div>
+					</div>
+				}
+			}
+		</div>
+	</div>
+</div>

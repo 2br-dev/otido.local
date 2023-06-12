@@ -178,6 +178,19 @@
 				<a href="#!" class="modal-close bx bx-x modal-close"></a>
 			</div>
 			<div class="inputs">
+				<div class="input-field type-selector">
+					<div class="type-wrapper">
+						<div>
+							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="type1"><label for="type1">Частное лицо</label>
+						</div>
+						<div>
+							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="type2"><label for="type2">Организация</label>
+						</div>
+					</div>
+				</div>
+				<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
+				<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
+				<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
 				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
 				<div class="input-field"><input type="text" placeholder="Имя"></div>
 				<div class="input-field"><input type="text" placeholder="Отчество"></div>
@@ -315,11 +328,12 @@
 									<li><i class="bx bxs-wallet"></i><span>Баланс</span><a href=""><i class="bx bx-link-external"></i>Добавить</a></li>
 									<li><i class="bx bxs-truck"></i><span>Мои адреса</span><a href="">Изменить</a></li>
 									<li><i class="bx bxs-bulb"></i><span>Мои активности</span><a href="">Смотреть</a></li>
-									<li><i class="bx bxs-cart"></i><span>Мои заказы</span><a href="">Управлять</a></li>
-									<li><i class="bx bx-refresh"></i><span>Последний заказ</span><a href="">Повторить</a></li>
+									<li class="active"><i class="bx bxs-cart"></i><span>Мои заказы</span><a href="">Управлять</a></li>
+									<li><i class="bx bx-refresh"></i><span>Последний заказ</span><a href="/checkout.html">Повторить</a></li>
 									<li><i class="bx bxs-bell"></i><span>Уведомления</span><a href="">Включить</a></li>
 								</ul>
 							</div>
+							<div class="edit-trigger center-align"><a href="#profile-editor" class="bttn-outlined modal-trigger waves-effect">Редактировать профиль</a></div>
 						</div>
 					</div>
 					<div class="col xl9 l8 m7 s12">
@@ -1271,6 +1285,52 @@
 			</div>
 		</section>
 	</main>
+	<div class="modal" id="profile-editor">
+		<div class="modal-content">
+			<div class="content-header">
+				<h3>Редактор профиля</h3>
+				<a href="#!" class="modal-close bx bx-x modal-close"></a>
+			</div>
+			<div class="editor-wrapper">
+				<div class="avatar-editor">
+					<input type="file" id="avatar">
+					<label>
+						<img src="/img/fish/avatar.jpg" alt="">
+						<div class="actions">
+							<label for="avatar" class="bx bx-cloud-upload"></label>
+							<a href="#!" class="bx bx-trash"></a>
+						</div>
+					</label>
+				</div>
+				<div class="inputs">
+					<div class="input-field type-selector">
+						<div class="type-wrapper">
+							<div>
+								<input class="accout-type-selector" type="radio" checked name="eaccount-type" id="etype1" value="type1"><label for="etype1">Частное лицо</label>
+							</div>
+							<div>
+								<input class="accout-type-selector" type="radio" name="eaccount-type" id="etype2" value="type2"><label for="etype2">Организация</label>
+							</div>
+						</div>
+					</div>
+					<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
+					<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
+					<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
+					<div class="input-field"><input type="text" placeholder="Фамилия"></div>
+					<div class="input-field"><input type="text" placeholder="Имя"></div>
+					<div class="input-field"><input type="text" placeholder="Отчество"></div>
+					<div class="input-field"><input type="tel" placeholder="Телефон"></div>
+					<div class="input-field email"><input type="email" placeholder="E-mail"></div>
+					<div class="input-field"><input type="password" placeholder="Пароль"></div>
+					<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#login" class="bttn-flat left modal-close modal-trigger waves-effect">Удалить аккаунт</a>
+			<a href="/profile.html" class="bttn-outlined modal-close">Сохранить изменения</a>
+		</div>
+	</div>
 	<footer>
 		<div class="container">
 			<div class="row flex">
@@ -1317,8 +1377,10 @@
 		</div>
 	</footer>
 	<div class="footer-copyright">
-		<span class="copyright">© 2023, От и До</span>
-		<div class="right"><span class="credits">Дизайн, разработка – </span><a href=""><strong>2BR</strong></a></div>
+		<div class="container">
+			<span class="copyright">© 2023, От и До</span>
+			<div class="right"><span class="credits">Дизайн, разработка – </span><a href=""><strong>2BR</strong></a></div>
+		</div>
 	</div>
 	<script src="/js/master.js"></script>
 </body>

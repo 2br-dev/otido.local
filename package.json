@@ -24,6 +24,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@types/typed.js": "^2.0.9",
     "boxicons": "^2.1.4",
     "gulp-html-beautify": "^1.0.1",
     "imask": "^6.6.1",

@@ -7,7 +7,8 @@
 	},
 	{
 		"img": "/img/fish/coolers/cooler1.png",
-		"header": "Aqua Well 1.5 JXC-1",
+		"header": "Aqua Well",
+		"subheader":"1.5 JXC-1",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -15,14 +16,14 @@
 			}
 		],
 		"cooler": "есть",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler2.png",
-		"header": "Aqua Well 08-M AW ПК BH-YLR-LB-08M белый",
+		"header": "Aqua Well",
+		"subheader": "08-M AW ПК BH-YLR-LB-08M белый",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -30,14 +31,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler3.png",
-		"header": "Aqua Well 03-LD ПЭ AW BH-YLR-03L white/gold",
+		"header": "Aqua Well",
+		"subheader": "03-LD ПЭ AW BH-YLR-03L white/gold",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -45,14 +46,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "электроника",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler4.png",
-		"header": "Aqua Well 2-JXС-1 ПК",
+		"header": "Aqua Well",
+		"subheader": "2-JXС-1 ПК",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -60,14 +61,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler5.png",
-		"header": "Ecotronic 21 K-LC",
+		"header": "Ecotronic",
+		"subheader": "21 K-LC",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -75,14 +76,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler6.jpg",
-		"header": "Aqua Well 89L ПК BH-YLR-89L",
+		"header": "Aqua Well",
+		"subheader": "89L ПК BH-YLR-89L",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -90,14 +91,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler7.png",
-		"header": "Aqua Well 1.5-JX-12А ПКНЗ AW",
+		"header": "Aqua Well",
+		"subheader": "1.5-JX-12А ПКНЗ AW",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -106,14 +107,14 @@
 		],
 		"loading": "нижняя",
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler8.jpg",
-		"header": "Aqua Well 16LD/E ПЭ BH-YLR-16LD/E",
+		"header": "Aqua Well",
+		"subheader": "16LD/E ПЭ BH-YLR-16LD/E",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -121,7 +122,6 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "электроника",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
@@ -134,7 +134,8 @@
 	},
 	{
 		"img": "/img/fish/coolers/cooler9.png",
-		"header": "Aqua Well 1.5-JXD-13 ПЭ YLR 1.5-JXD-13",
+		"header": "Aqua Well",
+		"subheader": "1.5-JXD-13 ПЭ YLR 1.5-JXD-13",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -142,14 +143,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "электроника",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler10.jpg",
-		"header": "Aqua Well 03-L ПК AW BH-YLR-03L SILVER/BLACK",
+		"header": "Aqua Well",
+		"subheader": "03-L ПК AW BH-YLR-03L SILVER/BLACK",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -157,14 +158,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler11.png",
-		"header": "SMixx 07 L",
+		"header": "SMixx",
+		"subheader": "07L",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -172,14 +173,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler12.jpg",
-		"header": "Smixx 26 TW",
+		"header": "Smixx",
+		"subheader": "26 TW",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -187,14 +188,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "без охлаждения",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler13.png",
-		"header": "Smixx 16 LW/E",
+		"header": "Smixx",
+		"subheader": "16 LW/E",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -202,14 +203,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "без охлаждения",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler14.png",
-		"header": "Aqua Well 1.5 JX-1",
+		"header": "Aqua Well",
+		"subheader": "1.5 JX-1",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -217,7 +218,6 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
@@ -230,7 +230,8 @@
 	},
 	{
 		"img": "/img/fish/coolers/cooler15.png",
-		"header": "SMixx 08 L",
+		"header": "SMixx",
+		"subheader": "08L",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -238,14 +239,14 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "компрессор",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler16.jpg",
-		"header": "SMixx 16 LK",
+		"header": "SMixx",
+		"subheader": "16L K",
 		"prices": [
 			{
 				"prefix": "цена",
@@ -253,7 +254,6 @@
 			}
 		],
 		"cooler": "нет",
-		"subheader": "без охлаждения",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
 		"wrapperClass": "col xs6 m6 l4 xl3 h2"

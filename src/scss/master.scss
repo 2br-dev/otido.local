@@ -12,11 +12,15 @@
 @import './parts/helpers';
 @import './parts/typography';
 @import './parts/custom_grid';
+
 @import './pages/main';
 @import './pages/catalog';
 @import './pages/product';
 @import './pages/checkout';
 @import './pages/profile';
+@import './pages/payment';
+@import './pages/service';
+@import './pages/contacts';
 
 .swiper-pagination{
 	z-index: 20000;

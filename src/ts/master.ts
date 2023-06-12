@@ -1,19 +1,26 @@
-import * as M from 'materialize-css';
-import * as $ from 'jquery';
+// import * as M from 'materialize-css';
+// import * as $ from 'jquery';
+import M from 'materialize-css';
+import $ from 'jquery';
 import Lazy from 'vanilla-lazyload';
 import Swiper, {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from 'swiper';
 
 let hasDark:boolean = false;
+(window as any).JQuery = $;
 
 import Typed from 'typed.js';
 Swiper.use([Autoplay, Navigation, EffectCoverflow, EffectFade, Pagination]);
 
-let rakw:number = null;
+let rakw:number = -1;
 let pressed = false;
 let startWidth = 0;
 let stopped = false;
 let pressedTime=0;
 let preventClick=false;
+let map:any;
+let mapCenter:Array<number>;
+
+declare var ymaps:any;
 
 const leftTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .07s, right .4s cubic-bezier(.76,-0.48,.32,1.44) .01s";
 const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .4s cubic-bezier(.76,-0.48,.32,1.44) .07s";
@@ -25,11 +32,11 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	let tommorow = current_date.setDate(current_date.getDate() + 1);
 	let modal = M.Modal.init(document.querySelectorAll('.modal'));
 	let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'));
-	let lazy = new Lazy(null, document.querySelectorAll('.lazy'));
+	let lazy = new Lazy({}, document.querySelectorAll('.lazy'));
 	let tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'), {
 		enterDelay: 200
 	});
-	let carrySlider = null;
+	let carrySlider:Swiper;
 	let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 		firstDay: 1,
 		autoClose: true,
@@ -64,14 +71,18 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 		}
 	});
 	
-	let typed = null;
+	let typed:Typed;
 	let header = document.querySelector('.header-wrapper');
-	hasDark = header?.classList.contains('dark');
+	if(header)
+	{
+		hasDark = header?.classList.contains('dark');
+	}
 	
 	resizeHandler();
 	scrollHandler();
 	
-	document.querySelectorAll('.section-slider').forEach((slider:HTMLElement) => {
+	document.querySelectorAll('.section-slider').forEach(s => {
+		let slider = <HTMLElement>s;
 		let sectionId = slider.dataset['section'];
 		let prevEl = `#${sectionId}-prev`;
 		let nextEl = `#${sectionId}-next`;
@@ -168,8 +179,10 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 			on:{
 				slideChange: (slider:Swiper) => {
 					let activeIndex:number = slider.activeIndex;
-					let text:string = slider.slides[activeIndex].dataset['text'];
+					let text = slider.slides[activeIndex].dataset['text'];
 	
+					if(!text) return;
+
 					if(typed)
 					{
 						typed.destroy();
@@ -190,16 +203,20 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 		})
 	
 		let activeIndex:number = carrySlider.activeIndex;
-		let text:string = carrySlider.slides[activeIndex].dataset['text'];
+		let text = carrySlider.slides[activeIndex].dataset['text'];
+
+		if(text)
+		{
+			typed = new Typed('.typed', {
+				strings: [text],
+				backDelay: 2000000000,
+				typeSpeed: 20,
+				loop: true,
+				cursorChar: '_',
+				smartBackspace: false,
+			});
+		}
 		
-		typed = new Typed('.typed', {
-			strings: [text],
-			backDelay: 2000000000,
-			typeSpeed: 20,
-			loop: true,
-			cursorChar: '_',
-			smartBackspace: false,
-		});
 	}
 	
 	if($('.partners-slider').length){
@@ -233,15 +250,17 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 					let slidesCount = subslider.slides.length;
 	
 					subslider.slideTo(0, 0);
-					subslider.el.querySelectorAll('.swiper-pagination-bullet span').forEach((el:HTMLSpanElement) => {
-						el.style.width='0';
+					subslider.el.querySelectorAll('.swiper-pagination-bullet span').forEach(el => {
+						(<HTMLElement>el).style.width='0';
 					})
 	
 					startWidth=0;
 				}
 			}
 		});
-		document.querySelectorAll('#stories-root .swiper').forEach((story:HTMLElement) => {
+		document.querySelectorAll('#stories-root .swiper').forEach(s => {
+
+			let story = <HTMLElement>s
 	
 			let nextNav = <HTMLElement>story.querySelector('.next');
 			let prevNav = <HTMLElement>story.querySelector('.prev');
@@ -388,36 +407,36 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 						let index = storySlide.realIndex;
 	
 						// Заполняем все
-						storySlide.el.querySelectorAll('.swiper-pagination-bullet span').forEach((el:HTMLElement) => {
-							el.style.width = '100%';
+						storySlide.el.querySelectorAll('.swiper-pagination-bullet span').forEach(el => {
+							(<HTMLElement>el).style.width = '100%';
 						});
 	
 						// Сбрасываем все после текущего
-						storySlide.el.querySelectorAll(`[data-slide="${index}"] ~ .swiper-pagination-bullet span`).forEach((el:HTMLElement) => {
-							el.removeAttribute('style');
+						storySlide.el.querySelectorAll(`[data-slide="${index}"] ~ .swiper-pagination-bullet span`).forEach(el => {
+							(<HTMLElement>el).removeAttribute('style');
 						});
 	
 						// Сбрасываем текущий
-						storySlide.el.querySelector(`[data-slide="${index}"]  span`).removeAttribute('style');
+						storySlide.el.querySelector(`[data-slide="${index}"]  span`)?.removeAttribute('style');
 	
 						// Сбрасываем глобальный счётчик
 						startWidth = 0;
 					},
-					navigationPrev: function(storySlide){
+					navigationPrev: function(storySlide:Swiper){
 						let index = storySlide.realIndex;
 	
 						// Заполняем все
-						storySlide.el.querySelectorAll('.swiper-pagination-bullet span').forEach((el:HTMLElement) => {
-							el.style.width = '100%';
+						storySlide.el.querySelectorAll('.swiper-pagination-bullet span').forEach(el => {
+							(<HTMLElement>el).style.width = '100%';
 						});
 	
 						// Сбрасываем все после текущего
-						storySlide.el.querySelectorAll(`[data-slide="${index}"] ~ .swiper-pagination-bullet span`).forEach((el:HTMLElement) => {
-							el.removeAttribute('style');
+						storySlide.el.querySelectorAll(`[data-slide="${index}"] ~ .swiper-pagination-bullet span`).forEach(el => {
+							(<HTMLElement>el).removeAttribute('style');
 						});
 	
 						// Сбрасываем текущий
-						storySlide.el.querySelector(`[data-slide="${index}"]  span`).removeAttribute('style');
+						storySlide.el.querySelector(`[data-slide="${index}"]  span`)?.removeAttribute('style');
 	
 						// Сбрасываем глобальный счётчик
 						startWidth = 0;
@@ -438,9 +457,11 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 			storySwiper.slideTo(0);
 		});
 	}
+
+	if($('#map').length) loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU', initMap);
 	
 	$(window).on('resize', resizeHandler);
-	$('html, body').on('scroll', scrollHandler);
+	window.addEventListener('scroll', scrollHandler)
 	$('body').on('click', '.folder > a', toggleFolder);
 	$('body').on('click', '.bttn-cart', flipSmartBttn);
 	$('body').on('click', '.cart-bttn-small.bx-minus', minusSmartBttn);
@@ -460,20 +481,198 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	$('body').on('click', '.input-field li a', selectInterval);
 	$('body').on('click', clickOutside);
 	$('body').on('click', '.order-row', toggleOrderDetails);
+	$('body').on('change', '.accout-type-selector', switchAccountType);
+	$('body').on('click', '.address-wrapper a', openAddress);
+	$('body').on('click', '.city-header', openCity);
 
 	if($('[name=address]').length){
 		let el = <HTMLElement>document.querySelector('[name=address]');
-		$('[name=city]').val(el.dataset['city']);
-		$('[name=street]').val(el.dataset['street']);
-		$('[name=house]').val(el.dataset['house']);
-		$('[name=block]').val(el.dataset['block']);
-		$('[name=app]').val(el.dataset['app']);
-		$('[name=entrance]').val(el.dataset['entrance']);
-		$('[name=floor]').val(el.dataset['floor']);
-		$('[name=domofon]').val(el.dataset['domofon']);
+		$('[name=city]').val(el.dataset['city'] || "");
+		$('[name=street]').val(el.dataset['street'] || "");
+		$('[name=house]').val(el.dataset['house'] || "");
+		$('[name=block]').val(el.dataset['block'] || "");
+		$('[name=app]').val(el.dataset['app'] || "");
+		$('[name=entrance]').val(el.dataset['entrance'] || "");
+		$('[name=floor]').val(el.dataset['floor'] || "");
+		$('[name=domofon]').val(el.dataset['domofon'] || "");
 	}
 
 })()
+
+function initMap()
+{
+	ymaps.ready(() => {
+
+		// Получаем центр карты из среднеарифметического координат адресов
+		let coordsHeader = document.querySelectorAll('.address-header a');
+		
+		let lonArray = new Array<number>();
+		let latArray = new Array<number>();
+		let coordsArray = new Array();
+
+		coordsHeader.forEach(el => {
+			let element = <HTMLElement>el;
+			let lon = element.dataset['lon']?.toString();
+			let lat = element.dataset['lat']?.toString();
+
+			if(lon && lat)
+			{
+				lonArray.push(parseFloat(lon));
+				latArray.push(parseFloat(lat));
+				coordsArray.push([parseFloat(lon), parseFloat(lat)]);
+			}
+		})
+
+		let minLon = Math.min(...lonArray)
+		let maxLon = Math.max(...lonArray)
+		let lon = (minLon + maxLon) / 2;
+
+		let minLat = Math.min(...latArray)
+		let maxLat = Math.max(...latArray)
+		let lat = (minLat + maxLat) / 2;
+
+		mapCenter = [lon, lat]
+
+		map = new ymaps.Map('map', {
+			center: [lon, lat],
+			zoom: 10
+		})
+
+		// Смещаем центр карты, отодвигаем от списка филиалов
+		let pixelCenter = map.getGlobalPixelCenter([lon, lat]);
+		let sidebarWidth = document.querySelector('.affiliates')?.clientWidth;
+		if(!sidebarWidth) return;
+		
+		let newPixelCenter = [
+			pixelCenter[0] + sidebarWidth / 2,
+			pixelCenter[1]
+		];
+
+		let geoCenter = map.options.get('projection').fromGlobalPixels(newPixelCenter, map.getZoom());
+		map.setCenter(geoCenter);
+		
+
+		coordsArray.forEach((coord:Array<number>) => {
+			let placemark = new ymaps.Placemark(coord, {}, {iconColor: 'red'});
+			map.geoObjects.add(placemark);
+		})
+		map.behaviors.disable('scrollZoom');
+	})
+}
+
+function flyToAffiliate(coords:Array<number>, zoom:number)
+{
+	map.setCenter(coords, zoom);
+
+	// Смещаем центр карты, отодвигаем от списка филиалов
+	let pixelCenter = map.getGlobalPixelCenter(coords);
+	let sidebarWidth = document.querySelector('.affiliates')?.clientWidth;
+	if(!sidebarWidth) return;
+
+	let newPixelCenter = [
+		pixelCenter[0] + sidebarWidth / 2,
+		pixelCenter[1]
+	];
+
+	let geoCenter = map.options.get('projection').fromGlobalPixels(newPixelCenter, map.getZoom());
+	map.setCenter(geoCenter, zoom);
+}
+
+function loadScript(url:string, callback:() => void){
+
+	var script = <any>document.createElement("script")
+	script.type = "text/javascript";
+
+	if (script.readyState){  //IE
+		script.onreadystatechange = function(){
+			if (script.readyState == "loaded" ||
+					script.readyState == "complete"){
+				script.onreadystatechange = null;
+				debugger;
+				callback();
+			}
+		};
+	} else {  //Others
+		script.onload = function(){
+			callback();
+		};
+	}
+
+	script.src = url;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+function openCity(e:JQuery.ClickEvent)
+{
+	e.preventDefault();
+	let el = $(e.currentTarget).next();
+	let already =el.hasClass('open');
+
+	$('.contact-city .addresses').slideUp('fast').removeClass('open');
+	$('.contact-city .address-info').slideUp('fast').removeClass('open');
+	if(!already)
+	{
+		el.slideDown('fast', () => {
+			el.find('.address-wrapper:first-of-type .address-info').slideDown('fast').addClass('open');
+			let coordsHost = el.find('.address-wrapper:first-of-type a')[0];
+			
+			if(coordsHost.dataset['lon'] && coordsHost.dataset['lat']){
+				let coords = [
+					parseFloat(coordsHost.dataset['lon']),
+					parseFloat(coordsHost.dataset['lat'])
+				]
+				flyToAffiliate(coords, 17);
+			}
+			
+		}).addClass('open');
+	}else{
+		flyToAffiliate(mapCenter, 10)
+	}
+}
+
+function openAddress(e:JQuery.ClickEvent)
+{
+	e.preventDefault();
+	let el = <HTMLElement>e.currentTarget;
+	let parent = $(el).parents('.contact-city');
+	let headerParent = $(el).parents('.address-wrapper');
+	let already = headerParent.find('.address-info').hasClass('open');
+	$(parent).find('.address-info').slideUp('fast').removeClass('open');
+	if(!already)
+	{
+		let innerParent = $(el).parents('.address-wrapper');
+		let addresses = $(innerParent).find('.address-info');
+		addresses.slideDown().addClass('open');
+	}
+
+	if(el.dataset['lon'] && el.dataset['lat'])
+	{
+		let coords = [
+			parseFloat(el.dataset['lon']),
+			parseFloat(el.dataset['lat'])
+		]
+
+		flyToAffiliate(coords, 17);
+	}
+}
+
+function switchAccountType(e:JQuery.ChangeEvent)
+{
+	let el = e.currentTarget;
+	let value = el.value;
+
+	let $modal = $(el).parents('.modal');
+
+	switch(value)
+	{
+		case "type1":
+			$modal.find('.law').addClass('hide');
+			break;
+		case "type2":
+			$modal.find('.law').removeClass('hide');
+			break;
+	}
+}
 
 function toggleOrderDetails(e:JQuery.ClickEvent)
 {
@@ -487,19 +686,24 @@ function toggleOrderDetails(e:JQuery.ClickEvent)
 function clickOutside(e:JQuery.ClickEvent)
 {
 	let path = e.originalEvent?.composedPath();
-	let filtered = path.filter(el => {
-		let element = <HTMLElement>el;
-		if(element.classList){
-			return element.classList.contains('input-field');
+	let filtered:any;
+	if(path)
+	{
+		let filtered = path.filter(el => {
+			let element = <HTMLElement>el;
+			if(element.classList){
+				return element.classList.contains('input-field');
+			}
+		});
+		if(!filtered.length){
+			$('.input-field').removeClass('hover');
 		}
-	});
-	if(!filtered.length){
-		$('.input-field').removeClass('hover');
 	}
 
-	filtered = path?.filter((el:HTMLElement) => {
-		if(el.classList){
-			return el.tagName.toLowerCase() == 'table';
+	filtered = path?.filter(el => {
+		let element = <HTMLElement>el;
+		if(element.classList){
+			return element.tagName.toLowerCase() == 'table';
 		}
 	})
 	if(!filtered.length){
@@ -513,27 +717,29 @@ function selectInterval(e:JQuery.ClickEvent)
 	e.preventDefault();
 	let el = <HTMLLinkElement>e.currentTarget;
 	let value = el.getAttribute('data-value');
-	let text = el.textContent;
-	let parent = $(el).parents('.input-field');
-	let input = parent.find('[type=hidden]');
-	let valueContainer = parent.find('input');
-	valueContainer.val(text);
-	input.val(value);
-	if(text == ""){
-		parent.find('.current').addClass('empty');
-	}else{
-		parent.find('.current').removeClass('empty');
+	if(el.textContent){
+		let text:string = el.textContent.toString();
+		let parent = $(el).parents('.input-field');
+		let input = parent.find('[type=hidden]');
+		let valueContainer = parent.find('input');
+		valueContainer.val(text);
+		input.val(value || "");
+		if(text == ""){
+			parent.find('.current').addClass('empty');
+		}else{
+			parent.find('.current').removeClass('empty');
+		}
+		parent.removeClass('hover');
+		e.stopPropagation();
+		let elNoNeedRecall = <HTMLElement>document.getElementById("dont-recall-wrapper");
+		if(value != 'undefined'){
+			elNoNeedRecall.classList.remove('hidden');
+		}else{
+			elNoNeedRecall.classList.add('hidden');
+			let inputNoNeedRecall = <HTMLInputElement>document.getElementById('dont-recall');
+			inputNoNeedRecall.removeAttribute('checked');
+		}
 	}
-	parent.removeClass('hover');
-	e.stopPropagation();
-	let elNoNeedRecall = <HTMLElement>document.getElementById("dont-recall-wrapper");
-	if(value != 'undefined'){
-	    elNoNeedRecall.classList.remove('hidden');
-    }else{
-        elNoNeedRecall.classList.add('hidden');
-        let inputNoNeedRecall = <HTMLInputElement>document.getElementById('dont-recall');
-        inputNoNeedRecall.removeAttribute('checked');
-    }
 }
 
 function openIntervalList(e:JQuery.ClickEvent)
@@ -571,19 +777,23 @@ function disableContextMenu()
 function scrollHandler()
 {
 	let header = document.querySelector('.header-wrapper');
-	let scrollTop = document.querySelector('html').scrollTop;
+	let scrollTop = document.querySelector('html')?.scrollTop;
 
-	if(scrollTop >= 200)
+	if(scrollTop)
 	{
-		header?.classList.add('fixed');
-		header?.classList.remove('dark');
-		
-	}else{
-		header?.classList.remove('fixed');
-		if(hasDark){
-			header?.classList.add('dark');
+		if(scrollTop >= 200)
+		{
+			header?.classList.add('fixed');
+			header?.classList.remove('dark');
+			
+		}else{
+			header?.classList.remove('fixed');
+			if(hasDark){
+				header?.classList.add('dark');
+			}
 		}
 	}
+
 }
 
 function setInterval(e:JQuery.ChangeEvent)
@@ -632,8 +842,9 @@ function loadBig(e:JQuery.ClickEvent)
 		bigImg.src=src;
 	}
 
-	document.querySelectorAll('.gallery-thumb').forEach((el:HTMLLinkElement) => {
-		el.classList.remove('active');
+	document.querySelectorAll('.gallery-thumb').forEach(el => {
+		let element = <HTMLElement>el
+		element.classList.remove('active');
 	})
 
 	e.currentTarget.classList.add('active');
@@ -645,12 +856,18 @@ function handleArrowClick(e:JQuery.ClickEvent)
 	let el = e.currentTarget;
 	let direction = el.classList.contains('left') ? -1 : 1;
 	let wrapper = document.querySelector('.stories');
-	let currentPos = wrapper?.scrollLeft;
-	let shift = (document.querySelector('.stories-wrapper li')?.getBoundingClientRect().width+10) * 3;
-
-	$('.stories').animate({
-		scrollLeft: currentPos + (shift * direction)
-	}, 400);
+	if(wrapper)
+	{
+		let currentPos = wrapper.scrollLeft;
+		let li = document.querySelector('.stories-wrapper li');
+		if(li)
+		{
+			let shift = (li?.getBoundingClientRect().width+10) * 3;
+			$('.stories').animate({
+				scrollLeft: currentPos + (shift * direction)
+			}, 400);
+		}
+	}
 }
 
 function flipSmartBttn(e:JQuery.ClickEvent)
@@ -658,10 +875,14 @@ function flipSmartBttn(e:JQuery.ClickEvent)
 	e.preventDefault();
 	let $parent = $(this).parents('.smart-bttn');
 	let $input = $parent.find('input');
-	let value = parseInt($input.val()?.toString());
-	value++;
-	$input.val(value);
-	$(this).parents('.smart-bttn').addClass('flip');
+	let inputValue = $input.val();
+	if(inputValue){
+		let inputStrValue = inputValue.toString();
+		let value = parseInt(inputStrValue);
+		value++;
+		$input.val(value);
+		$(this).parents('.smart-bttn').addClass('flip');
+	}
 }
 
 function minusSmartBttn(e:JQuery.ClickEvent)
@@ -669,15 +890,20 @@ function minusSmartBttn(e:JQuery.ClickEvent)
 	e.preventDefault();
 	let $parent = $(this).parents('.smart-bttn');
 	let $input = $parent.find('input');
-	let value = parseInt($input.val()?.toString());
-	value--;
-	if(value == 0){
-		$parent.removeClass('flip');
-		setTimeout(() => {
+	let inputValue = $input.val();
+	if(inputValue)
+	{
+		let inputStrValue = inputValue.toString();
+		let value = parseInt(inputStrValue);
+		value--;
+		if(value == 0){
+			$parent.removeClass('flip');
+			setTimeout(() => {
+				$input.val(value);
+			}, 200);
+		}else{
 			$input.val(value);
-		}, 200);
-	}else{
-		$input.val(value);
+		}
 	}
 }
 
@@ -686,9 +912,12 @@ function plusSmartBttn(e:JQuery.ClickEvent)
 	e.preventDefault();
 	let $parent = $(this).parents('.smart-bttn');
 	let $input = $parent.find('input');
-	let value = parseInt($input.val()?.toString());
-	value++;
-	$input.val(value);
+	let inputValue = $input.val();
+	if(inputValue){
+		let value = parseInt(inputValue?.toString());
+		value++;
+		$input.val(value);
+	}
 }
 
 function toggleFolder(e:JQuery.ClickEvent)
@@ -729,7 +958,7 @@ function animate()
 	let selectedSlider:Swiper = (rootSlide as any).swiper;
 	let selectedSliderSelection = selectedSlider.realIndex;
 	let selectedBullet = rootSlide.querySelector(`.swiper-pagination-bullet-active`);
-	let span = selectedBullet.querySelector('span');
+	let span = selectedBullet?.querySelector('span');
 
 	// Количество слайдов во вложенном слайдере
 	let slides = selectedSlider.slides.length;
@@ -739,25 +968,27 @@ function animate()
 		startWidth += .2;
 	}
 	
-
-	span.style.width = startWidth + "%"
-
-	if(startWidth >= 100){
-
-		if(selectedSliderSelection < (slides - 1)){
-			selectedSlider.slideNext();
-		}else{
-			root.slideNext();
-		}
-
-		let rootEnd = selectedIndex == root.slides.length - 1;
-		let childEnd = selectedSliderSelection == slides - 1;
-
-		if(rootEnd && childEnd)
-		{
-			closeStories();
-		}else{
-			startWidth = 0
+	if(span)
+	{
+		span.style.width = startWidth + "%"
+	
+		if(startWidth >= 100){
+	
+			if(selectedSliderSelection < (slides - 1)){
+				selectedSlider.slideNext();
+			}else{
+				root.slideNext();
+			}
+	
+			let rootEnd = selectedIndex == root.slides.length - 1;
+			let childEnd = selectedSliderSelection == slides - 1;
+	
+			if(rootEnd && childEnd)
+			{
+				closeStories();
+			}else{
+				startWidth = 0
+			}
 		}
 	}
 }
@@ -774,44 +1005,53 @@ function closeStories()
 function launchStories(e:JQuery.ClickEvent)
 {
 	let el = <HTMLLinkElement>e.currentTarget;
-	let slideNum = parseInt(el.dataset['slide']) - 1;
-	let root:Swiper = (document.querySelector('#stories-root') as any).swiper;
-	root.slideTo(slideNum, 0);
-
-	let subslider = (root.slides[slideNum].querySelector('.swiper') as any).swiper;
-	subslider.slideTo(0, 0);
-
-	let video = <HTMLVideoElement>subslider.slides[0].querySelector('video');
-	if(video)
+	let dataSlide = el.dataset['slide'];
+	if(dataSlide)
 	{
-		video.currentTime=0;
-		video.play();
+		let dataSlideNum = dataSlide.toString();
+		let slideNum = parseInt(dataSlideNum) - 1;
+		let root:Swiper = (document.querySelector('#stories-root') as any).swiper;
+		root.slideTo(slideNum, 0);
+	
+		let subslider = (root.slides[slideNum].querySelector('.swiper') as any).swiper;
+		subslider.slideTo(0, 0);
+	
+		let video = <HTMLVideoElement>subslider.slides[0].querySelector('video');
+		if(video)
+		{
+			video.currentTime=0;
+			video.play();
+		}
+	
+		root.el.querySelectorAll('.swiper-pagination-bullet span').forEach(el => {
+			let element = <HTMLElement>el;
+			element.style.width = '0';
+		})
+	
+		let modal = <HTMLDivElement>document.querySelector('.stories-modal');
+		modal.classList.add('open');
+		startWidth=0;
+		animate();
 	}
-
-	root.el.querySelectorAll('.swiper-pagination-bullet span').forEach((el:HTMLSpanElement) => {
-		el.style.width = '0';
-	})
-
-	let modal = <HTMLDivElement>document.querySelector('.stories-modal');
-	modal.classList.add('open');
-	startWidth=0;
-	animate();
 }
 
 function hideStories(e:JQuery.ClickEvent)
 {
 	let el = e.target;
 	let path = e.originalEvent?.composedPath();
-
-	let stayReasons = path?.filter((el:HTMLElement) => {
-		if(el.classList){
-			return el.classList.contains('swiper');
-		}
-	});
-
-	if(stayReasons.length == 0)
+	if(path)
 	{
-		closeStories();
+		let stayReasons = path.filter(el => {
+			let element = <HTMLElement>el
+			if(element.classList){
+				return element.classList.contains('swiper');
+			}
+		});
+	
+		if(stayReasons.length == 0)
+		{
+			closeStories();
+		}
 	}
 
 }
@@ -821,25 +1061,25 @@ function resizeHandler()
 	// Отработка Stories
 	if(document.querySelectorAll('ul.stories').length){
 		let storiesWrapper = document.querySelector('.stories-wrapper');
-		let stories = storiesWrapper.querySelector('ul.stories');
-		let containerWidth = stories?.getBoundingClientRect().width;
-		let entryWidth = stories.querySelector('li').getBoundingClientRect().width + 10;
-		let entryCount = stories?.querySelectorAll('li').length;
-		let contentWidth = entryWidth*entryCount;
-
-		console.log({
-			contentWidth, containerWidth
-		})
-
-		if(containerWidth < contentWidth)
+		let stories = storiesWrapper?.querySelector('ul.stories');
+		let storiesLi = stories?.querySelector('li');
+		if(storiesLi && stories)
 		{
-			storiesWrapper?.querySelectorAll('.arrow').forEach((el:HTMLLIElement) => {
-				el.classList.add('visible')
-			})
-		}else{			
-			storiesWrapper?.querySelectorAll('.arrow').forEach((el:HTMLLIElement) => {
-				el.classList.remove('visible')
-			})
+			let containerWidth = stories.getBoundingClientRect().width;
+			let entryWidth = storiesLi.getBoundingClientRect().width + 10;
+			let entryCount = stories.querySelectorAll('li').length;
+			let contentWidth = entryWidth*entryCount;
+	
+			if(containerWidth < contentWidth)
+			{
+				storiesWrapper?.querySelectorAll('.arrow').forEach(el => {
+					(<HTMLElement>el).classList.add('visible')
+				})
+			}else{			
+				storiesWrapper?.querySelectorAll('.arrow').forEach(el => {
+					(<HTMLElement>el).classList.remove('visible')
+				})
+			}
 		}
 	}
 
@@ -889,7 +1129,7 @@ function tabClick(e:JQuery.ClickEvent)
   document.querySelectorAll('.tab-content').forEach(el => {el.classList.remove('active');});
   document.querySelectorAll('.tab').forEach(el => {el.classList.remove('active');});
   parent.classList.add('active');
-  document.querySelector(href).classList.add('active');
+  document.querySelector(href)?.classList.add('active');
 }
 
 function loadIntervals(date){

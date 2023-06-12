@@ -37,7 +37,7 @@ gulp.task('scss', () => {
 
 //= HTML =============================================
 gulp.task('html', () => {
-	return gulp.src('./src/html/**/*.html')
+	return gulp.src('./src/html/*.html')
 		.pipe(include())
 		.pipe(beautify({
 			indentSize: 4,

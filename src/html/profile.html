@@ -30,11 +30,12 @@
 									<li><i class="bx bxs-wallet"></i><span>Баланс</span><a href=""><i class="bx bx-link-external"></i>Добавить</a></li>
 									<li><i class="bx bxs-truck"></i><span>Мои адреса</span><a href="">Изменить</a></li>
 									<li><i class="bx bxs-bulb"></i><span>Мои активности</span><a href="">Смотреть</a></li>
-									<li><i class="bx bxs-cart"></i><span>Мои заказы</span><a href="">Управлять</a></li>
-									<li><i class="bx bx-refresh"></i><span>Последний заказ</span><a href="">Повторить</a></li>
+									<li class="active"><i class="bx bxs-cart"></i><span>Мои заказы</span><a href="">Управлять</a></li>
+									<li><i class="bx bx-refresh"></i><span>Последний заказ</span><a href="/checkout.html">Повторить</a></li>
 									<li><i class="bx bxs-bell"></i><span>Уведомления</span><a href="">Включить</a></li>
 								</ul>
 							</div>
+							<div class="edit-trigger center-align"><a href="#profile-editor" class="bttn-outlined modal-trigger waves-effect">Редактировать профиль</a></div>
 						</div>
 					</div>
 					<div class="col xl9 l8 m7 s12">
@@ -70,6 +71,7 @@
 			</div>
 		</section>
 	</main>
+	@@include('./parts/modal-profile-editor.html')
 	@@include('./parts/footer.html')
 	<script src="/js/master.js"></script>
 </body>

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Оформление заказа</title>
+	<title>Оплата и доставка</title>
 	<link rel="stylesheet" href="/css/master.css">
 </head>
 
@@ -303,353 +303,171 @@
 		<li><a href="/service.html">Сервис</a></li>
 		<li><a href="/contacts.html">Контакты</a></li>
 	</ul>
-	<main id="checkout">
-		<section>
+	<main id="payment">
+		<section id="main-content">
 			<div class="container">
 				<div class="row flex">
-					<div class="col s12">
-						<h1>Оформление заказа</h1>
+					<div class="col">
+						<h1>Оплата и доставка</h1>
 					</div>
-					<div class="col l8 order-m1 row">
-						<div class="color-wrapper">
-							<h2>Учётная запись</h2>
-							<form action="" class="row">
-								<div class="col l4 m12">
-									<div class="input-field"><input autocomplete="off" type="text" placeholder="Фамилия"></div>
-								</div>
-								<div class="col l4 m6 s6 xs12">
-									<div class="input-field"><input autocomplete="off" type="text" placeholder="Имя"></div>
-								</div>
-								<div class="col l4 m6 s6 xs12">
-									<div class="input-field"><input autocomplete="off" type="text" placeholder="Отчество"></div>
-								</div>
-								<div class="col m8 s6 xs12">
-									<div class="input-field"><input autocomplete="off" type="email" placeholder="E-mail"></div>
-								</div>
-								<div class="col l4 m4 s6 xs12">
-									<div class="input-field"><input autocomplete="off" type="text" placeholder="Телефон"></div>
-								</div>
-								<div class="col s12 right-align">
-									<a href="#login" class="bttn-flat waves-effect modal-trigger">Войти</a>
-								</div>
-							</form>
-							<p>
-								Нажимая кнопку Оформить заказ», я принимаю условия <a href="/agreement.html">Пользовательского соглашения</a>
-								и даю своё согласие на обработку персональных данных Интернет-Магазина «Аква.Рус»
-								в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных»,
-								на условиях и для целей, определенных <a href="/policy.html">Политикой конфиденциальности</a>
-								и <a href="/collect.html">Политикой в отношении обработки персональных данных</a>
-							</p>
+					<div class="col l6 m12">
+						<div class="icon-header">
+							<div class="icon-wrapper">
+								<img src="/img/icons/payment.png" alt="">
+							</div>
+							<div class="head-wrapper">
+								<h2>Оплата товара</h2>
+							</div>
 						</div>
-						<form action="" class="row">
-							<div class="col s12">
-								<div class="color-wrapper">
-									<div class="row">
-										<div class="col s12">
-											<h2>Адрес доставки</h2>
-										</div>
-										<div class="col m5 s12">
-											<ul class="address-list">
-												<li class="input-field">
-													<input id="address1" name="address" type="radio" data-city="Краснодар" data-street="Московская" data-house="129" data-block="" data-app="206" data-entrance="2" data-domofon="206" checked>
-													<label for="address1">ул. Московская, 129/206</label>
-
-
-													<a href="#!" class="mdi mdi-delete"></a>
-
-
-												</li>
-												<li class="input-field">
-													<input id="address2" name="address" type="radio" data-city="Краснодар" data-street="Северная" data-house="324" data-block="Г" data-app="51" data-entrance="1" data-domofon="51">
-													<label for="address2">ул. Северная, д. 324, литер Г</label>
-
-
-													<a href="#!" class="mdi mdi-delete"></a>
-
-
-												</li>
-												<li class="input-field">
-													<input id="address3" name="address" type="radio" data-city="Ессентуки" data-street="Пушкина" data-house="46" data-block="" data-app="9" data-entrance="1" data-domofon="">
-													<label for="address3">ул. Пушкина, 46/9</label>
-
-
-													<a href="#!" class="mdi mdi-delete"></a>
-
-
-												</li>
-												<li class="input-field">
-													<input id="other" name="address" type="radio" data-city="" data-street="" data-house="" data-block="" data-app="" data-entrance="" data-domofon="">
-													<label for="other">Указать вручную</label>
-
-
-
-												</li>
-											</ul>
-										</div>
-										<div class="col m7 s12">
-											<div class="row address-details">
-												<div class="col s6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="city" placeholder="Город"></div>
-												</div>
-												<div class="col s6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="street" placeholder="Улица"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="house" placeholder="Дом"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="block" placeholder="Корпус"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="app" placeholder="Квартира/офис"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="entrance" placeholder="Подъезд"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="floor" placeholder="Этаж"></div>
-												</div>
-												<div class="col xl4 l6 m6 s6 xs6 t6">
-													<div class="input-field disable"><input autocomplete="off" type="text" name="domofon" placeholder="Домофон"></div>
-												</div>
-											</div>
-										</div>
-									</div>
+						<div class="row flex">
+							<div class="col xl6 l6 m6 s12">
+								<div class="payment-card">
+									<h3>При получении</h3>
+									<p>Вы можете оплатить заказ курьеру при получении с помощью банковской карты или наличным расчётом.</p>
 								</div>
 							</div>
-							<div class="col">
-								<div class="color-wrapper">
-									<h2>Дата поставки</h2>
-									<div class="row">
-										<div class="col l5 m5">
-											<ul class="delivery-list">
-												<li class="input-field"><input type="radio" name="delivery-day" checked id="nearest"><label for="nearest">Ближайшая (менеджер уточнит)</label></li>
-												<li class="input-field"><input type="radio" name="delivery-day" id="manual"><label for="manual">Выбрать дату</label></li>
-											</ul>
-										</div>
-										<div class="col l7 m7 s12">
-											<div class="row">
-												<div class="col xs6 delivery-details" id="delivery-date">
-													<div class="input-field">
-														<input autocomplete="off" type="text" placeholder="Дата поставки" class="datepicker" readonly>
-													</div>
-													<div class="input-field">
-														<input type="checkbox" id="dont-recall">
-														<label for="dont-recall">Не перезванивать</label>
-													</div>
-												</div>
-												<div class="col xs6 delivery-details" id="delivery-time">
-													<div class="input-field">
-														<label for="date">
-															<input type="text" placeholder="Выберите интервал" readonly id="interval">
-														</label>
-														<ul class="dropdown interval-dropdown visible" id="weekdays">
-															<li><a href="" class="waves-effect">c 9:00 до 15:00</a></li>
-															<li><a href="" class="waves-effect">c 12:00 до 15:00</a></li>
-															<li><a href="" class="waves-effect">с 18:00 до 22:00</a></li>
-														</ul>
-														<ul class="dropdown interval-dropdown" id="holydays">
-															<li><a href="" class="waves-effect">с 11:00 до 16:00</a></li>
-															<li><a href="" class="waves-effect">с 18:00 до 22:00</a></li>
-														</ul>
-														<input type="hidden" name="interval">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+							<div class="col xl6 l6 m6 s12">
+								<div class="payment-card">
+									<h3>Картой онлайн</h3>
+									<p>Вы можете оплатить заказ с помощью карты основных платёжных систем, работающих в России: Visa®, MasterCard™ и Мир®</p>
 								</div>
 							</div>
-							<div class="col">
-								<div class="color-wrapper">
-									<h2>Оплата</h2>
-									<!-- Пример информационной вставки -->
-									<!-- Доступные классы: error, warning, info, success -->
-									<!-- К месту не привязан можно использовать в других местах сайта -->
-									<div class="note error">
-										<div class="text align-center-m-down">Ой! К сожалению на вашем счёте недостаточно средств для оплаты заказа ((</div>
-										<a href="#!" class="action">Пополнить</a>
-									</div>
-									<!-- /Пример информационной вставки -->
-									<div class="payments-wrapper row">
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="cash" checked>
-												<label for="cash">
-													<span class="title">Наличными</span>
-
-													<span class="subtitle">курьеру</span>
-
-
-												</label>
-											</div>
-										</div>
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="card-online">
-												<label for="card-online">
-													<span class="title">Картой</span>
-
-													<span class="subtitle">онлайн</span>
-
-
-												</label>
-											</div>
-										</div>
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="card-offline">
-												<label for="card-offline">
-													<span class="title">Картой</span>
-
-													<span class="subtitle">при получении</span>
-
-
-												</label>
-											</div>
-										</div>
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="non-cash">
-												<label for="non-cash">
-													<span class="title">Безналичный</span>
-
-													<span class="subtitle">расчёт</span>
-
-
-												</label>
-											</div>
-										</div>
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="on-arrival">
-												<label for="on-arrival">
-													<span class="title">Наличными</span>
-
-													<span class="subtitle">курьеру</span>
-
-
-												</label>
-											</div>
-										</div>
-										<div class="col xl2 l4 m4 s6 xs6 t12">
-											<div class="payment input-field">
-												<input type="radio" name="payment" id="from-ballance">
-												<label for="from-ballance">
-													<span class="title">С балланса</span>
-
-													<span class="subtitle">240 ₽</span>
-
-
-												</label>
-											</div>
-										</div>
-									</div>
-									<p>Поддерживаются основные платёжные системы, работающие в России: Visa®, MasterCard™, Мир®</p>
-									<div class="input-field">
-										<textarea placeholder="Комментарий" name=""></textarea><label for="">Комментарий</label>
-									</div>
-									<div class="right-align">
-										<a href="/result.html" class="bttn" id="send">Оформить заказ</a>
-									</div>
+							<div class="col xl6 l6 m6 s12">
+								<div class="payment-card">
+									<h3>C лицевого счёта аккаунта</h3>
+									<p>Пополнить лицевой счёт аккаунта вы можете банковской картой из личного кабинета пользователя.</p>
 								</div>
 							</div>
-						</form>
+							<div class="col xl6 l6 m6 s12">
+								<div class="payment-card">
+									<h3>Безналичным расчётом</h3>
+									<p>На электронную почту покупателя будет отправлен счёт, сгенерированный при формировании заказа</p>
+								</div>
+							</div>
+						</div>
+						<p>Если Ваш банк поддерживает технологию безопасных интернет платежей, проверенных Visa или кодом безопасности MasterCard для проведения платежа система может потребовать ввести специальный пароль. Возможность получения паролей для проведения интернет-платежей и доступные способы оплаты Вы можете уточнить в Вашем банке.</p>
+						<p>Наш сайт поддерживает 256-битное шифрование. Информация, переданная в рамках совершения платежа не будет передана третьим лицам за исключением случаев, предусмотренных законодательством РФ, а её конфиденциальность обеспечивается ПАО «Сбербанк России». Проведение платежей банковскими картами происзводится в строгом соответствии с требованиями платёжных систем Visa® int., MasterCard™ Europe Sprl и МИР®</p>
 					</div>
-					<div class="col l4 m12">
-						<form class="pin color-wrapper">
-							<h2>Состав корзины</h2>
-							<div class="cart-content">
-								<div class="cart-entry">
-									<div class="img-wrapper">
-										<img alt="" class="lazy responsive-img" data-src="/img/fish/bottles/caucasian-perl.png">
-									</div>
-									<div class="name">
-										<div class="title">Жемчужина Кавказа</div>
-
-									</div>
-									<div class="counter-wrapper">
-										<div class="counter">
-											<a href=""><i class="bx bx-minus"></i></a>
-											<input type="number" value="1">
-											<a href="" class="bx bx-plus"></a>
-										</div>
-									</div>
-									<div class="price">240₽</div>
-									<div class="action">
-										<a href="" class="bx bxs-trash"></a>
-									</div>
-								</div>
-								<div class="cart-entry">
-									<div class="img-wrapper">
-										<img alt="" class="lazy responsive-img" data-src="/img/fish/bottles/elbrusinka.png">
-									</div>
-									<div class="name">
-										<div class="title">Эльбрусинка</div>
-
-										<div class="subtitle">Детская</div>
-
-									</div>
-									<div class="counter-wrapper">
-										<div class="counter">
-											<a href=""><i class="bx bx-minus"></i></a>
-											<input type="number" value="1">
-											<a href="" class="bx bx-plus"></a>
-										</div>
-									</div>
-									<div class="price">260</div>
-									<div class="action">
-										<a href="" class="bx bxs-trash"></a>
-									</div>
-								</div>
-								<div class="cart-entry">
-									<div class="img-wrapper">
-										<img alt="" class="lazy responsive-img" data-src="/img/fish/bottles/empty-bottle.png">
-									</div>
-									<div class="name">
-										<div class="title">Мирабель</div>
-
-									</div>
-									<div class="counter-wrapper">
-										<div class="counter">
-											<a href=""><i class="bx bx-minus"></i></a>
-											<input type="number" value="1">
-											<a href="" class="bx bx-plus"></a>
-										</div>
-									</div>
-									<div class="price">240₽</div>
-									<div class="action">
-										<a href="" class="bx bxs-trash"></a>
-									</div>
-								</div>
-								<div class="cart-entry">
-									<div class="img-wrapper">
-										<img alt="" class="lazy responsive-img" data-src="/img/fish/coolers/cooler2.png">
-									</div>
-									<div class="name">
-										<div class="title">Aqua-Well 08-M</div>
-
-										<div class="subtitle">AW ПК BH-YLR-LB-08M белый</div>
-
-									</div>
-									<div class="counter-wrapper">
-										<div class="counter">
-											<a href=""><i class="bx bx-minus"></i></a>
-											<input type="number" value="1">
-											<a href="" class="bx bx-plus"></a>
-										</div>
-									</div>
-									<div class="price">12 500₽</div>
-									<div class="action">
-										<a href="" class="bx bxs-trash"></a>
-									</div>
-								</div>
+					<div class="col l6 m12">
+						<div class="icon-header">
+							<div class="icon-wrapper">
+								<img src="/img/icons/return.png" alt="">
 							</div>
-							<div class="divider"></div>
-							<div class="summary">
-								Итого к оплате: 13 420₽
+							<div class="head-wrapper">
+								<h2>Возврат</h2>
 							</div>
-						</form>
+						</div>
+						<p>Возврат питьевой бутилированной воды после её приёма покупателем невозможен по законодательству России, так как она относится к продуктам питания</p>
+						<p>Кулеры и прочие товары, не относящиеся к продуктам питания могут быть возвращены согласно Закону о защите прав потребителей, Гражданского кодекса РФ, Положения Правительства РФ от 11 ноября 2011 г. №924 и других нормтивных законодательных актов РФ.</p>
+						<h3>Наличные денежные средства</h3>
+						<p>Возврат наличных денежных средств, поступивших в пользу ИП Зюлев В.П. может быть осуществлён при предъявлении документа, удостоверяющего личность после подачи письменного заявления по адресу: 353451 г. Анапа, пер. Спасский, д .16, пом. 8. Для уточнения деталей, обратитесь к менеджеру по телефону (918) 66-22-880.</p>
+						<h3>Безналичный расчёт</h3>
+						<p>При оплате через безналичный расчёт денежные средства могут быть возвращены только на счёт-источник платежа. Возврат платежа наличными средствами при оплате безналичным расчётом не допускается. Порядок возврата регулируется правилами международных платёжных систем.</p>
+						<p>Чтобы вернуть денежные средства на банковскую карту, обратитесь к менеджеру по телефону (918) 66-22-880. Средства будут возвращены в течении десяти рабочих дней с момента получения заявления от Покупателя.</p>
+					</div>
+					<div class="col l4 m6">
+						<div class="icon-header">
+							<div class="icon-wrapper">
+								<img src="/img/icons/delivery.png" alt="">
+							</div>
+							<div class="head-wrapper">
+								<h2>Доставка</h2>
+							</div>
+						</div>
+						<p>
+							Дос­тавка по го­роду - бес­плат­ная. Ус­ло­вия дос­тавки в от­да­лен­ные ре­ги­оны вы можете уточнить у менеджера.
+						</p>
+					</div>
+					<div class="col l8 m12 row flex">
+						<div class="col s12">
+							<h3>Отдалённые районы</h3>
+						</div>
+						<div class="col l3 s3 xs6 t12">
+							<h4>Анапа</h4>
+							<ul class="browser-default">
+								<li>Супсех</li>
+								<li>Варваровка</li>
+								<li>Сукко</li>
+								<li>Анапская</li>
+								<li>Усатова Балка</li>
+								<li>Бужор</li>
+								<li>Тарусино</li>
+								<li>Рассвет</li>
+								<li>Заря</li>
+								<li>Гай-Кодзор</li>
+								<li>Натухаевская</li>
+								<li>Раевская</li>
+								<li>Семигорский</li>
+								<li>Витязево</li>
+								<li>Верхнее Джемете</li>
+								<li>Нижнее Джемете</li>
+								<li>Воскресенский</li>
+								<li>Цибанобалка</li>
+								<li>Песчаный</li>
+								<li>Красный</li>
+								<li>Виноградный</li>
+								<li>Благовещенская</li>
+								<li>Красный</li>
+								<li>ДНТ Южное</li>
+								<li>Чембурка</li>
+							</ul>
+						</div>
+						<div class="col l3 s3 xs6 t12">
+							<h4>Славянск-на-Кубани</h4>
+							<ul class="browser-default">
+								<li>Ханьков</li>
+								<li>Анастасиевская</li>
+								<li>СНТ Хуторок</li>
+								<li>Бараниковский</li>
+								<li>Петровская</li>
+								<li>Черноерковская</li>
+								<li>Садовый</li>
+								<li>Прибрежный</li>
+								<li>Совхозный</li>
+								<li>Трудобеликовский</li>
+								<li>Крижановский</li>
+								<li>Чигрина</li>
+								<li>Полтавская</li>
+								<li>Троицкий</li>
+								<li>Кувичинский</li>
+								<li>Ачуево</li>
+								<li>Голубая Нива</li>
+							</ul>
+						</div>
+						<div class="col l3 s3 xs6 t12">
+							<h4>Абинск</h4>
+							<ul class="browser-default">
+								<li>Ахтырский</li>
+								<li>Светлогорское</li>
+								<li>Холмская</li>
+							</ul>
+							<h4>Крымск</h4>
+							<ul class="browser-default">
+								<li>Новоукраинский</li>
+								<li>Нижнебаканская</li>
+								<li>Саук-Дере</li>
+								<li>Армянский</li>
+								<li>Шептальский</li>
+								<li>Экономическое</li>
+								<li>Киевское</li>
+								<li>Молдованское</li>
+							</ul>
+						</div>
+						<div class="col l3 s3 xs6 t12">
+							<h4>Новороссийск</h4>
+							<ul class="browser-default">
+								<li>Кирилловка</li>
+								<li>Борисовка</li>
+								<li>Глебовское</li>
+								<li>Южная</li>
+								<li>Владимировка</li>
+								<li>Абрау</li>
+								<li>Мефодиевка</li>
+								<li>Широкая балка</li>
+								<li>Мысхако</li>
+								<li>Горный</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

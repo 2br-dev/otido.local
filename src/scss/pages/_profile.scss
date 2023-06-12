@@ -39,9 +39,15 @@ main#profile{
 
 			& li{
 				display: table-row;
-
+				
 				& > *{
 					display: table-cell;
+					padding: 5px 0;
+				}
+
+				& > :first-child{
+					border-left: 2px solid transparent;
+					padding-left: 10px;
 				}
 				
 				& i{
@@ -64,6 +70,18 @@ main#profile{
 					}
 				}
 
+				&.active{
+
+					color: $secondary;
+					
+					& i{
+						color: $secondary;
+					}
+
+					& > :first-child{
+						border-color: $secondary;
+					}
+				}
 			}
 		}
 
@@ -113,7 +131,7 @@ main#profile{
 				border-left: 2px solid $fogged;
 				
 				& td{
-					transform: translateX(-225px);
+					transform: translateX(-205px);
 				}
 			}
 			
@@ -135,7 +153,7 @@ main#profile{
 				right: 0;
 				width: fit-content;
 				height: 100%;
-				transform: translateX(110%);
+				transform: translateX(calc(100% + 1px));
 
 				& li{
 

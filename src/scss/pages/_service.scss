@@ -1,0 +1,77 @@
+main#service{
+
+	display: flex;
+	flex-direction: column;
+
+	& section{
+
+		&#hero{
+			margin-top: -155px;
+			background-size: cover;
+			background-position: center center;
+			color: #fff;
+			display: flex;
+			align-items: flex-end;
+
+			& .container{
+
+				height: 100%;
+				padding-top: 155px;
+
+				& .row{
+					margin: 0;
+					height: 100%;
+
+					& img{
+						display: block;
+						height: 100%;
+						object-fit: contain;
+						object-position: bottom center;
+					}
+
+					& h1{
+						color: #fff;
+						margin: 0;
+					}
+				}
+			}
+
+
+		}
+
+		&#sanitarium{
+			order: 1;
+		}
+
+		&#post-guarantee{
+
+			padding-top: 4vmax;
+			background: radial-gradient(circle at left 80% top 10%, #6FCDFF, #00A7FF);
+			color: #fff;
+			overflow: hidden;
+
+			& .row{
+
+				margin: 0;
+				
+				& h2{
+					color: #fff;
+				}
+
+				& img{
+					filter: drop-shadow(0 0 4px rgba(black, .4) );
+				}
+			}
+
+			& .post-text{
+				padding-bottom: 2vmax;
+			}
+		}
+	}
+
+
+	& h3{
+		color: $primary;
+		font-size: clamp(18px, 2vmax, 24px);
+	}
+}
