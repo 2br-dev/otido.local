@@ -179,7 +179,8 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 			on:{
 				slideChange: (slider:Swiper) => {
 					let activeIndex:number = slider.activeIndex;
-					let text = slider.slides[activeIndex].dataset['text'];
+					let slide = <HTMLElement>slider.slides[activeIndex];
+					let text = slide.dataset['text'];
 	
 					if(!text) return;
 
@@ -203,7 +204,8 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 		})
 	
 		let activeIndex:number = carrySlider.activeIndex;
-		let text = carrySlider.slides[activeIndex].dataset['text'];
+		let slide = <HTMLElement>carrySlider.slides[activeIndex];
+		let text = slide.dataset['text'];
 
 		if(text)
 		{
@@ -222,13 +224,11 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	if($('.partners-slider').length){
 	
 		let partnersSwiper = new Swiper('.partners-slider', {
-			slidesPerView: "auto",
-			spaceBetween: 40,
+			slidesPerView: 'auto',
 			centeredSlides: true,
-			loopedSlides: 6,
 			loop: true,
 			centerInsufficientSlides: true,
-			speed: 800,
+			loopedSlides: 12,
 			autoplay: {
 				delay: 1000
 			}
