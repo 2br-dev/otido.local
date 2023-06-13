@@ -229,6 +229,7 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 			loop: true,
 			centerInsufficientSlides: true,
 			loopedSlides: 12,
+			speed: 800,
 			autoplay: {
 				delay: 1000
 			}
