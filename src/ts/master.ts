@@ -1,7 +1,7 @@
-// import * as M from 'materialize-css';
-// import * as $ from 'jquery';
-import M from 'materialize-css';
-import $ from 'jquery';
+import * as M from 'materialize-css';
+import * as $ from 'jquery';
+// import M from 'materialize-css';
+// import $ from 'jquery';
 import Lazy from 'vanilla-lazyload';
 import Swiper, {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from 'swiper';
 
@@ -484,6 +484,7 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	$('body').on('change', '.accout-type-selector', switchAccountType);
 	$('body').on('click', '.address-wrapper a', openAddress);
 	$('body').on('click', '.city-header', openCity);
+	$('body').on('change', '[name="reason"]', switchReason);
 
 	if($('[name=address]').length){
 		let el = <HTMLElement>document.querySelector('[name=address]');
@@ -498,6 +499,17 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	}
 
 })()
+
+function switchReason(e:JQuery.ChangeEvent)
+{
+	let val = $(e.currentTarget).val();
+	if(val == 'other')
+	{
+		$('.other-reason').slideDown('fast');
+	}else{
+		$('.other-reason').slideUp('fast');
+	}
+}
 
 function initMap()
 {
@@ -1128,10 +1140,11 @@ function tabClick(e:JQuery.ClickEvent)
   let left = this.offsetLeft;
   let tabsWidth = (<HTMLElement>document.querySelector('.tabs')).offsetWidth;
   let right = tabsWidth - this.offsetWidth - this.offsetLeft;
+  let link = this.querySelector('a');
   
   indicator.style.left = left + 'px';
   indicator.style.right = right + 'px';
-  let href = '#'+this.href.split('#')[1];
+  let href = '#'+link.href.split('#')[1];
   document.querySelectorAll('.tab-content').forEach(el => {el.classList.remove('active');});
   document.querySelectorAll('.tab').forEach(el => {el.classList.remove('active');});
   parent.classList.add('active');

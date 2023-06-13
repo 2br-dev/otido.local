@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Удаление профиля'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="service">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12">
+						<h1>Удаление профиля</h1>
+						<p>
+							Нам очень жаль, что вы решили удалить свой профиль… Пожалуйста, расскажите,
+							почему вы приняли такое решение?
+						</p>
+						<form action="">
+							<ul>
+								<li><div class="input-field reason"><input type="radio" name="reason" value="Есть другой аккаунт" id="reason1" checked><label for="reason1">Есть другой аккаунт</label></div></li>
+								<li><div class="input-field reason"><input type="radio" name="reason" value="Плохо работает поддержка" id="reason2"><label for="reason2">Плохо работает поддержка</label></div></li>
+								<li><div class="input-field reason"><input type="radio" name="reason" value="Не устраивает качество услуг" id="reason3"><label for="reason3">Не устраивает качество услуг</label></div></li>
+								<li><div class="input-field reason"><input type="radio" name="reason" value="Не устраивает качество товаров" id="reason4"><label for="reason4">Не устраивает качество товаров</label></div></li>
+								<li><div class="input-field reason"><input type="radio" name="reason" value="other" id="reason5"><label for="reason5">Другое</label></div></li>
+							</ul>
+							<div class="input-field other-reason"><textarea id="" cols="30" rows="10" placeholder="Укажите причину" name="reason-text"></textarea></div>
+							<p>
+								<a href="/profile.html" class="bttn-outlined">Отмена</a>
+								<a href="#confirm" class="bttn modal-trigger">Удалить</a>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

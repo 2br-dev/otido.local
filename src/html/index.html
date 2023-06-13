@@ -350,21 +350,7 @@
 				</form>
 			</div>
 		</section>
-		<section id="news">
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<h2>Новости компании</h2>
-					</div>
-				</div>
-				<div class="row flex">
-					@@loop('./parts/news-entry.html', './data/news.json')
-				</div>
-				<div class="row">
-					<div class="col s12 center-align"><a href="/news.html" class="bttn">Смотреть все</a></div>
-				</div>
-			</div>
-		</section>
+		@@include('./parts/news-section.html')
 		<section id="parners">
 			<div class="col s12 center-align">
 				<h2>Наши партнёры</h2>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Страница новости'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="news">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs">
+							<li class="crumb"><i class="bx bxs-home"></i><a href="/">Главная</a></li>
+							<li class="crumb"><a href="/news.html">Новости</a></li>
+							<li class="crumb current"><span>Заголовок новости</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l5 m6 s12">
+						<img alt="" class="lazy responsive-img news-title-img" data-src="/img/fish/news1.jpg">
+					</div>
+					<div class="col l6 offset-l1 m5 offset-m1 s12">
+						<h1>Заголовок новости</h1>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia nulla facere necessitatibus optio iste error adipisci, itaque esse ipsam quasi atque, ducimus inventore explicabo sint blanditiis. Sequi provident quam voluptatibus, voluptatem fugiat dignissimos quas reiciendis veniam ipsa optio natus neque cupiditate culpa tenetur! Non impedit temporibus autem aperiam, voluptatibus iure qui, ex veritatis laboriosam magnam sequi natus ipsum tempora obcaecati illo, nesciunt delectus quos deleniti aliquid eligendi! Asperiores obcaecati temporibus minus placeat officia rerum explicabo fugiat ex! Tempore laudantium soluta, pariatur repellendus consequatur obcaecati repellat, excepturi facere fugit praesentium eum magnam aliquid, error amet. Laudantium exercitationem consequatur rerum numquam sed!
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/news-section.html', {title: 'Похожие новости'})
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1087,25 +1087,6 @@ main#main{
 		}
 	}
 
-	& section#news{
-
-		& .news-card{
-
-			margin-bottom: $gutter-width;
-
-			& h3{
-				font-size: clamp(18px, 2vmax, 24px);
-			}
-	
-			& .date{
-				font-size: clamp(14px, 1vmax, 16px);
-				margin-top: 1em;
-				color: $fogged;
-			}
-		}
-
-	}
-
 	& .partners-slider{
 
 		& .swiper-wrapper{

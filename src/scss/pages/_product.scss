@@ -8,53 +8,6 @@ main#product{
 		margin-bottom: #{$gutter-width * 2};
 	}
 
-	& .gallery{
-
-		margin: 0;
-		max-height: 50vh;
-		overflow-y: auto;
-		overflow-x: hidden;
-		padding-right: 6px;
-
-		&::-webkit-scrollbar{
-			width: 6px;
-			background: rgba(black, .1);
-			border-radius: 7px;
-		}
-
-		&::-webkit-scrollbar-thumb{
-			background: rgba(black, .4);
-			border-radius: 7px;
-		}
-
-		& li{
-
-			& a{
-
-				padding: 10px;
-				display: block;
-				border-radius: $border-radius;
-				margin-bottom: #{$gutter-width / 2};				
-				background-color: rgba(black, .03);
-				box-shadow: 0 0 0 1px rgba(black, .2) inset;
-				transition: box-shadow .2s, background-color .2s;
-
-				& img{
-					width: 100%;
-					aspect-ratio: 1 / 1;
-					object-fit: contain;
-					display: block;
-					transition: all .4s;
-				}
-
-				&.active{
-					background-color: #fff;
-					box-shadow: 0 0 0 4px $primary inset;
-				}
-			}
-		}
-	}
-
 	& .product-image{
 		width: 100%;
 		height: 100%;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Ошибка 404'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12 center-align">
+						<img data-src="/img/delete.png" class="responsive-img lazy">
+						<p>Ваш профиль успешно удалён!</p>
+						<p><a href="/" class="bttn">Вернуться на главную</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

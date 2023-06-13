@@ -1,0 +1,20 @@
+<section id="news">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				@@if(!context.title){
+					<h2>Новости компании</h2>
+				}
+				@@if(context.title){
+					<h2>@@title</h2>
+				}
+			</div>
+		</div>
+		<div class="row flex">
+			@@loop('./news-entry.html', './data/news.json')
+		</div>
+		<div class="row">
+			<div class="col s12 center-align"><a href="/news.html" class="bttn">Смотреть все</a></div>
+		</div>
+	</div>
+</section>
