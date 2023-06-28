@@ -1,10 +1,16 @@
 [
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col s12 m8 l6 xl4",
+		"cardType": "action",
+		"img": "/img/fish/action1.jpg",
+		"link": "/action.html"
+	},
+	{
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/arhyz-legend.png",
-		"header": "Архыз легенда гор",
-		"subheader": "",
+		"header": "Архыз",
+		"subheader": "легенда гор",
 		"faved": false,
 		"prices":[
 			{
@@ -30,11 +36,11 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "single",
 		"img": "/img/fish/bottles/empty-bottle.png",
-		"header": "Пустая тара 19л",
-		"subheader": "",
+		"header": "Пустая тара",
+		"subheader": "пэт 19 литров",
 		"faved": false,
 		"prices":[
 			{
@@ -46,11 +52,11 @@
 		"labels":[]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/gorgippia.png",
 		"header": "Горгиппия",
-		"subheader": "",
+		"subheader": "питьевая вода",
 		"faved": true,
 		"prices":[
 			{
@@ -76,11 +82,11 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/troizkaya.png",
 		"header": "Троицкая",
-		"subheader": "",
+		"subheader": "питьевая вода",
 		"faved": true,
 		"prices":[
 			{
@@ -106,11 +112,11 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/elbrusinka.png",
-		"header": "Эльбрусинка детская",
-		"subheader": "",
+		"header": "Эльбрусинка",
+		"subheader": "детская",
 		"faved": false,
 		"prices":[
 			{
@@ -136,11 +142,11 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/caucasian-perl.png",
-		"header": "Жемчужина Кавказа",
-		"subheader": "",
+		"header": "Жемчужина",
+		"subheader": "Кавказа",
 		"faved": true,
 		"prices":[
 			{
@@ -161,11 +167,11 @@
 		"labels":[]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/mountain-peak.png",
-		"header": "Горная вершина",
-		"subheader": "",
+		"header": "Горная",
+		"subheader": "вершина",
 		"faved": false,
 		"prices":[
 			{
@@ -191,7 +197,7 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/chisto-gornaya.png",
 		"header": "#чистоГорная",
@@ -216,11 +222,17 @@
 		"labels":[]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col s12 m8 l6 xl4",
+		"cardType": "action",
+		"img": "/img/fish/action2.jpg",
+		"link": "/action.html"
+	},
+	{
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/dombay.png",
 		"header": "Домбай",
-		"subheader": "",
+		"subheader": "питьевая вода",
 		"faved": false,
 		"prices":[
 			{
@@ -246,7 +258,7 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/soft-aqua.png",
 		"header": "Софт Аква",
@@ -276,11 +288,17 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
+		"cardType": "action",
+		"img": "/img/fish/action3.jpg",
+		"link": "/action.html"
+	},
+	{
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/mountain-key.png",
 		"header": "Горный ключ",
-		"subheader": "",
+		"subheader": "питьевая вода",
 		"faved": false,
 		"prices":[
 			{
@@ -306,11 +324,11 @@
 		]
 	},
 	{
-		"wrapperClass": "swiper-slide",
+		"wrapperClass": "col t6 xs6 s6 m4 l3 xl2",
 		"cardType": "triple",
 		"img": "/img/fish/bottles/silver-droplet.png",
-		"header": "Серебряная капля",
-		"subheader": "",
+		"header": "Серебряная",
+		"subheader": "капля",
 		"faved": false,
 		"prices":[
 			{

@@ -548,8 +548,13 @@ function initMap()
 
 		map = new ymaps.Map('map', {
 			center: [lon, lat],
-			zoom: 10
+			zoom: 10,
+			controls: []
 		})
+
+		map.controls.add('zoomControl');
+		map.controls.add('geolocationControl');
+		map.controls.add('searchControl');
 
 		// Смещаем центр карты, отодвигаем от списка филиалов
 		let pixelCenter = map.getGlobalPixelCenter([lon, lat]);

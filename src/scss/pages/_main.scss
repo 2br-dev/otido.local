@@ -709,8 +709,13 @@ main#main{
 		& .typed{
 			text-decoration: underline;
 			text-decoration-color: $primary;
-			text-decoration-thickness: clamp(6px, 2vw, 18px);
 			text-underline-offset: 9px;
+			text-decoration-thickness: clamp(6px, 2vw, 18px);
+			
+			@media(max-width: 600px){
+				text-underline-offset: 2px;
+				text-decoration-thickness: 6px;
+			}
 		}
 	}
 
@@ -1042,48 +1047,47 @@ main#main{
 
 	& section#feedback{
 
+		background-image: url(/img/feedback.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding: 2vmax 0;
+		background-size: auto calc(100% + 8vmax);
+		
+		@media(max-width: $extra-large){
+			background-position: right -10vw center;
+		}
+		
+		@media(max-width: $large){
+			background-position: right -20vw center;
+		}
+
+		@media(max-width: $medium){
+			background-position: top -4vmax right -20vmax;
+			background-size: 80vw auto;
+			& .header{
+				margin: 10vmax 0;
+			}
+		}
+		
+		@media(max-width: $small){
+			background-size: calc(80% + 4vmax) auto;
+			background-position: top -2vmax right -10vmax;
+
+			& .header{
+				margin: 5vmax 0;
+			}
+		}
+
 		& h2{
 			margin: 0;
+
+			@media(max-width: $small){
+				color: $text;
+			}
 		}
 
 		& .container{
 			position: relative;
-
-			& form{
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 100%;
-				transform: translateY(-50%);
-
-				& textarea{
-					height: 200px;
-				}
-			}
-
-			@media(max-width: $large){
-
-				& form{
-					position: relative;
-					top: unset;
-					transform: none;
-				}
-
-				& #illustration{
-
-					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 100%;
-					transform: translateY(-50%);
-
-					@media(max-width: $medium){
-						position: relative;
-						transform: none;
-						top: unset;
-					}
-				}
-			}
 		}
 	}
 

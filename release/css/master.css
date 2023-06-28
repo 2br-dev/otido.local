@@ -3246,7 +3246,7 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
     padding-left: 1rem; }
 
 /**
- * Swiper 9.3.2
+ * Swiper 9.4.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -3254,7 +3254,7 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
  *
  * Released under the MIT License
  *
- * Released on: May 15, 2023
+ * Released on: June 12, 2023
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -3388,6 +3388,12 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory; }
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none; }
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none; }
 
 .swiper-centered > .swiper-wrapper::before {
   content: '';
@@ -4052,6 +4058,15 @@ footer {
   box-sizing: border-box; }
   footer a {
     color: #fff; }
+    footer a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px; }
+      footer a:hover i {
+        color: #fff; }
+  footer i.bx {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7); }
   footer .footer-header {
     font-weight: 700;
     font-size: clamp(18px, 1vmax, 21px); }
@@ -4063,7 +4078,7 @@ footer {
   footer .col {
     margin-bottom: 20px; }
   footer ~ .footer-copyright {
-    background-color: #006499;
+    background-color: #0077ff;
     color: #fff;
     padding: 20px; }
     footer ~ .footer-copyright a {
@@ -4293,7 +4308,8 @@ body {
         transform: translateX(calc(-5px - .3vmax)) translateY(-40%);
         text-transform: uppercase;
         color: #C0D7E3;
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: clamp(10px, 2vw, 21px); }
       body .product-card .image-wrapper .fav {
         display: block;
         position: absolute;
@@ -4332,26 +4348,30 @@ body {
       background-color: #fff;
       padding: clamp(5px, 0.5vmax, 20px);
       text-align: center;
-      padding-top: 20px; }
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1; }
       body .product-card .info-wrapper .header {
-        line-height: 1em;
+        line-height: .8em;
         font-weight: 800;
         color: #00A7FF;
-        white-space: nowrap;
-        max-width: 100%;
         overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: clamp(16px, 3vmax, 28px) !important; }
-      body .product-card .info-wrapper .subheader {
-        font-weight: 800;
-        color: #00A7FF;
-        line-height: 1em;
-        margin-bottom: 10px;
-        white-space: nowrap;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: clamp(14px, 1vmax, 21px) !important; }
+        font-size: clamp(16px, 3vmax, 28px);
+        flex-grow: 1; }
+        body .product-card .info-wrapper .header > a {
+          font-size: clamp(16px, 2vw, 21px);
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden; }
+        body .product-card .info-wrapper .header .subheader {
+          color: #00A7FF;
+          line-height: 1.2em;
+          margin-bottom: 10px;
+          margin: 6px 0;
+          font-weight: 300;
+          font-size: clamp(14px, 1vmax, 21px) !important; }
       body .product-card .info-wrapper .prices {
         display: flex;
         justify-content: center;
@@ -4640,6 +4660,8 @@ body {
       color: #fff; }
     body .breadcrumbs.dark li span, body .breadcrumbs.dark li i {
       color: rgba(255, 255, 255, 0.7); }
+  body .pagination a {
+    font-size: clamp(16px, 2vw, 18px); }
   body .pagination .active {
     background-color: #FF5F19 !important;
     border-radius: 2em; }
@@ -11854,8 +11876,12 @@ main#main {
     main#main section#carry .typed {
       text-decoration: underline;
       text-decoration-color: #FF5F19;
-      text-decoration-thickness: clamp(6px, 2vw, 18px);
-      text-underline-offset: 9px; }
+      text-underline-offset: 9px;
+      text-decoration-thickness: clamp(6px, 2vw, 18px); }
+      @media (max-width: 600px) {
+        main#main section#carry .typed {
+          text-underline-offset: 2px;
+          text-decoration-thickness: 6px; } }
   main#main section#popular-slider {
     margin: 20vmin 0; }
   main#main section#whyus {
@@ -11967,34 +11993,37 @@ main#main {
             box-shadow: 0 125px 80px rgba(25, 58, 105, 0.07), 0 81px 46px rgba(25, 58, 105, 0.05), 0 48px 25px rgba(25, 58, 105, 0.04);
             z-index: 2;
             transform: translateY(-10px); } }
-  main#main section#feedback h2 {
-    margin: 0; }
-  main#main section#feedback .container {
-    position: relative; }
-    main#main section#feedback .container form {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      transform: translateY(-50%); }
-      main#main section#feedback .container form textarea {
-        height: 200px; }
+  main#main section#feedback {
+    background-image: url(../img/feedback.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 2vmax 0;
+    background-size: auto calc(100% + 8vmax); }
+    @media (max-width: 1600px) {
+      main#main section#feedback {
+        background-position: right -10vw center; } }
     @media (max-width: 1200px) {
-      main#main section#feedback .container form {
-        position: relative;
-        top: unset;
-        transform: none; }
-      main#main section#feedback .container #illustration {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        transform: translateY(-50%); } }
-  @media (max-width: 1200px) and (max-width: 800px) {
-    main#main section#feedback .container #illustration {
-      position: relative;
-      transform: none;
-      top: unset; } }
+      main#main section#feedback {
+        background-position: right -20vw center; } }
+    @media (max-width: 800px) {
+      main#main section#feedback {
+        background-position: top -4vmax right -20vmax;
+        background-size: 80vw auto; }
+        main#main section#feedback .header {
+          margin: 10vmax 0; } }
+    @media (max-width: 600px) {
+      main#main section#feedback {
+        background-size: calc(80% + 4vmax) auto;
+        background-position: top -2vmax right -10vmax; }
+        main#main section#feedback .header {
+          margin: 5vmax 0; } }
+    main#main section#feedback h2 {
+      margin: 0; }
+      @media (max-width: 600px) {
+        main#main section#feedback h2 {
+          color: #333; } }
+    main#main section#feedback .container {
+      position: relative; }
   main#main .partners-slider .swiper-wrapper .swiper-slide {
     width: -moz-fit-content;
     width: fit-content; }
@@ -12739,8 +12768,58 @@ main#service {
     color: #FF5F19;
     font-size: clamp(18px, 2vmax, 24px); }
 
-main#contacts h1 {
-  color: #fff; }
+main#contacts #main-content {
+  padding: 4vmax 0;
+  background: radial-gradient(circle at top 0 right 10vw, #6FCDFF, #00A7FF);
+  color: #fff;
+  position: relative;
+  margin-top: 0; }
+  main#contacts #main-content #phones {
+    margin-top: 0; }
+  main#contacts #main-content a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px; }
+    main#contacts #main-content a:hover i {
+      color: #fff; }
+  main#contacts #main-content a i {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7); }
+  main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/feedback.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto calc(100% + 8vmax); }
+    @media (max-width: 1600px) {
+      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
+        background-position: right -15vw center;
+        background-size: 65% auto; } }
+    @media (max-width: 800px) {
+      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
+        background-position: top 40px right -80px;
+        background-size: 60% auto; } }
+    @media (max-width: 600px) {
+      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
+        background-position: 5vh right -80px;
+        background-size: 400px auto; } }
+  main#contacts #main-content .container {
+    position: relative;
+    z-index: 2; }
+    main#contacts #main-content .container h1 {
+      margin-bottom: 0;
+      color: #fff; }
+    main#contacts #main-content .container a {
+      color: #fff; }
+  main#contacts #main-content .divider {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.7); }
 
 main#contacts .map-wrapper {
   background-color: #fff;
@@ -12772,7 +12851,6 @@ main#contacts .map-wrapper {
     @media (min-width: 800px) {
       main#contacts .map-wrapper .addresses-wrapper {
         overflow: auto;
-        margin-top: 50px;
         padding: 10px; } }
     main#contacts .map-wrapper .addresses-wrapper .contact-city {
       margin-bottom: 10px;

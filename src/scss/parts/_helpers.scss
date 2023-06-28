@@ -357,6 +357,7 @@ body{
 				text-transform: uppercase;
 				color: #C0D7E3;
 				font-weight: 700;
+				font-size: clamp(10px, 2vw, 21px);
 			}
 
 			& .fav{
@@ -407,29 +408,36 @@ body{
 			padding: clamp(5px, .5vmax, 20px);
 			text-align: center;
 			padding-top: 20px;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
 
 			& .header{
-				line-height: 1em;
+				line-height: .8em;
 				font-weight: 800;
 				color: $secondary;
-				white-space: nowrap;
-				max-width: 100%;
 				overflow: hidden;
-				text-overflow: ellipsis;
-				font-size: clamp(16px, 3vmax, 28px) !important;
+				font-size: clamp(16px, 3vmax, 28px);
+				flex-grow: 1;
+
+				& > a{
+					font-size: clamp(16px, 2vw, 21px);
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					overflow: hidden;
+				}
+
+				& .subheader{
+					color: $secondary;
+					line-height: 1.2em;
+					margin-bottom: 10px;
+					margin: 6px 0;
+					font-weight: 300;
+					font-size: clamp(14px, 1vmax, 21px) !important;
+				}
 			}
 			
-			& .subheader{
-				font-weight: 800;
-				color: $secondary;
-				line-height: 1em;
-				margin-bottom: 10px;
-				white-space: nowrap;
-				max-width: 100%;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				font-size: clamp(14px, 1vmax, 21px) !important;
-			}
 
 			& .prices{
 
@@ -949,6 +957,10 @@ body{
 	}
 
 	& .pagination{
+
+		& a{
+			font-size: clamp(16px, 2vw, 18px);
+		}
 
 		& .active{
 			background-color: $primary !important;

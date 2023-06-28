@@ -18,7 +18,7 @@
 		"cooler": "есть",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler2.png",
@@ -33,7 +33,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler3.png",
@@ -48,7 +48,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler4.png",
@@ -63,7 +63,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler5.png",
@@ -78,7 +78,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler6.jpg",
@@ -93,7 +93,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler7.png",
@@ -109,7 +109,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler8.jpg",
@@ -124,7 +124,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"wrapperClass": "col s12 m12 l8 xl6 h4",
@@ -145,7 +145,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler10.jpg",
@@ -160,7 +160,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler11.png",
@@ -175,7 +175,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler12.jpg",
@@ -190,7 +190,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler13.png",
@@ -205,7 +205,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler14.png",
@@ -220,10 +220,10 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
-		"wrapperClass": "col xs6 m6 l4 xl3 h2",
+		"wrapperClass": "col t6 xs6 m6 l4 xl3 h2",
 		"cardType": "action",
 		"img": "/img/fish/action3.jpg",
 		"link": "/action.html"
@@ -241,7 +241,7 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	},
 	{
 		"img": "/img/fish/coolers/cooler16.jpg",
@@ -256,6 +256,6 @@
 		"cooler": "нет",
 		"cardType":"single-price",
 		"link": "/product-cooler.html",
-		"wrapperClass": "col xs6 m6 l4 xl3 h2"
+		"wrapperClass": "col t6 xs6 s6 m6 l4 xl3 h2"
 	}
 ]

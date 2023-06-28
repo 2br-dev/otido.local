@@ -6,6 +6,21 @@ footer{
 
 	& a{
 		color: #fff;
+
+		&:hover{
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 4px;
+
+			& i{
+				color: #fff;
+			}
+		}
+	}
+
+	& i.bx{
+		margin-right: 10px;
+		color: rgba(#fff, .7);
 	}
 
 	& .footer-header{
@@ -29,7 +44,7 @@ footer{
 	}
 
 	& ~ .footer-copyright{
-		background-color: darken($secondary, 20);
+		background-color: #0077ff;
 		color: #fff;
 		padding: 20px;
 		
