@@ -303,9 +303,11 @@ body{
 
 			& .swiper-slide{
 				width: auto;
+				height: auto;
 
 				& .product-card{
 					width: 300px;
+					height: 100%;
 
 					@media(max-width: 600px){
 						width: 160px;
@@ -438,12 +440,12 @@ body{
 				}
 			}
 			
-
 			& .prices{
 
 				display: flex;
 				justify-content: center;
 				margin-top: 5px;
+				
 
 				& .price{
 

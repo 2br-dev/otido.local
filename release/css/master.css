@@ -4273,9 +4273,11 @@ body {
         body section.slider-section .slider-wrapper .water-section-slider-wrapper {
           padding-top: 10px; } }
     body section.slider-section .slider-wrapper .swiper-slide {
-      width: auto; }
+      width: auto;
+      height: auto; }
       body section.slider-section .slider-wrapper .swiper-slide .product-card {
-        width: 300px; }
+        width: 300px;
+        height: 100%; }
         @media (max-width: 600px) {
           body section.slider-section .slider-wrapper .swiper-slide .product-card {
             width: 160px; } }
