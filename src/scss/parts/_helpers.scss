@@ -180,6 +180,14 @@ body{
 				flex-grow: 1;
 			}
 		}
+
+		& .law{
+			display: none;
+
+			&.show{
+				display: initial;
+			}
+		}
 	}
 
 	& .bttn{
@@ -766,6 +774,11 @@ body{
 			}
 		}
 
+		& .error{
+			font-size: 14px;
+			color: $critical;
+		}
+
 		// & .current{
 		// 	display: block;
 		// 	width: 100%;
@@ -975,10 +988,12 @@ body{
 		padding: 0;
 		display: flex;
 		position: relative;
-		margin: 0;
+		margin: 0 auto;
 		overflow: hidden;
 		justify-content: center;
+		width: fit-content;
 		z-index: 1;
+		padding: 0 20px;
 		
 		& a{
 			text-decoration: none;
@@ -1016,6 +1031,7 @@ body{
 				left: -9px;
 				width: 10px;
 				height: 10px;
+				z-index: 2;
 				background-image: url("data:image/svg+xml;utf8,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9.12109 10H-0.000427246C4.8898 9.58652 8.77763 5.65387 9.12109 0.744019V10Z' fill='white'/></svg>");
 			}
 		
@@ -1273,5 +1289,56 @@ body{
 
 	& .other-reason{
 		display: none;
+	}
+
+	& .diapasone{
+
+		display: flex;
+
+		& > *:not(:last-of-type){
+			margin-right: 10px;
+			line-height: clamp(32px, 2vw, 42px);
+		}
+
+		& .input-field{
+
+			& input{
+				text-align: center;
+				width: 100px;
+				font-size: clamp(16px, 2vw, 21px);
+				border: 1px solid #aaa;
+			}
+		}
+	}
+
+	& .px-3{
+
+	
+		& .noUi-target{
+			height: 10px;
+			border-radius: 20px;
+		}
+
+		& .noUi-base{
+	
+			& .noUi-connects{
+				background: $primary;
+			}
+	
+			& .noUi-origin{
+	
+				& .noUi-handle{
+	
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					box-shadow: 0 0 0 5px $primary inset;
+	
+					&:before, &:after{
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,37 @@
+$prefix: noUi;
+
+.#{$prefix}-tooltip {
+	display: block;
+	position: absolute;
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	background: #fff;
+	color: #000;
+	padding: 5px;
+	text-align: center;
+	white-space: nowrap;
+}
+.#{$prefix}-horizontal .#{$prefix}-tooltip {
+-webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 120%;
+}
+.#{$prefix}-vertical .#{$prefix}-tooltip {
+-webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 120%;
+}
+.#{$prefix}-horizontal .#{$prefix}-origin > .#{$prefix}-tooltip {
+	-webkit-transform: translate(50%, 0);
+	transform: translate(50%, 0);
+	left: auto;
+	bottom: 10px;
+}
+.#{$prefix}-vertical .#{$prefix}-origin > .#{$prefix}-tooltip {
+	-webkit-transform: translate(0, -18px);
+	transform: translate(0, -18px);
+	top: auto;
+	right: 28px;
+}

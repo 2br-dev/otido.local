@@ -12,6 +12,9 @@
 @import './parts/helpers';
 @import './parts/typography';
 @import './parts/custom_grid';
+@import './parts/zoomer';
+
+@import './parts/noUiSlider/nouislider.scss';
 
 @import './pages/main';
 @import './pages/catalog';

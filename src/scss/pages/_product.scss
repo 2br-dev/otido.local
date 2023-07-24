@@ -189,4 +189,9 @@ main#product{
 			}
 		}
 	}
+
+	& .thumb{
+		border: 1px solid green;
+		max-width: 100px;
+	}
 }

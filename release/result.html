@@ -181,7 +181,7 @@
 			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
 		</div>
 	</div>
-	<div class="modal" id="register">
+	<form class="modal" id="register">
 		<div class="modal-content">
 			<div class="content-header">
 				<h3>Регистрация</h3>
@@ -191,30 +191,59 @@
 				<div class="input-field type-selector">
 					<div class="type-wrapper">
 						<div>
-							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="type1"><label for="type1">Частное лицо</label>
+							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="0"><label for="type1">Частное лицо</label>
 						</div>
 						<div>
-							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="type2"><label for="type2">Организация</label>
+							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="1"><label for="type2">Организация</label>
 						</div>
 					</div>
 				</div>
-				<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
-				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
-				<div class="input-field"><input type="text" placeholder="Имя"></div>
-				<div class="input-field"><input type="text" placeholder="Отчество"></div>
-				<div class="input-field"><input type="tel" placeholder="Телефон"></div>
-				<div class="input-field email"><input type="email" placeholder="E-mail"></div>
-				<div class="input-field"><input type="password" placeholder="Пароль"></div>
-				<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+				<div class="input-field company law"><input type="text" placeholder="Наименование организации">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field law"><input type="text" placeholder="ИНН">
+					<div class="error"></div>
+				</div>
+				<div class="input-field law"><input type="text" placeholder="ОГРН/ОГРНИП">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="text" name="lastname" placeholder="Фамилия">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="text" name="firstname" placeholder="Имя">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field"><input type="text" name="middlename" placeholder="Отчество">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field"><input type="tel" name="phone" placeholder="Телефон">
+					<div class="error"></div>
+				</div>
+				<div class="input-field email"><input type="email" name="mail" placeholder="E-mail">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="password" name="password" placeholder="Пароль">
+					<div class="error">Слишком длинный пароль</div>
+				</div>
+				<div class="input-field"><input type="password" name="password-confirm" placeholder="Повтор пароля">
+					<div class="error">Пароли не совпадают</div>
+				</div>
+			</div>
+			<div class="agreement">
+				<p>
+				<div class="input-field">
+					<input type="checkbox" id="modal-agreement"><label for="modal-agreement">
+						Даю своё согласие на сбор и обработку данных в соответствии с политикой конфиденциальности.
+					</label>
+				</div>
+				</p>
 			</div>
 		</div>
 		<div class="modal-footer">
 			<a href="#login" class="bttn-flat left modal-close modal-trigger waves-effect">Есть аккаунт?</a>
 			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
 		</div>
-	</div>
+	</form>
 	<ul class="sidenav" id="mobile">
 		<!-- Зарегистрированный пользователь, полная корзина -->
 		<li class="sidenav-header">
@@ -495,18 +524,23 @@
 				</div>
 				<div class="col xl3 l12 m12 s6 cookies">
 					<div class="footer-header">Важно</div>
-					<p>Компания «Аквагород» на сайте использует файлы Cookie для обеспечения удобства пользователя. Используя функционал аторизации/регистрации пользователь даёт своё согласие на сбор и обработку персональных данных в соответствии с политикой конфиденциальности</p>
+					<p>
+						Компания «От и До» на сайте использует файлы Cookie для обеспечения удобства пользователя.
+						Используя функционал аторизации/регистрации пользователь даёт своё <a href="/agreement.html">согласие</a>
+						<a href="/collect.html">на сбор и обработку</a> персональных данных в соответствии
+						с <a href="/policy.html">политикой конфиденциальности</a>
+					</p>
 				</div>
 				<div class="col xl2 offset-xl1 l3 m4 s6 xs12">
 					<div class="footer-header">Обратная связь</div>
 					<ul>
 						<li><a href="tel:+79181277000"><i class="bx bxs-phone"></i><span>+7 (918) 127-7000</span></a></li>
-						<li><a href="mailto://shop@voda-plus.info"><i class="bx bxs-envelope-open"></i><span>shop@voda-plus.info</span></a></li>
-						<li><a href="https://t.me/+79181277000"><i class="bx bxl-telegram"></i><span>Telegram</span></a></li>
-						<li><a href="https://wa.me/+79181277000"><i class="bx bxl-whatsapp"></i><span>WhatsApp</span></a></li>
+						<li><a href="voda-plus@mail.ru"><i class="bx bxs-envelope-open"></i><span>voda-plus@mail.ru</span></a></li>
+						<li><a href="https://t.me/+79887690030"><i class="bx bxl-telegram"></i><span>Telegram</span></a></li>
+						<li><a href="https://wa.me/+79887690030"><i class="bx bxl-whatsapp"></i><span>WhatsApp</span></a></li>
 						<li><a href="https://vk.com/delivery_ot_u_do"><i class="bx bxl-vk"></i><span>ВКонтакте</span></a></li>
 						<li><a href="https://ok.ru/group/70000002823598"><i class="bx bxl-ok-ru"></i><span>Одноклассники</span></a></li>
-						<li><i class="bx bxs-time-five"></i><span>Пн-Вс 8:00 - 19:01</span></li>
+						<li><i class="bx bxs-time-five"></i><span>Пн-Вс 8:00 - 20:00</span></li>
 					</ul>
 				</div>
 			</div>

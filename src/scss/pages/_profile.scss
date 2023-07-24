@@ -122,17 +122,21 @@ main#profile{
 			cursor: pointer;
 			border-left: 2px solid transparent;
 
+			@media(max-width: 1200px){
+
+				& .order-date{
+					display: block;
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+
 			&:hover{
 				background-color: rgba(black, .05);
 			}
 			
 			&.open{
-
 				border-left: 2px solid $fogged;
-				
-				& td{
-					transform: translateX(-205px);
-				}
 			}
 			
 			& td{
@@ -214,9 +218,53 @@ main#profile{
 
 			background-color: #fff;
 			border-left: 2px solid $secondary;
+
+			& .order-data{
+				display: none;
+			}
 					
 			& td{
 				padding: 0;
+			}
+
+			& .delivery-data{
+
+				display: flex;
+				flex-wrap: wrap;
+				font-size: 16px;
+				margin: 20px;
+				padding-bottom: 0;
+				border-bottom: 1px solid $text;
+				box-sizing: border-box;
+				
+				& .kv-pair{
+
+					display: flex;
+					margin-right: 20px;
+
+					& .key{
+						margin-right: 10px;
+					}
+
+					& .value{
+						font-weight: 700;
+					}
+				}
+
+				@media(max-width: $large){
+
+					display: table;
+					width: calc(100% - 40px);
+					margin: 20px;
+
+					& .kv-pair{
+						display: table-row;
+
+						& .key, & .value{
+							display: table-cell;
+						}
+					}
+				}
 			}
 	
 			& .items{
@@ -226,7 +274,7 @@ main#profile{
 				gap: 10px;
 				padding: 20px;
 				box-sizing: border-box;
-				display: none;
+				// display: none;
 
 				&[style*="display: block"]{
 					display: grid !important;

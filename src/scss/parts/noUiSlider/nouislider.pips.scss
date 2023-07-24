@@ -1,0 +1,106 @@
+$prefix: noUi;
+
+/* Base;
+ *
+ */
+ .#{$prefix}-pips,
+ .#{$prefix}-pips * {
+ -moz-box-sizing: border-box;
+	 box-sizing: border-box;
+ }
+ .#{$prefix}-pips {
+	 position: absolute;
+	 color: #999;
+ }
+ 
+ /* Values;
+  *
+  */
+ .#{$prefix}-value {
+	 position: absolute;
+	 white-space: nowrap;
+	 text-align: center;
+ }
+ .#{$prefix}-value-sub {
+	 color: #ccc;
+	 font-size: 10px;
+ }
+ 
+ /* Markings;
+  *
+  */
+ .#{$prefix}-marker {
+	 position: absolute;
+	 background: #CCC;
+ }
+ .#{$prefix}-marker-sub {
+	 background: #AAA;
+ }
+ .#{$prefix}-marker-large {
+	 background: #AAA;
+ }
+ 
+ /* Horizontal layout;
+  *
+  */
+ .#{$prefix}-pips-horizontal {
+	 padding: 10px 0;
+	 height: 80px;
+	 top: 100%;
+	 left: 0;
+	 width: 100%;
+ }
+ .#{$prefix}-value-horizontal {
+	 -webkit-transform: translate(-50%, 50%);
+	 transform: translate(-50%, 50%);
+ 
+	 .#{$prefix}-rtl & {
+		 -webkit-transform: translate(50%, 50%);
+		 transform: translate(50%, 50%);
+	 }
+ }
+ 
+ .#{$prefix}-marker-horizontal.#{$prefix}-marker {
+	 margin-left: -1px;
+	 width: 2px;
+	 height: 5px;
+ }
+ .#{$prefix}-marker-horizontal.#{$prefix}-marker-sub {
+	 height: 10px;
+ }
+ .#{$prefix}-marker-horizontal.#{$prefix}-marker-large {
+	 height: 15px;
+ }
+ 
+ /* Vertical layout;
+  *
+  */
+ .#{$prefix}-pips-vertical {
+	 padding: 0 10px;
+	 height: 100%;
+	 top: 0;
+	 left: 100%;
+ }
+ .#{$prefix}-value-vertical {
+	 -webkit-transform: translate(0, -50%);
+	 transform: translate(0, -50%);
+	 padding-left: 25px;
+ 
+	 .#{$prefix}-rtl & {
+		 -webkit-transform: translate(0, 50%);
+		 transform: translate(0, 50%);
+	 }
+ }
+ 
+ .#{$prefix}-marker-vertical.#{$prefix}-marker {
+	 width: 5px;
+	 height: 2px;
+	 margin-top: -1px;
+ }
+ .#{$prefix}-marker-vertical.#{$prefix}-marker-sub {
+	 width: 10px;
+ }
+ .#{$prefix}-marker-vertical.#{$prefix}-marker-large {
+	 width: 15px;
+ }
+ 

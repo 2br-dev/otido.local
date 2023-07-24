@@ -4,6 +4,9 @@ import * as $ from 'jquery';
 // import $ from 'jquery';
 import Lazy from 'vanilla-lazyload';
 import Swiper, {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from 'swiper';
+import Zoomer from './lib/zoomer';
+import Inputmask from 'inputmask';
+import Tabs from './lib/tabs';
 
 let hasDark:boolean = false;
 (window as any).JQuery = $;
@@ -19,6 +22,7 @@ let pressedTime=0;
 let preventClick=false;
 let map:any;
 let mapCenter:Array<number>;
+
 
 declare var ymaps:any;
 
@@ -70,6 +74,9 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 			$('#delivery-time').addClass('visible');
 		}
 	});
+
+	let inputmask = new Inputmask('+7 (9{3}) 9{3}-9{2}-9{2}')
+	inputmask.mask(document.querySelectorAll('[name="phone"'));
 	
 	let typed:Typed;
 	let header = document.querySelector('.header-wrapper');
@@ -77,6 +84,17 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	{
 		hasDark = header?.classList.contains('dark');
 	}
+
+	let zoomer = new Zoomer('.zoomer', 'src', true, 300);
+	let main_tabs = new Tabs({
+		headerSelector: '#main-tabs',
+		contentSelector: '#main-tabs-content'
+	})
+
+	let secondaryTabs = new Tabs({
+		headerSelector: '#secondary-tabs',
+		contentSelector: '#secondary-tabs-content'
+	})
 	
 	resizeHandler();
 	scrollHandler();
@@ -472,7 +490,6 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	$('body').on('click', '.stories-modal', hideStories);
 	$('body').on('click', '.stories-modal .closer', hideStories);
 	$('body').on('click', '.stories-wrapper .arrow', handleArrowClick);
-	$('body').on('click', '.tab', tabClick);
 	$('body').on('click', 'form .reset', resetFilters);
 	$('body').on('change', '[name=address]', setAddress);
 	$('body').on('change', '[name=delivery-day]', setInterval);
@@ -486,6 +503,7 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	$('body').on('click', '.address-wrapper a', openAddress);
 	$('body').on('click', '.city-header', openCity);
 	$('body').on('change', '[name="reason"]', switchReason);
+	$('body').on('mouseleave', '.tooltipped', resetTooltip);
 
 	if($('[name=address]').length){
 		let el = <HTMLElement>document.querySelector('[name=address]');
@@ -500,6 +518,18 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	}
 
 })()
+
+function resetTooltip(e:JQuery.MouseLeaveEvent)
+{
+	let el = e.currentTarget;
+	let instance = M.Tooltip.getInstance(el);
+	let tooltip = (instance as any).tooltipEl;
+
+	setTimeout(() => {
+		$(tooltip).removeAttr('style');
+	}, 500)
+
+}
 
 function switchReason(e:JQuery.ChangeEvent)
 {
@@ -689,11 +719,11 @@ function switchAccountType(e:JQuery.ChangeEvent)
 
 	switch(value)
 	{
-		case "type1":
-			$modal.find('.law').addClass('hide');
+		case "0":
+			$modal.find('.law').removeClass('show');
 			break;
-		case "type2":
-			$modal.find('.law').removeClass('hide');
+		case "1":
+			$modal.find('.law').addClass('show');
 			break;
 	}
 }
@@ -703,7 +733,7 @@ function toggleOrderDetails(e:JQuery.ClickEvent)
 	// Если произведён клик по ссылки, прерываемся
 	if((<HTMLElement>e.target).tagName.toLowerCase() != 'a')
 	{
-		$(e.currentTarget).next().find('.items').slideToggle();
+		$(e.currentTarget).next().find('.order-data').slideToggle();
 	}
 }
 
@@ -732,7 +762,9 @@ function clickOutside(e:JQuery.ClickEvent)
 	})
 	if(!filtered.length){
 		$('.order-row').removeClass('open');
-		$('.order-details-row .items').slideUp();
+		$('.order-row td').removeAttr('style');
+		$('.order-row .toggle-actions').attr('class', 'bx bx-dots-vertical-rounded bx-sm toggle-actions');
+		$('.order-details-row .order-data').slideUp();
 	}
 }
 
@@ -778,6 +810,23 @@ function toggleActions(e:JQuery.ClickEvent)
 	let $row = $(e.target).parents('tr');
 	let already = $row.hasClass('open');
 	$('.order-row').removeClass('open');
+	$('.order-row .toggle-actions').attr('class', 'bx bx-dots-vertical-rounded bx-sm toggle-actions');
+	$('.order-row td').removeAttr('style');
+
+	let itemWidth = 41;
+	let actionsCount = $row[0].querySelectorAll('.action').length;
+	let shiftAmount = actionsCount * itemWidth * -1;
+
+	$row[0].querySelectorAll('td').forEach((el:HTMLElement, i:number) => {
+		if(!already){
+			el.style.transform = `translateX(${shiftAmount}px)`;
+		}else{
+			$(el).removeAttr('style');
+		}
+	})
+
+	let linkClassName = already ? "bx bx-dots-vertical-rounded bx-sm toggle-actions" : "bx bx-x bx-sm toggle-actions"
+	e.target.className = linkClassName;
 
 	if(!already){
 		$row.addClass('open');
@@ -1106,55 +1155,6 @@ function resizeHandler()
 			}
 		}
 	}
-
-	updateIndicator();
-}
-
-function updateIndicator()
-{
-  let indicator = <HTMLElement>document.querySelector('.indicator');
-
-  if(indicator){	
-	let activeTab = <HTMLElement>document.querySelector('.tab.active');
-	let left = activeTab.offsetLeft;
-	let tabsWidth = (<HTMLElement>document.querySelector('.tabs')).offsetWidth;
-	let right = tabsWidth - left - activeTab.offsetWidth;
-	
-	indicator.style.transition = "none";
-	indicator.style.left = left + 'px';
-	indicator.style.right = right + 'px';
-  }
-}
-
-function tabClick(e:JQuery.ClickEvent)
-{
-
-	e.preventDefault();
-  let indicator = <HTMLElement>document.querySelector('.indicator');
-  let parent = this.parentNode;
-  let active = document.querySelector('.active');
-  let activeindex = [].indexOf.call(document.querySelectorAll('.tab'), active);
-  let thisindex = [].indexOf.call(document.querySelectorAll('.tab'), parent);
-  
-  if(activeindex < thisindex)
-  {
-    indicator.style.transition = leftTransition;
-  }else{
-    indicator.style.transition = rightTransition;
-  }
-  
-  let left = this.offsetLeft;
-  let tabsWidth = (<HTMLElement>document.querySelector('.tabs')).offsetWidth;
-  let right = tabsWidth - this.offsetWidth - this.offsetLeft;
-  let link = this.querySelector('a');
-  
-  indicator.style.left = left + 'px';
-  indicator.style.right = right + 'px';
-  let href = '#'+link.href.split('#')[1];
-  document.querySelectorAll('.tab-content').forEach(el => {el.classList.remove('active');});
-  document.querySelectorAll('.tab').forEach(el => {el.classList.remove('active');});
-  parent.classList.add('active');
-  document.querySelector(href)?.classList.add('active');
 }
 
 function loadIntervals(date){

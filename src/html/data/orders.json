@@ -27,7 +27,26 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -57,7 +76,32 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024"
+		}
 	},
 	{
 		"number": "№23452467",
@@ -87,7 +131,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -117,7 +188,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -147,7 +245,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -177,7 +302,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -207,7 +359,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -237,7 +416,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -267,7 +473,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -297,7 +530,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -327,7 +587,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -357,7 +644,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -387,7 +701,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -417,7 +758,34 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	},
 	{
 		"number": "№23452467",
@@ -447,6 +815,33 @@
 				"price": "120₽",
 				"price_total": "240₽"
 			}
-		]
+		],
+		"actions": [
+			{
+				"label": "Повторить",
+				"icon": "bx bx-refresh repeat"
+			},
+			{
+				"label": "Оплатить",
+				"icon": "bx bxs-wallet pay"
+			},
+			{
+				"label": "Счёт на оплату",
+				"icon": "bx bxs-receipt reciept"
+			},
+			{
+				"label": "Изменить доставку",
+				"icon": "bx bxs-truck geo"
+			},
+			{
+				"label": "Отменить",
+				"icon": "bx bx-block cancel"
+			}
+		],
+		"deliveryData": {
+			"date": "12 января 2024",
+			"interval": "С 14:00 до 18:00",
+			"recall": true
+		}
 	}
 ]

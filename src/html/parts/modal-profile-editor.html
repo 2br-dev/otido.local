@@ -1,4 +1,4 @@
-<div class="modal" id="profile-editor">
+<form class="modal" id="profile-editor">
 	<div class="modal-content">
 		<div class="content-header">
 			<h3>Редактор профиля</h3>
@@ -26,16 +26,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
-				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
-				<div class="input-field"><input type="text" placeholder="Имя"></div>
-				<div class="input-field"><input type="text" placeholder="Отчество"></div>
-				<div class="input-field"><input type="tel" placeholder="Телефон"></div>
-				<div class="input-field email"><input type="email" placeholder="E-mail"></div>
-				<div class="input-field"><input type="password" placeholder="Пароль"></div>
-				<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+				<div class="input-field company law hide"><input type="text" name="company" placeholder="Наименование организации"></div>
+				<div class="input-field law hide"><input type="text" name="inn" placeholder="ИНН"></div>
+				<div class="input-field law hide"><input type="text" name="ogrnip" placeholder="ОГРН/ОГРНИП"></div>
+				<div class="input-field"><input type="text" name="lastname" placeholder="Фамилия"></div>
+				<div class="input-field"><input type="text" name="firstname" placeholder="Имя"></div>
+				<div class="input-field"><input type="text" name="middlename" placeholder="Отчество"></div>
+				<div class="input-field"><input type="tel" name="phone" placeholder="Телефон"></div>
+				<div class="input-field email"><input type="email" name="mail" placeholder="E-mail"></div>
+				<div class="input-field"><input type="password" name="password" placeholder="Пароль"></div>
+				<div class="input-field"><input type="password" name="password-confirm" placeholder="Повтор пароля"></div>
 			</div>
 		</div>
 	</div>
@@ -43,4 +43,4 @@
 		<a href="/delete-profile.html" class="bttn-flat left modal-close modal-trigger waves-effect">Удалить аккаунт</a>
 		<a href="/profile.html" class="bttn-outlined modal-close">Сохранить изменения</a>
 	</div>
-</div>
+</form>

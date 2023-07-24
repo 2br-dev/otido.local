@@ -181,7 +181,7 @@
 			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
 		</div>
 	</div>
-	<div class="modal" id="register">
+	<form class="modal" id="register">
 		<div class="modal-content">
 			<div class="content-header">
 				<h3>Регистрация</h3>
@@ -191,30 +191,59 @@
 				<div class="input-field type-selector">
 					<div class="type-wrapper">
 						<div>
-							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="type1"><label for="type1">Частное лицо</label>
+							<input class="accout-type-selector" type="radio" checked name="account-type" id="type1" value="0"><label for="type1">Частное лицо</label>
 						</div>
 						<div>
-							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="type2"><label for="type2">Организация</label>
+							<input class="accout-type-selector" type="radio" name="account-type" id="type2" value="1"><label for="type2">Организация</label>
 						</div>
 					</div>
 				</div>
-				<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
-				<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
-				<div class="input-field"><input type="text" placeholder="Фамилия"></div>
-				<div class="input-field"><input type="text" placeholder="Имя"></div>
-				<div class="input-field"><input type="text" placeholder="Отчество"></div>
-				<div class="input-field"><input type="tel" placeholder="Телефон"></div>
-				<div class="input-field email"><input type="email" placeholder="E-mail"></div>
-				<div class="input-field"><input type="password" placeholder="Пароль"></div>
-				<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+				<div class="input-field company law"><input type="text" placeholder="Наименование организации">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field law"><input type="text" placeholder="ИНН">
+					<div class="error"></div>
+				</div>
+				<div class="input-field law"><input type="text" placeholder="ОГРН/ОГРНИП">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="text" name="lastname" placeholder="Фамилия">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="text" name="firstname" placeholder="Имя">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field"><input type="text" name="middlename" placeholder="Отчество">
+					<div class="error">Не заполнено обязательное поле</div>
+				</div>
+				<div class="input-field"><input type="tel" name="phone" placeholder="Телефон">
+					<div class="error"></div>
+				</div>
+				<div class="input-field email"><input type="email" name="mail" placeholder="E-mail">
+					<div class="error"></div>
+				</div>
+				<div class="input-field"><input type="password" name="password" placeholder="Пароль">
+					<div class="error">Слишком длинный пароль</div>
+				</div>
+				<div class="input-field"><input type="password" name="password-confirm" placeholder="Повтор пароля">
+					<div class="error">Пароли не совпадают</div>
+				</div>
+			</div>
+			<div class="agreement">
+				<p>
+				<div class="input-field">
+					<input type="checkbox" id="modal-agreement"><label for="modal-agreement">
+						Даю своё согласие на сбор и обработку данных в соответствии с политикой конфиденциальности.
+					</label>
+				</div>
+				</p>
 			</div>
 		</div>
 		<div class="modal-footer">
 			<a href="#login" class="bttn-flat left modal-close modal-trigger waves-effect">Есть аккаунт?</a>
 			<a href="/profile.html" class="bttn-outlined modal-close">Войти</a>
 		</div>
-	</div>
+	</form>
 	<ul class="sidenav" id="mobile">
 		<!-- Зарегистрированный пользователь, полная корзина -->
 		<li class="sidenav-header">
@@ -374,915 +403,1526 @@
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																не указан
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
 
+																не нужен
+
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr class="order-row">
 											<td>
 												<i class="bx bx-chevron-right"></i>
-												<span>№23452467</span><span class="hide-xl-down">от 1 декабря 2012</span>
+												<span>№23452467</span>
+												<span class="order-date">от 1 декабря 2012</span>
 											</td>
 											<td>14 000₽</td>
 											<td class="hide-s-down">Выполнен</td>
 											<td class="hide-tablet">Наличными курьеру</td>
 											<td class="right-align">
-												<a href="#!" class="bx bx-dots-vertical-rounded toggle-actions"></a>
+												<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
 												<ul class="actions">
-													<li><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped repeat bx bx-refresh"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped pay bx bx-ruble"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Счёт" class="tooltipped reciept bx bx-receipt"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Доставка" class="tooltipped geo bx bx-map"></a></li>
-													<li><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped cancel bx bx-x-circle"></a></li>
+
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Повторить" class="tooltipped bx bx-refresh repeat"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Оплатить" class="tooltipped bx bxs-wallet pay"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Счёт на оплату" class="tooltipped bx bxs-receipt reciept"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Изменить доставку" class="tooltipped bx bxs-truck geo"></a></li>
+
+													<li class="action"><a href="#!" data-position="top" data-tooltip="Отменить" class="tooltipped bx bx-block cancel"></a></li>
+
+
 												</ul>
 											</td>
 										</tr>
 										<tr class="order-details-row">
 											<td colspan="5">
-												<div class="items">
+												<div class="order-data">
+													<div class="delivery-data">
+														<div class="kv-pair date">
+															<div class="key">
+																Дата доставки:
+															</div>
+															<div class="value">
+																12 января 2024
+															</div>
+														</div>
+														<div class="kv-pair interval">
+															<div class="key">
+																Интервал:
+															</div>
+															<div class="value">
+
+																С 14:00 до 18:00
 
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
 														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода #чистоГорная</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+														<div class="kv-pair recall">
+															<div class="key">Перезвон:</div>
+															<div class="value">
 
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Вода «Эльбрусинка детская»</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
-
-													<a class="order-item" href="/product-water.html">
-														<div class="image-wrapper">
-															<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
-														</div>
-														<div class="data-wrapper">
-															<div class="name">Пустая тара</div>
-															<div class="price">120₽</div>
-															<div class="count">2шт – 240₽</div>
-														</div>
-													</a>
+																необходим
 
 
+															</div>
+														</div>
+													</div>
+													<div class="items">
+
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/chisto-gornaya.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода #чистоГорная</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/elbrusinka.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Вода «Эльбрусинка детская»</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+														<a class="order-item" href="/product-water.html">
+															<div class="image-wrapper">
+																<img alt="" class="lazy product-image" data-src="/img/fish/bottles/empty-bottle.png">
+															</div>
+															<div class="data-wrapper">
+																<div class="name">Пустая тара</div>
+																<div class="price">120₽</div>
+																<div class="count">2шт – 240₽</div>
+															</div>
+														</a>
+
+
+													</div>
 												</div>
 											</td>
 										</tr>
@@ -1295,7 +1935,7 @@
 			</div>
 		</section>
 	</main>
-	<div class="modal" id="profile-editor">
+	<form class="modal" id="profile-editor">
 		<div class="modal-content">
 			<div class="content-header">
 				<h3>Редактор профиля</h3>
@@ -1323,16 +1963,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="input-field company law hide"><input type="text" placeholder="Наименование организации"></div>
-					<div class="input-field law hide"><input type="text" placeholder="ИНН"></div>
-					<div class="input-field law hide"><input type="text" placeholder="ОГРН/ОГРНИП"></div>
-					<div class="input-field"><input type="text" placeholder="Фамилия"></div>
-					<div class="input-field"><input type="text" placeholder="Имя"></div>
-					<div class="input-field"><input type="text" placeholder="Отчество"></div>
-					<div class="input-field"><input type="tel" placeholder="Телефон"></div>
-					<div class="input-field email"><input type="email" placeholder="E-mail"></div>
-					<div class="input-field"><input type="password" placeholder="Пароль"></div>
-					<div class="input-field"><input type="password" placeholder="Повтор пароля"></div>
+					<div class="input-field company law hide"><input type="text" name="company" placeholder="Наименование организации"></div>
+					<div class="input-field law hide"><input type="text" name="inn" placeholder="ИНН"></div>
+					<div class="input-field law hide"><input type="text" name="ogrnip" placeholder="ОГРН/ОГРНИП"></div>
+					<div class="input-field"><input type="text" name="lastname" placeholder="Фамилия"></div>
+					<div class="input-field"><input type="text" name="firstname" placeholder="Имя"></div>
+					<div class="input-field"><input type="text" name="middlename" placeholder="Отчество"></div>
+					<div class="input-field"><input type="tel" name="phone" placeholder="Телефон"></div>
+					<div class="input-field email"><input type="email" name="mail" placeholder="E-mail"></div>
+					<div class="input-field"><input type="password" name="password" placeholder="Пароль"></div>
+					<div class="input-field"><input type="password" name="password-confirm" placeholder="Повтор пароля"></div>
 				</div>
 			</div>
 		</div>
@@ -1340,7 +1980,7 @@
 			<a href="/delete-profile.html" class="bttn-flat left modal-close modal-trigger waves-effect">Удалить аккаунт</a>
 			<a href="/profile.html" class="bttn-outlined modal-close">Сохранить изменения</a>
 		</div>
-	</div>
+	</form>
 	<footer>
 		<div class="container">
 			<div class="row flex">
@@ -1370,18 +2010,23 @@
 				</div>
 				<div class="col xl3 l12 m12 s6 cookies">
 					<div class="footer-header">Важно</div>
-					<p>Компания «Аквагород» на сайте использует файлы Cookie для обеспечения удобства пользователя. Используя функционал аторизации/регистрации пользователь даёт своё согласие на сбор и обработку персональных данных в соответствии с политикой конфиденциальности</p>
+					<p>
+						Компания «От и До» на сайте использует файлы Cookie для обеспечения удобства пользователя.
+						Используя функционал аторизации/регистрации пользователь даёт своё <a href="/agreement.html">согласие</a>
+						<a href="/collect.html">на сбор и обработку</a> персональных данных в соответствии
+						с <a href="/policy.html">политикой конфиденциальности</a>
+					</p>
 				</div>
 				<div class="col xl2 offset-xl1 l3 m4 s6 xs12">
 					<div class="footer-header">Обратная связь</div>
 					<ul>
 						<li><a href="tel:+79181277000"><i class="bx bxs-phone"></i><span>+7 (918) 127-7000</span></a></li>
-						<li><a href="mailto://shop@voda-plus.info"><i class="bx bxs-envelope-open"></i><span>shop@voda-plus.info</span></a></li>
-						<li><a href="https://t.me/+79181277000"><i class="bx bxl-telegram"></i><span>Telegram</span></a></li>
-						<li><a href="https://wa.me/+79181277000"><i class="bx bxl-whatsapp"></i><span>WhatsApp</span></a></li>
+						<li><a href="voda-plus@mail.ru"><i class="bx bxs-envelope-open"></i><span>voda-plus@mail.ru</span></a></li>
+						<li><a href="https://t.me/+79887690030"><i class="bx bxl-telegram"></i><span>Telegram</span></a></li>
+						<li><a href="https://wa.me/+79887690030"><i class="bx bxl-whatsapp"></i><span>WhatsApp</span></a></li>
 						<li><a href="https://vk.com/delivery_ot_u_do"><i class="bx bxl-vk"></i><span>ВКонтакте</span></a></li>
 						<li><a href="https://ok.ru/group/70000002823598"><i class="bx bxl-ok-ru"></i><span>Одноклассники</span></a></li>
-						<li><i class="bx bxs-time-five"></i><span>Пн-Вс 8:00 - 19:01</span></li>
+						<li><i class="bx bxs-time-five"></i><span>Пн-Вс 8:00 - 20:00</span></li>
 					</ul>
 				</div>
 			</div>
