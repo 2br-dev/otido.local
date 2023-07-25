@@ -550,6 +550,8 @@ main#main{
 		& #actions-slider{
 			max-width: 1900px;
 			margin: auto;
+			padding-top: 30px;
+			margin-top: -30px;
 
 			& .swiper-slide{ 
 				transition: filter 1s, transform 1s, opacity 1s;
@@ -562,6 +564,7 @@ main#main{
 					width: fit-content;
 					margin: auto;
 					border-radius: $border-radius;
+					transition: box-shadow .4s;
 
 					& a{
 						position: absolute;
@@ -596,8 +599,17 @@ main#main{
 				}
 
 				&-active{
-					& .img-wrapper:before{
-						opacity: 0;
+					
+					& .img-wrapper{
+
+						box-shadow: 
+							0 45px 80px rgba(#193A69, .07),
+							0 20px 46px rgba(#193A69, .05), 
+							0 5px 25px rgba(#193A69, .04);
+						
+						&:before{
+							opacity: 0;
+						}
 					}
 				}
 			}
@@ -693,7 +705,7 @@ main#main{
 			&:before{
 				content: '';
 				display: block;
-				bottom: 0;
+				bottom: -20px;
 				position: absolute;
 				width: calc(100% + 2vmax);
 				left: 50%;
@@ -721,14 +733,15 @@ main#main{
 	}
 
 	& section#popular-slider{
-		margin: 20vmin 0;
+		margin-top: 20vmin;
+		margin-bottom: 10vmin;
 	}
 
 	& section#whyus{
 
 		background-color: $secondary;
 		color: #fff;
-		padding: 4vmax 0;
+		padding: 2vmax 0;
 
 		& h2{
 			color: #fff;
@@ -750,6 +763,10 @@ main#main{
 				font-size: clamp(20px, 2vw, 28px);
 				margin-top: 0;
 				margin-bottom: .2em;
+			}
+
+			& img{
+				width: 80%;
 			}
 		}
 
@@ -893,7 +910,6 @@ main#main{
 						margin: 0;
 					}
 
-
 					&:hover{
 						@media(min-width: 600px){
 							@include hover();
@@ -902,148 +918,6 @@ main#main{
 				}
 			}
 		}
-
-		// & .categories-grid{
-			// display: grid;
-			// gap: $gutter-width;
-			// grid-template-columns: repeat(6, 1fr);
-
-			// @media(max-width: $bp2){
-			// 	gap: 10px;
-			// }
-
-			// & .category{
-
-			// 	background-size: auto 70%;
-			// 	background-position: bottom right;
-			// 	background-repeat: no-repeat;
-			// 	background-color: #DEFCFF;
-			// 	border-radius: #{$border-radius * 2};
-			// 	padding: clamp(5px, 2vmax, 20px);
-			// 	transition: box-shadow .4s, background-color .4s, transform .4s;
-			// 	min-height: 100%;
-			// 	max-width: 100%;
-
-			// 	&:not(.actions){
-			// 		aspect-ratio: 1 / 1;
-			// 	}
-
-			// 	&:hover{
-
-			// 		@media(min-width: 600px){
-			// 			box-shadow: 
-			// 				0 125px 80px rgba(#193A69, .07),
-			// 				0 81px 46px rgba(#193A69, .05), 
-			// 				0 48px 25px rgba(#193A69, .04);
-			// 			z-index: 2;
-			// 			transform: translateY(-10px);
-			// 		}
-			// 	}
-
-			// 	@media(max-width: $bp1){
-			// 		grid-column: auto / span 2;
-			// 		grid-row: auto / span 2;
-			// 	}
-
-			// 	@media(max-width: $bp2){
-			// 		grid-column: auto / span 3;
-			// 		grid-row: auto / span 3;
-			// 	}
-
-			// 	&.all-link{
-			// 		background-color: transparent;
-			// 		display: flex;
-			// 		align-items: center;
-			// 		justify-content: center;
-
-			// 		&:hover{
-			// 			background-color: #fff;
-			// 		}
-			// 	}
-
-			// 	& h3{
-			// 		font-weight: 800;
-			// 	}
-
-			// 	& h3, & .intro{
-
-			// 		margin: 0;
-			// 		font-size: clamp(20px, 2vw, 28px);
-			// 		// line-height: 1.2em;
-			// 	}
-
-			// 	&.accent{
-
-			// 		grid-column: 1 / 3;
-			// 		grid-row: 1 / 3;
-			// 		background-size: auto 80%;
-
-			// 		& h3{
-			// 			font-size: clamp(18px, 2vw, 42px);
-
-			// 			@media(max-width: 1400px){
-			// 				font-size: clamp(18px, 2vw, 60px);
-			// 			}
-
-			// 			@media(max-width: 800px){
-			// 				font-size: clamp(16px, 2vw, 30px);
-			// 			}
-			// 		}
-
-			// 		@media(max-width: $bp1){
-			// 			grid-column: 1 / 5;
-			// 			grid-row: 1 / 5;
-			// 		}
-
-			// 		@media(max-width: $bp2){
-			// 			grid-column: 1 / 7;
-			// 			aspect-ratio: 2 / 1.2;
-			// 			background-size: auto 90%;
-
-			// 			& h3{
-			// 				display: block;
-			// 				width: 50%;
-			// 			}
-			// 		}
-			// 	}
-
-			// 	&.actions{
-			// 		grid-row: 1 / 4;
-			// 		grid-column: 4 / 7;
-
-			// 		& h3{
-			// 			font-size: clamp(21px, 3.5vmax, 60px);
-			// 		}
-
-			// 		@media(max-width: $bp1){
-			// 			grid-column: 1 / 7;
-			// 			grid-row: 7 / 10;
-			// 			aspect-ratio: 2 / 1.2;
-
-			// 			& .intro{
-			// 				width: 70%;
-			// 			}
-			// 		}
-
-			// 		@media(max-width: $bp2){
-			// 			grid-row: unset;
-			// 		}
-			// 	}
-
-			// 	&:nth-child(2), &:nth-child(4){
-			// 		@media(max-width: $bp2){
-			// 			grid-row: 5 / 7;
-			// 		}
-			// 	}
-
-			// 	&.all-link{
-			// 		@media(max-width: 800px){
-			// 			grid-column: 1 / 7;
-			// 			aspect-ratio: 3 / 1;
-			// 		}
-			// 	}
-			// }
-		// }
 	}
 
 	& section#feedback{

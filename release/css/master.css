@@ -3807,7 +3807,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
                    column-gap: 2vmax;
               border-left: 3px solid #FF5F19; }
               .header-wrapper .container .nav-content nav .nav-left .catalog-button ~ ul li a {
-                border-radius: 5px;
+                border-radius: 10px;
                 padding: 6px 12px; }
         .header-wrapper .container .nav-content nav .nav-right {
           display: flex;
@@ -3847,7 +3847,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
         pointer-events: none;
         transform: translateY(-20px);
         opacity: 0;
-        border-radius: 10px;
+        border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); }
         .header-wrapper ul li ul li a {
@@ -4002,7 +4002,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
         position: absolute;
         right: 0;
         background-color: #fff;
-        border-radius: 10px;
+        border-radius: 20px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
         will-change: transform, opacity;
         transition: opacity .2s, transform .2s;
@@ -4102,7 +4102,7 @@ body {
   body .hidden {
     display: none !important; }
   body .modal {
-    border-radius: 10px; }
+    border-radius: 20px; }
     body .modal#confirm, body .modal#login, body .modal#register {
       max-width: 600px; }
     body .modal .inputs {
@@ -4218,7 +4218,7 @@ body {
     body .bttn-outlined {
       box-shadow: 0 0 0 1px #FF5F19 inset; }
   body section.slider-section .slider-wrapper {
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     background: var(--bg) bottom left no-repeat, linear-gradient(to top, #7FCAFF, #3579F0);
     background-size: auto 65%, auto; }
@@ -4233,11 +4233,13 @@ body {
       color: #fff;
       width: 100%;
       height: 100%;
-      padding: 20px;
-      padding-right: 0;
       box-sizing: border-box;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      padding-left: 40px;
+      padding-bottom: 40px;
+      padding-right: 0;
+      padding-top: 20px; }
       @media (max-width: 600px) {
         body section.slider-section .slider-wrapper .slider-header {
           padding-top: 10px;
@@ -4288,7 +4290,7 @@ body {
   body .product-card {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -4390,13 +4392,13 @@ body {
             line-height: 1.2em; }
           body .product-card .info-wrapper .prices .price .value {
             font-weight: 800;
-            font-size: clamp(16px, 0.5vmax, 22px); }
+            font-size: clamp(16px, 2vw, 22px); }
       body .product-card .info-wrapper .smart-bttn {
         margin: auto; }
   body .news-card {
     margin-bottom: 20px; }
     body .news-card img {
-      border-radius: 10px;
+      border-radius: 20px;
       transition: box-shadow .2s;
       position: relative; }
       body .news-card img:hover {
@@ -4504,7 +4506,7 @@ body {
       width: 100%;
       margin-bottom: 20px;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 10px;
       background-color: #efefef;
       border: 0;
       font-family: 'Nunito', sans-serif;
@@ -4528,7 +4530,7 @@ body {
       margin: 0;
       top: 100%;
       background-color: #fff;
-      border-radius: 10px 10px;
+      border-radius: 20px 20px;
       pointer-events: none;
       transform: translateY(-20px);
       opacity: 0;
@@ -4817,7 +4819,7 @@ body {
     background-color: #EEF7F8;
     padding: clamp(10px, 2vmax, 30px);
     margin-bottom: 20px;
-    border-radius: 10px; }
+    border-radius: 20px; }
   body .icon-header {
     display: flex;
     align-items: center;
@@ -4859,7 +4861,7 @@ body {
     body .gallery li a {
       padding: 10px;
       display: block;
-      border-radius: 10px;
+      border-radius: 20px;
       margin-bottom: 10px;
       background-color: rgba(0, 0, 0, 0.03);
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset;
@@ -4901,6 +4903,59 @@ body {
     box-shadow: 0 0 0 5px #FF5F19 inset; }
     body .px-3 .noUi-base .noUi-origin .noUi-handle:before, body .px-3 .noUi-base .noUi-origin main#main section.noUi-handle#carry:after, main#main body .px-3 .noUi-base .noUi-origin section.noUi-handle#carry:after, body .px-3 .noUi-base .noUi-origin main#catalog section#main-content form .param.multichoise .values .value input ~ label.noUi-handle:after, main#catalog section#main-content form .param.multichoise .values .value body .px-3 .noUi-base .noUi-origin input ~ label.noUi-handle:after, body .px-3 .noUi-base .noUi-origin #filters-form-mobile .param.multichoise .values .value input ~ label.noUi-handle:after, #filters-form-mobile .param.multichoise .values .value body .px-3 .noUi-base .noUi-origin input ~ label.noUi-handle:after, body .px-3 .noUi-base .noUi-origin .noUi-handle:after {
       display: none; }
+  body #contacts-block {
+    padding: 4vmax 0;
+    background: radial-gradient(circle at top 0 right 10vw, #6FCDFF, #00A7FF);
+    color: #fff;
+    position: relative;
+    margin-top: 0;
+    order: 8; }
+    body #contacts-block #phones {
+      margin-top: 0; }
+    body #contacts-block a:not(.bttn):hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px; }
+      body #contacts-block a:not(.bttn):hover i {
+        color: #fff; }
+    body #contacts-block a:not(.bttn) i {
+      margin-right: 10px;
+      color: rgba(255, 255, 255, 0.7); }
+    body #contacts-block:before, body main#catalog section#main-content form .param.multichoise .values .value input ~ label#contacts-block:after, main#catalog section#main-content form .param.multichoise .values .value body input ~ label#contacts-block:after, body #filters-form-mobile .param.multichoise .values .value input ~ label#contacts-block:after, #filters-form-mobile .param.multichoise .values .value body input ~ label#contacts-block:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(../img/feedback.png);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: auto calc(100% + 8vmax); }
+      @media (max-width: 1600px) {
+        body #contacts-block:before, body main#catalog section#main-content form .param.multichoise .values .value input ~ label#contacts-block:after, main#catalog section#main-content form .param.multichoise .values .value body input ~ label#contacts-block:after, body #filters-form-mobile .param.multichoise .values .value input ~ label#contacts-block:after, #filters-form-mobile .param.multichoise .values .value body input ~ label#contacts-block:after {
+          background-position: right -15vw center;
+          background-size: 65% auto; } }
+      @media (max-width: 900px) {
+        body #contacts-block:before, body main#catalog section#main-content form .param.multichoise .values .value input ~ label#contacts-block:after, main#catalog section#main-content form .param.multichoise .values .value body input ~ label#contacts-block:after, body #filters-form-mobile .param.multichoise .values .value input ~ label#contacts-block:after, #filters-form-mobile .param.multichoise .values .value body input ~ label#contacts-block:after {
+          background-position: top 40px right -80px;
+          background-size: 60% auto; } }
+      @media (max-width: 600px) {
+        body #contacts-block:before, body main#catalog section#main-content form .param.multichoise .values .value input ~ label#contacts-block:after, main#catalog section#main-content form .param.multichoise .values .value body input ~ label#contacts-block:after, body #filters-form-mobile .param.multichoise .values .value input ~ label#contacts-block:after, #filters-form-mobile .param.multichoise .values .value body input ~ label#contacts-block:after {
+          background-position: 5vh right -80px;
+          background-size: 400px auto; } }
+    body #contacts-block .container {
+      position: relative;
+      z-index: 2; }
+      body #contacts-block .container h1 {
+        margin-bottom: 0;
+        color: #fff; }
+      body #contacts-block .container a {
+        color: #fff; }
+    body #contacts-block .divider {
+      width: 50%;
+      background-color: rgba(255, 255, 255, 0.7); }
 
 @font-face {
   font-family: 'boxicons';
@@ -12159,7 +12214,9 @@ main#main {
     color: #FF5F19; }
   main#main section#actions #actions-slider {
     max-width: 1900px;
-    margin: auto; }
+    margin: auto;
+    padding-top: 30px;
+    margin-top: -30px; }
     main#main section#actions #actions-slider .swiper-slide {
       transition: filter 1s, transform 1s, opacity 1s;
       opacity: 0;
@@ -12170,7 +12227,8 @@ main#main {
         width: -moz-fit-content;
         width: fit-content;
         margin: auto;
-        border-radius: 10px; }
+        border-radius: 20px;
+        transition: box-shadow .4s; }
         main#main section#actions #actions-slider .swiper-slide .img-wrapper a {
           position: absolute;
           top: 0;
@@ -12194,8 +12252,10 @@ main#main {
         margin: auto; }
       main#main section#actions #actions-slider .swiper-slide-active, main#main section#actions #actions-slider .swiper-slide-prev, main#main section#actions #actions-slider .swiper-slide-next {
         opacity: 1; }
-      main#main section#actions #actions-slider .swiper-slide-active .img-wrapper:before, main#main section#actions #actions-slider .swiper-slide-active section.img-wrapper#carry:after, main#main section#actions #actions-slider .swiper-slide-active main#catalog section#main-content form .param.multichoise .values .value input ~ label.img-wrapper:after, main#catalog section#main-content form .param.multichoise .values .value main#main section#actions #actions-slider .swiper-slide-active input ~ label.img-wrapper:after, main#main section#actions #actions-slider .swiper-slide-active #filters-form-mobile .param.multichoise .values .value input ~ label.img-wrapper:after, #filters-form-mobile .param.multichoise .values .value main#main section#actions #actions-slider .swiper-slide-active input ~ label.img-wrapper:after {
-        opacity: 0; }
+      main#main section#actions #actions-slider .swiper-slide-active .img-wrapper {
+        box-shadow: 0 45px 80px rgba(25, 58, 105, 0.07), 0 20px 46px rgba(25, 58, 105, 0.05), 0 5px 25px rgba(25, 58, 105, 0.04); }
+        main#main section#actions #actions-slider .swiper-slide-active .img-wrapper:before, main#main section#actions #actions-slider .swiper-slide-active section.img-wrapper#carry:after, main#main section#actions #actions-slider .swiper-slide-active main#catalog section#main-content form .param.multichoise .values .value input ~ label.img-wrapper:after, main#catalog section#main-content form .param.multichoise .values .value main#main section#actions #actions-slider .swiper-slide-active input ~ label.img-wrapper:after, main#main section#actions #actions-slider .swiper-slide-active #filters-form-mobile .param.multichoise .values .value input ~ label.img-wrapper:after, #filters-form-mobile .param.multichoise .values .value main#main section#actions #actions-slider .swiper-slide-active input ~ label.img-wrapper:after {
+          opacity: 0; }
     main#main section#actions #actions-slider .swiper-pagination {
       position: unset;
       margin: 20px 0; }
@@ -12258,7 +12318,7 @@ main#main {
       main#main section#carry .carry-slider-wrapper:before, main#main section#carry section.carry-slider-wrapper#carry:after, main#main section#carry main#catalog section#main-content form .param.multichoise .values .value input ~ label.carry-slider-wrapper:after, main#catalog section#main-content form .param.multichoise .values .value main#main section#carry input ~ label.carry-slider-wrapper:after, main#main section#carry #filters-form-mobile .param.multichoise .values .value input ~ label.carry-slider-wrapper:after, #filters-form-mobile .param.multichoise .values .value main#main section#carry input ~ label.carry-slider-wrapper:after {
         content: '';
         display: block;
-        bottom: 0;
+        bottom: -20px;
         position: absolute;
         width: calc(100% + 2vmax);
         left: 50%;
@@ -12279,11 +12339,12 @@ main#main {
           text-underline-offset: 2px;
           text-decoration-thickness: 6px; } }
   main#main section#popular-slider {
-    margin: 20vmin 0; }
+    margin-top: 20vmin;
+    margin-bottom: 10vmin; }
   main#main section#whyus {
     background-color: #00A7FF;
     color: #fff;
-    padding: 4vmax 0; }
+    padding: 2vmax 0; }
     main#main section#whyus h2 {
       color: #fff;
       margin-top: 0;
@@ -12298,6 +12359,8 @@ main#main {
         font-size: clamp(20px, 2vw, 28px);
         margin-top: 0;
         margin-bottom: .2em; }
+      main#main section#whyus .point img {
+        width: 80%; }
   main#main section#categories .main-categories {
     display: flex; }
     @media (max-width: 750px) {
@@ -12319,7 +12382,7 @@ main#main {
         background-repeat: no-repeat;
         background-position: bottom right;
         padding: clamp(10px, 1vw, 20px);
-        border-radius: 10px;
+        border-radius: 20px;
         background-color: #DEFCFF;
         transition: transform .4s, box-shadow .4s, background-color .4s; }
         main#main section#categories .main-categories .categories-grid .category.accent h3 {
@@ -12374,7 +12437,7 @@ main#main {
         background-position: bottom right;
         background-repeat: no-repeat;
         padding: clamp(10px, 1vw, 20px);
-        border-radius: 10px;
+        border-radius: 20px;
         background-color: #DEFCFF;
         transition: transform .4s, box-shadow .4s; }
         @media (max-width: 750px) {
@@ -12442,7 +12505,7 @@ main#catalog section#main-content {
     display: block;
     aspect-ratio: 1 / 1;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff;
     padding: clamp(10px, 2vmax, 40px);
     color: #333;
@@ -13095,7 +13158,7 @@ main#profile .orders-table {
         color: #333;
         padding: 10px;
         box-sizing: border-box;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: background-color .2s, box-shadow .2s; }
         main#profile .orders-table .order-details-row .items .order-item .image-wrapper img {
           aspect-ratio: 1 / 1;
@@ -13141,7 +13204,7 @@ main#payment h4 {
 main#payment .payment-card {
   padding: 20px;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); }
   main#payment .payment-card h3 {
@@ -13191,66 +13254,15 @@ main#service {
         filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4)); }
     main#service section#post-guarantee .post-text {
       padding-bottom: 2vmax; }
+  main#service section#contacts-block {
+    margin-bottom: 0; }
   main#service h3 {
     color: #FF5F19;
     font-size: clamp(18px, 2vmax, 24px); }
 
-main#contacts #main-content {
-  padding: 4vmax 0;
-  background: radial-gradient(circle at top 0 right 10vw, #6FCDFF, #00A7FF);
-  color: #fff;
-  position: relative;
-  margin-top: 0; }
-  main#contacts #main-content #phones {
-    margin-top: 0; }
-  main#contacts #main-content a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px; }
-    main#contacts #main-content a:hover i {
-      color: #fff; }
-  main#contacts #main-content a i {
-    margin-right: 10px;
-    color: rgba(255, 255, 255, 0.7); }
-  main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../img/feedback.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: auto calc(100% + 8vmax); }
-    @media (max-width: 1600px) {
-      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
-        background-position: right -15vw center;
-        background-size: 65% auto; } }
-    @media (max-width: 900px) {
-      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
-        background-position: top 40px right -80px;
-        background-size: 60% auto; } }
-    @media (max-width: 600px) {
-      main#contacts #main-content:before, main#contacts main#catalog section#main-content form .param.multichoise .values .value input ~ label#main-content:after, main#catalog section#main-content form .param.multichoise .values .value main#contacts input ~ label#main-content:after, main#contacts #filters-form-mobile .param.multichoise .values .value input ~ label#main-content:after, #filters-form-mobile .param.multichoise .values .value main#contacts input ~ label#main-content:after {
-        background-position: 5vh right -80px;
-        background-size: 400px auto; } }
-  main#contacts #main-content .container {
-    position: relative;
-    z-index: 2; }
-    main#contacts #main-content .container h1 {
-      margin-bottom: 0;
-      color: #fff; }
-    main#contacts #main-content .container a {
-      color: #fff; }
-  main#contacts #main-content .divider {
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.7); }
-
 main#contacts .map-wrapper {
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 40px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
@@ -13281,7 +13293,7 @@ main#contacts .map-wrapper {
         padding: 10px; } }
     main#contacts .map-wrapper .addresses-wrapper .contact-city {
       margin-bottom: 10px;
-      border-radius: 10px;
+      border-radius: 20px;
       background-color: #fff;
       transition: box-shadow .2s;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1); }
@@ -13311,7 +13323,7 @@ main#contacts .map-wrapper {
       padding-bottom: 1px; }
     main#contacts .map-wrapper .addresses-wrapper .address-wrapper {
       margin-bottom: 10px;
-      border-radius: 10px;
+      border-radius: 20px;
       cursor: pointer;
       transition: box-shadow .2s;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1); }
@@ -13382,7 +13394,7 @@ main#actions .lazy.v, main#actions .lazy.h {
   display: block;
   background-size: cover;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-position: center center;
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -13471,7 +13483,7 @@ main#actions .content-prices {
     color: #828282; }
 
 main#news .news-title-img {
-  border-radius: 10px; }
+  border-radius: 20px; }
 
 .swiper-pagination {
   z-index: 20000; }

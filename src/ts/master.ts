@@ -504,6 +504,7 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	$('body').on('click', '.city-header', openCity);
 	$('body').on('change', '[name="reason"]', switchReason);
 	$('body').on('mouseleave', '.tooltipped', resetTooltip);
+	$('body').on('click', '.scroll-link', scrollToBlock);
 
 	if($('[name=address]').length){
 		let el = <HTMLElement>document.querySelector('[name=address]');
@@ -518,6 +519,20 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 	}
 
 })()
+
+function scrollToBlock(e:JQuery.ClickEvent)
+{
+	e.preventDefault();
+	let el = <HTMLLinkElement>e.currentTarget;
+	let hash = '#' + el.href.split('#')[1];
+
+	let blockPos = $(hash).offset()?.top;
+
+	$('html, body').animate({
+		scrollTop: blockPos
+	}, 400);
+	
+}
 
 function resetTooltip(e:JQuery.MouseLeaveEvent)
 {
