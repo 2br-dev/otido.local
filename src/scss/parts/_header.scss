@@ -292,10 +292,6 @@
 		color: #fff;
 		box-shadow: none;
 
-		& a:not(.bttn){
-			color: #fff;
-		}
-
 		& .container{
 
 			& .logo-wrapper{
@@ -344,8 +340,9 @@
 
 					& a{
 						color: #fff;
+
 						&:hover{
-							color: $primary;
+							color: #fff;
 						}
 					}
 	

@@ -3873,8 +3873,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   .header-wrapper.dark {
     color: #fff;
     box-shadow: none; }
-    .header-wrapper.dark a:not(.bttn) {
-      color: #fff; }
     .header-wrapper.dark .container .logo-wrapper .logo {
       background-image: url(../img/logo_dark.svg); }
     .header-wrapper.dark .container .nav-content header {
@@ -3894,7 +3892,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     .header-wrapper.dark .container .nav-content nav a {
       color: #fff; }
       .header-wrapper.dark .container .nav-content nav a:hover {
-        color: #FF5F19; }
+        color: #fff; }
     .header-wrapper.dark .container .nav-content nav .icon-link {
       color: #fff; }
     .header-wrapper.dark .container .nav-content nav .catalog-wrapper {
@@ -4953,6 +4951,10 @@ body {
         color: #fff; }
       body #contacts-block .container a {
         color: #fff; }
+      body #contacts-block .container .input-field {
+        margin-bottom: 20px; }
+        body #contacts-block .container .input-field input {
+          margin-bottom: 0; }
     body #contacts-block .divider {
       width: 50%;
       background-color: rgba(255, 255, 255, 0.7); }
@@ -12049,10 +12051,10 @@ main#main {
             position: absolute;
             border-radius: 50%;
             transition: box-shadow .2s;
-            box-shadow: 0 0 0 1px #828282, 0 0 0 4px #fff inset;
+            box-shadow: 0 0 0 2px #FF5F19, 0 0 0 4px #fff inset;
             pointer-events: none; }
           main#main section#stories .stories-wrapper ul.stories li:not(.arrow) a:hover:before {
-            box-shadow: 0 0 0 1px #828282, 0 0 0 4px #FF5F19 inset; }
+            box-shadow: 0 0 0 1px #FF5F19, 0 0 0 4px #FF5F19 inset; }
           main#main section#stories .stories-wrapper ul.stories li:not(.arrow) a ~ span {
             font-size: 13px;
             display: block;
@@ -12297,7 +12299,8 @@ main#main {
           width: 150%;
           bottom: -5%; } }
     main#main section#carry .carry-slider-wrapper {
-      position: relative; }
+      position: relative;
+      margin-bottom: 40px; }
       main#main section#carry .carry-slider-wrapper img {
         border-radius: 0 0 50% 50% / 50% 50%; }
       main#main section#carry .carry-slider-wrapper #carryPrev, main#main section#carry .carry-slider-wrapper #carryNext {
@@ -12361,6 +12364,8 @@ main#main {
         margin-bottom: .2em; }
       main#main section#whyus .point img {
         width: 80%; }
+    main#main section#whyus .col {
+      margin-bottom: 40px; }
   main#main section#categories .main-categories {
     display: flex; }
     @media (max-width: 750px) {
