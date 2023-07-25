@@ -11985,7 +11985,7 @@ main#main {
           position: relative;
           display: block;
           margin: auto;
-          width: clamp(64px, 5vw, 90px); }
+          width: 85px; }
           main#main section#stories .stories-wrapper ul.stories li:not(.arrow) a:before {
             content: '';
             display: block;
@@ -12032,7 +12032,8 @@ main#main {
       right: 2vmax;
       font-size: clamp(32px, 2vmax, 60px);
       color: #fff;
-      border-radius: 10px; }
+      border-radius: 10px;
+      z-index: 15; }
       main#main section#stories .stories-modal .closer:hover, main#main section#stories .stories-modal .zoomer-wrapper .zoomer-arrow:hover, .zoomer-wrapper main#main section#stories .stories-modal .zoomer-arrow:hover {
         background-color: rgba(0, 0, 0, 0.1); }
     main#main section#stories .stories-modal:not(.open) {

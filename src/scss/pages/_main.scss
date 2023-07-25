@@ -296,7 +296,7 @@ main#main{
 						position: relative;
 						display: block;
 						margin: auto;
-						width: clamp(64px, 5vw, 90px);
+						width: 85px;
 						
 						&:before{
 							content: '';
@@ -361,6 +361,7 @@ main#main{
 				font-size: clamp(32px, 2vmax, 60px);
 				color: #fff;
 				border-radius: 10px;
+				z-index: 15;
 
 				&:hover{
 					background-color: rgba(black, .1);
