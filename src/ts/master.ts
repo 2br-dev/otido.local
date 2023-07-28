@@ -518,6 +518,18 @@ const rightTransition = "left .4s cubic-bezier(.76,-0.48,.32,1.44) .01s, right .
 		$('[name=domofon]').val(el.dataset['domofon'] || "");
 	}
 
+	let url = new URL(window.location.href);
+	let params = new URLSearchParams(url.search);
+	let scroll = params.get('scroll');
+
+	let headerHeight = document.querySelector('header')?.offsetHeight;
+
+	if(scroll){
+		$('html, body').animate({
+			scrollTop: $('#content').offset().top - headerHeight - 40
+		}, 400);
+	}
+
 })()
 
 function scrollToBlock(e:JQuery.ClickEvent)

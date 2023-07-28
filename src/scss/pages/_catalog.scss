@@ -240,6 +240,69 @@ main#catalog{
 			@include filtersForm();
 		}
 	}
+
+	& .pin{
+
+		padding: 10px 20px;
+		background-color: $paper;
+		border-radius: $border-radius;
+
+		& h2{
+			font-size: 32px;
+			margin-top: .5em;
+		}
+
+		& #categories-navi{
+
+			& li{
+				
+				&:not(:first-of-type){
+
+					&:before{
+						content: '';
+						display: block;
+						border-top: 1px solid #ccc;
+						width: 100%;
+						margin-top: 5px;
+						padding-top: 5px;
+					}
+				}
+
+				& a{
+
+					display: flex;
+					align-items: center;
+					padding: 10px;
+					border-radius: #{$border-radius / 2};
+					transition: background-color .2s;
+
+					&.active{
+						background-color: $secondary;
+						color: #fff;
+					}
+
+					&:hover{
+
+						&:not(.active){
+							background: darken($paper, 5);
+						}
+					}
+
+					& img{
+						width: 2em;
+						aspect-ratio: 1 / 1;
+						margin-right: 10px;
+						border-radius: 6px;
+					}
+
+					& span{
+						line-height: 1em;
+						flex-grow: 1;
+					}
+				}
+			}
+		}
+	}
 }
 
 #filters-form-mobile{

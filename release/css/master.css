@@ -12649,6 +12649,40 @@ main#catalog section#main-content {
     main#catalog section#main-content form .reset {
       color: #FF5F19; }
 
+main#catalog .pin {
+  padding: 10px 20px;
+  background-color: #FBFBFD;
+  border-radius: 20px; }
+  main#catalog .pin h2 {
+    font-size: 32px;
+    margin-top: .5em; }
+  main#catalog .pin #categories-navi li:not(:first-of-type):before {
+    content: '';
+    display: block;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 5px; }
+  main#catalog .pin #categories-navi li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color .2s; }
+    main#catalog .pin #categories-navi li a.active {
+      background-color: #00A7FF;
+      color: #fff; }
+    main#catalog .pin #categories-navi li a:hover:not(.active) {
+      background: #eaeaf5; }
+    main#catalog .pin #categories-navi li a img {
+      width: 2em;
+      aspect-ratio: 1 / 1;
+      margin-right: 10px;
+      border-radius: 6px; }
+    main#catalog .pin #categories-navi li a span {
+      line-height: 1em;
+      flex-grow: 1; }
+
 #filters-form-mobile {
   z-index: 9999;
   padding: 10px;
