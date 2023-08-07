@@ -399,10 +399,11 @@ body{
 
 			& img{
 				height: 100%;
-				width: 90%;
+				width: 100%;
 				display: block;
 				aspect-ratio: 1 / 1.2;
-				object-fit: cover;
+				object-fit: contain;
+				transform: translateY(40px);
 				margin: auto;
 				filter: drop-shadow(0 -2px 4px rgba(black, .7));
 				object-position: top center;
