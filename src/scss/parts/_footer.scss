@@ -34,7 +34,7 @@ footer{
 
 	@media(max-width: $extra-large){
 
-		& .cookies{
+		& .cookies, & .appstore{
 			order: 1;
 		}
 	}
@@ -54,6 +54,22 @@ footer{
 			& strong{
 				font-weight: 800;
 			}
+		}
+	}
+
+	& .app-icons{
+		margin-top: 30px;
+	}
+
+	& .app-icon{
+		border: 1px solid #fff;
+		padding: 4px 10px;
+		display: inline-block;
+		border-radius: 4px;
+
+		&:hover{
+			background-color: rgba(#fff, .1);
+			text-decoration: none;
 		}
 	}
 }
