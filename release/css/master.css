@@ -3957,97 +3957,115 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
         height: 100%;
         margin: 0; } }
 
-.sidenav#mobile .sidenav-header {
+.sidenav#mobile {
   display: flex;
-  align-items: center;
-  line-height: unset;
-  padding: 20px;
-  background-image: url(../img/sidenav-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 130% auto; }
-  .sidenav#mobile .sidenav-header span, .sidenav#mobile .sidenav-header i {
-    color: #fff; }
-  .sidenav#mobile .sidenav-header .avatar {
-    padding: 0; }
-    .sidenav#mobile .sidenav-header .avatar img {
-      margin: 0;
-      width: 60px;
-      display: block;
-      border-radius: 50%; }
-  .sidenav#mobile .sidenav-header .info {
-    padding-left: 20px;
-    flex-grow: 1; }
-    .sidenav#mobile .sidenav-header .info a {
+  flex-direction: column; }
+  .sidenav#mobile .divider {
+    flex-grow: 1;
+    background-color: #fff; }
+  .sidenav#mobile .buttons {
+    margin-bottom: 40px;
+    line-height: unset;
+    text-align: center; }
+    .sidenav#mobile .buttons a {
+      color: #fff;
+      height: 2em;
+      line-height: 2em;
+      display: inline-block;
+      padding: 0 1em; }
+      .sidenav#mobile .buttons a i {
+        line-height: unset;
+        margin: 0;
+        color: #fff; }
+      .sidenav#mobile .buttons a:hover {
+        background-color: #e54600; }
+  .sidenav#mobile .sidenav-header {
+    display: flex;
+    align-items: center;
+    line-height: unset;
+    padding: 20px;
+    background-image: url(../img/sidenav-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 130% auto; }
+    .sidenav#mobile .sidenav-header span, .sidenav#mobile .sidenav-header i {
       color: #fff; }
-    .sidenav#mobile .sidenav-header .info .name a {
-      font-size: 1.4rem; }
-    .sidenav#mobile .sidenav-header .info .cart a {
-      font-size: .9rem; }
-  .sidenav#mobile .sidenav-header .actions {
-    display: block;
-    position: relative;
-    width: unset; }
-    .sidenav#mobile .sidenav-header .actions > li {
+    .sidenav#mobile .sidenav-header .avatar {
       padding: 0; }
-      .sidenav#mobile .sidenav-header .actions > li a {
-        padding: 0;
-        font-size: 20px; }
-        .sidenav#mobile .sidenav-header .actions > li a i {
-          margin: 0;
-          color: #fff; }
-      .sidenav#mobile .sidenav-header .actions > li ul {
-        position: absolute;
-        right: 0;
-        background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
-        will-change: transform, opacity;
-        transition: opacity .2s, transform .2s;
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none;
-        z-index: 2; }
-        .sidenav#mobile .sidenav-header .actions > li ul li a {
-          line-height: 2.5em;
-          font-size: clamp(16px, 0.2vmax, 18px);
-          padding: 0 20px;
-          height: unset; }
-      .sidenav#mobile .sidenav-header .actions > li:hover ul {
-        opacity: 1;
-        transform: none;
-        pointer-events: all; }
-
-.sidenav#mobile li a {
-  font-size: clamp(16px, 0.2vmax, 18px); }
-
-.sidenav#mobile .small {
-  line-height: unset;
-  height: 2em;
-  pointer-events: none; }
-  .sidenav#mobile .small a {
-    color: #828282;
-    font-size: 12px;
-    display: block;
-    height: 100%;
-    line-height: 2rem; }
-
-.sidenav#mobile .folder-trigger {
-  display: flex; }
-  .sidenav#mobile .folder-trigger span {
-    display: inline-block;
-    flex-grow: 1; }
-  .sidenav#mobile .folder-trigger i {
-    margin: 0;
-    text-align: right; }
-
-.sidenav#mobile .folder > a {
-  padding-left: 28px;
-  border-left: 4px solid #00A7FF; }
-
-.sidenav#mobile .folder ul {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.05); }
+      .sidenav#mobile .sidenav-header .avatar img {
+        margin: 0;
+        width: 60px;
+        display: block;
+        border-radius: 50%; }
+    .sidenav#mobile .sidenav-header .info {
+      padding-left: 20px;
+      flex-grow: 1; }
+      .sidenav#mobile .sidenav-header .info a {
+        color: #fff; }
+      .sidenav#mobile .sidenav-header .info .name a {
+        font-size: 1.4rem; }
+      .sidenav#mobile .sidenav-header .info .cart a {
+        font-size: .9rem; }
+    .sidenav#mobile .sidenav-header .actions {
+      display: block;
+      position: relative;
+      width: unset; }
+      .sidenav#mobile .sidenav-header .actions > li {
+        padding: 0; }
+        .sidenav#mobile .sidenav-header .actions > li a {
+          padding: 0;
+          font-size: 20px; }
+          .sidenav#mobile .sidenav-header .actions > li a i {
+            margin: 0;
+            color: #fff; }
+        .sidenav#mobile .sidenav-header .actions > li ul {
+          position: absolute;
+          right: 0;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+          will-change: transform, opacity;
+          transition: opacity .2s, transform .2s;
+          transform: translateY(-20px);
+          opacity: 0;
+          pointer-events: none;
+          z-index: 2;
+          overflow: hidden; }
+          .sidenav#mobile .sidenav-header .actions > li ul li a {
+            line-height: 2.5em;
+            font-size: clamp(16px, 0.2vmax, 18px);
+            padding: 0 20px;
+            height: unset; }
+        .sidenav#mobile .sidenav-header .actions > li:hover ul {
+          opacity: 1;
+          transform: none;
+          pointer-events: all; }
+  .sidenav#mobile li a {
+    font-size: clamp(16px, 0.2vmax, 18px); }
+  .sidenav#mobile .small {
+    line-height: unset;
+    height: 2em;
+    pointer-events: none; }
+    .sidenav#mobile .small a {
+      color: #828282;
+      font-size: 12px;
+      display: block;
+      height: 100%;
+      line-height: 2rem; }
+  .sidenav#mobile .folder-trigger {
+    display: flex; }
+    .sidenav#mobile .folder-trigger span {
+      display: inline-block;
+      flex-grow: 1; }
+    .sidenav#mobile .folder-trigger i {
+      margin: 0;
+      text-align: right; }
+  .sidenav#mobile .folder > a {
+    padding-left: 28px;
+    border-left: 4px solid #00A7FF; }
+  .sidenav#mobile .folder ul {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.05); }
 
 footer {
   background: #00A7FF;
@@ -10097,7 +10115,7 @@ body {
     font-weight: 900;
     line-height: 1.2em; }
   body h2 {
-    font-size: clamp(24px, 5vw, 60px);
+    font-size: clamp(24px, 3vw, 60px);
     font-weight: 800;
     line-height: 1.2em; }
   body h3 {
@@ -12499,6 +12517,66 @@ main#main {
           color: #333; } }
     main#main section#feedback .container {
       position: relative; }
+  main#main section#mobile-app {
+    background-color: #00A7FF;
+    color: #fff;
+    overflow: hidden !important;
+    display: block;
+    position: relative; }
+    main#main section#mobile-app:before {
+      content: '';
+      display: block;
+      width: 70%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-15%, 5%);
+      background: linear-gradient(303deg, #54D1ED 0%, #00A3FF 100%); }
+      @media (max-width: 900px) {
+        main#main section#mobile-app:before {
+          width: 100%;
+          transform: translate(30%, -40%); } }
+    main#main section#mobile-app .container {
+      position: relative;
+      z-index: 1; }
+    main#main section#mobile-app h2 {
+      color: #fff;
+      line-height: 1em; }
+    main#main section#mobile-app .desktop-header {
+      margin: 0; }
+      @media (max-width: 1100px) {
+        main#main section#mobile-app .desktop-header {
+          display: none; } }
+    main#main section#mobile-app .mobile-header {
+      margin: 0; }
+      @media (min-width: 1100px) {
+        main#main section#mobile-app .mobile-header {
+          display: none; } }
+    @media (max-width: 1100px) {
+      main#main section#mobile-app .desktop-text {
+        display: none; } }
+    @media (min-width: 1100px) {
+      main#main section#mobile-app .mobile-text {
+        display: none; } }
+    main#main section#mobile-app .qrs img {
+      margin-right: 20px;
+      width: 10vw;
+      max-width: 160px; }
+    @media (max-width: 900px) {
+      main#main section#mobile-app .qrs {
+        display: none; } }
+    main#main section#mobile-app .buttons {
+      padding-bottom: 4vmax; }
+      @media (min-width: 900px) {
+        main#main section#mobile-app .buttons {
+          display: none; } }
+    main#main section#mobile-app .section-text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
   main#main .partners-slider .swiper-wrapper .swiper-slide {
     width: -moz-fit-content;
     width: fit-content; }
