@@ -24,7 +24,7 @@ main#service{
 
 					& img{
 						display: block;
-						height: 100%;
+						min-height: 100%;
 						object-fit: contain;
 						object-position: bottom center;
 					}

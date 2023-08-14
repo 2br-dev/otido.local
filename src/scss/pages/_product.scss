@@ -45,6 +45,8 @@ main#product{
 			position: relative;
 			padding-left: 30px;
 			font-weight: 800;
+			white-space: nowrap;
+			font-size: clamp(14px, 2vw, 18px);
 
 			&:before{
 				position: absolute;
@@ -112,7 +114,7 @@ main#product{
 			}
 
 			& .value{
-				font-size: clamp(40px, 3vmax, 52px);
+				font-size: clamp(28px, 3vmax, 52px);
 				line-height: 1.2em;
 				font-weight: 800;
 			}

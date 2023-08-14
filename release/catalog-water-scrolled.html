@@ -46,25 +46,81 @@
 							</ul>
 						</li>
 					</ul>
-					<ul class="nav-right">
+					<ul class="nav-right desktop">
 						<li>
 							<a href="tel:+79181277000">
 								<i class="bx bx-phone"></i>
-								<span>+7 (918) 127-70-00</span>
+								<span class="hide-m-down">+7 (918) 127-70-00</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://t.me/+79887690030">
 								<i class="bx bxl-telegram"></i>
-								<span>Telegram</span>
+								<span class="hide-m-down">Telegram</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://wa.me/79887690030">
 								<i class="bx bxl-whatsapp"></i>
-								<span>WhatsApp</span>
+								<span class="hide-m-down">WhatsApp</span>
 							</a>
 						</li>
+					</ul>
+					<ul class="nav-right mobile">
+						<!-- Пустая корзина -->
+						<li class="hidden">
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>Корзина</span>
+							</a>
+						</li>
+						<!-- /Пустая корзина -->
+						<!-- Корзина с продукцией -->
+						<li>
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>10 / 2 000₽</span>
+							</a>
+							<ul>
+								<li><a href="/checkout.html">Оформить</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Очистить</a></li>
+							</ul>
+						</li>
+						<!-- /Корзина с продукцией -->
+						<!-- Зарегистрированный пользователь -->
+						<li class="hidden">
+							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
+								<span>Мария</span>
+								<img src="/img/fish/avatar.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/profile.html#orders">Заказы</a></li>
+								<li><a href="/profile.html#notifications">Уведомления</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Выход</a></li>
+							</ul>
+						</li>
+						<!-- /Зарегистрированный пользователь -->
+						<!-- Гость -->
+						<li>
+							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
+								<span>Войти</span>
+								<img src="/img/incognito.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="#login" class="modal-trigger waves-effect">Авторизация</a></li>
+								<li><a href="#register" class="modal-trigger waves-effect">Регистрация</a></li>
+							</ul>
+						</li>
+						<!-- /Гость -->
 					</ul>
 				</header>
 				<nav>
@@ -120,6 +176,7 @@
 						<!-- Зарегистрированный пользователь -->
 						<li class="hidden">
 							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
 								<span>Мария</span>
 								<img src="/img/fish/avatar.jpg" alt="">
 							</a>
@@ -137,6 +194,7 @@
 						<!-- Гость -->
 						<li>
 							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
 								<span>Войти</span>
 								<img src="/img/incognito.jpg" alt="">
 							</a>
@@ -345,6 +403,18 @@
 		<li class="buttons">
 			<a href="https://apps.apple.com/ru/app/id6453854456" class="bttn"><i class="bx bxl-apple"></i><span>AppStore</span></a>
 			<a href="https://play.google.com/store/apps/details?id=com.rsm.shop.otido&pli=1" class="bttn"><i class="bx bxl-play-store"></i><span>Play Market</span></a>
+		</li>
+	</ul>
+	<ul class="floating-action-button">
+		<li>
+			<a href="javascript:void(0);">
+				<i class="bx bxs-phone bx-flip-horizontal"></i>
+			</a>
+			<ul>
+				<li><a target="_blank" class="phone" href="tel:+79181277000"><i class="bx bxs-phone-call bx-flip-horizontal"></i></a></li>
+				<li><a target="_blank" class="telegram" href="https://t.me/+79887690030"><i class="bx bxl-telegram"></i></a></li>
+				<li><a target="_blank" class="whatsapp" href="https://wa.me/79887690030"><i class="bx bxl-whatsapp"></i></a></li>
+			</ul>
 		</li>
 	</ul>
 	<main id="catalog">

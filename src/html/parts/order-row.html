@@ -8,14 +8,20 @@
 	<td class="hide-s-down">@@status</td>
 	<td class="hide-tablet">@@payment</td>
 	<td class="right-align">
-		<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
-		<ul class="actions">
-			@@if(context.actions){
-				@@for(let i=0; i<actions.length; i++){
-					<li class="action"><a href="#!" data-position="top" data-tooltip="`+actions[i].label+`" class="tooltipped `+actions[i].icon+`"></a></li>
-				}
-			}
-		</ul>
+		<div class="main-actions-wrapper">
+			<a href="#!" class="bx bx-dots-vertical-rounded bx-sm toggle-actions"></a>
+			<div class="actions-wrapper">
+				<ul class="actions">
+					@@if(context.actions){
+						@@for(let i=0; i<actions.length; i++){
+							<li class="action">
+								<a href="#!" data-position="top" data-tooltip="`+actions[i].label+`" class="tooltipped `+actions[i].icon+`"></a>
+							</li>
+						}
+					}
+				</ul>
+			</div>
+		</div>
 	</td>
 </tr>
 <tr class="order-details-row">

@@ -31,6 +31,10 @@ main#profile{
 
 	& .profile-actions{
 
+		& ~ .edit-trigger{
+			margin: 20px 0;
+		}
+
 		& ul{
 			display: table;
 			font-size: 18px;
@@ -70,6 +74,11 @@ main#profile{
 					}
 				}
 
+				@media(max-width: 400px){
+					font-size: 16px;
+					line-height: 1.2em;
+				}
+
 				&.active{
 
 					color: $secondary;
@@ -93,6 +102,10 @@ main#profile{
 		align-items: baseline;
 		border-bottom: 2px solid $fogged;
 
+		@media(max-width: $medium){
+			flex-direction: column;
+		}
+
 		& h2{
 			margin: 0;
 		}
@@ -112,6 +125,10 @@ main#profile{
 			& th{
 				font-size: 16px;
 				line-height: 1.2em;
+
+				@media(max-width: $medium){
+					display: none;
+				}
 			}
 		}
 
@@ -140,13 +157,41 @@ main#profile{
 			}
 			
 			& td{
-				padding: 10px;
+				padding: clamp(5px, 1vw, 10px);
 				transition: transform .4s;
+
+				& .bx-chevron-right{
+
+					@media(max-width: 350px){
+						display: none;
+					}
+				}
+
+				&:nth-child(2){
+					white-space: nowrap;
+				}
+
+				&:last-of-type{
+					padding: 0;
+				}
 			}
 
 			& .toggle-actions{
 				border-radius: 50%;
 				padding: 10px;
+			}
+
+			& .main-actions-wrapper{
+				display: flex;
+				width: fit-content;
+				margin-left: auto;
+				align-items: center;
+			}
+
+			& .actions-wrapper{
+				position: relative;
+				display: inline-block;
+				height: 68px;
 			}
 
 			& .actions{
@@ -221,6 +266,7 @@ main#profile{
 
 			& .order-data{
 				display: none;
+				max-width: 100%;
 			}
 					
 			& td{
@@ -241,9 +287,13 @@ main#profile{
 
 					display: flex;
 					margin-right: 20px;
-
+					
 					& .key{
 						margin-right: 10px;
+
+						@media(max-width: 400px){
+							font-size: 12px;
+						}
 					}
 
 					& .value{
@@ -262,6 +312,22 @@ main#profile{
 
 						& .key, & .value{
 							display: table-cell;
+						}
+					}
+				}
+
+				@media(max-width: $medium){
+
+					display: block;
+
+					& .kv-pair{
+
+						display: block;
+						margin-bottom: .5rem;
+
+						& .key, & .value{
+							display: block;
+							line-height: 1.2em;
 						}
 					}
 				}
@@ -319,6 +385,7 @@ main#profile{
 						& .price{
 							font-size: 16px;
 							line-height: 1.2em;
+							white-space: nowrap;
 						}
 						& .count{
 							font-size: 16px;
@@ -329,6 +396,15 @@ main#profile{
 					&:hover{
 						background-color: #fff;
 						box-shadow: 0 2px 4px rgba(black, .4);
+					}
+
+					@media(max-width: 400px){
+						flex-direction: column;
+						text-align: center;
+
+						& .data-wrapper{
+							padding-left: 0;
+						}
 					}
 				}
 			}

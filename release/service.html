@@ -46,25 +46,81 @@
 							</ul>
 						</li>
 					</ul>
-					<ul class="nav-right">
+					<ul class="nav-right desktop">
 						<li>
 							<a href="tel:+79181277000">
 								<i class="bx bx-phone"></i>
-								<span>+7 (918) 127-70-00</span>
+								<span class="hide-m-down">+7 (918) 127-70-00</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://t.me/+79887690030">
 								<i class="bx bxl-telegram"></i>
-								<span>Telegram</span>
+								<span class="hide-m-down">Telegram</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://wa.me/79887690030">
 								<i class="bx bxl-whatsapp"></i>
-								<span>WhatsApp</span>
+								<span class="hide-m-down">WhatsApp</span>
 							</a>
 						</li>
+					</ul>
+					<ul class="nav-right mobile">
+						<!-- Пустая корзина -->
+						<li class="hidden">
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>Корзина</span>
+							</a>
+						</li>
+						<!-- /Пустая корзина -->
+						<!-- Корзина с продукцией -->
+						<li>
+							<a href="/checkout.html" class="icon-link">
+								<i class="bx bxs-cart"></i>
+								<span>10 / 2 000₽</span>
+							</a>
+							<ul>
+								<li><a href="/checkout.html">Оформить</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Очистить</a></li>
+							</ul>
+						</li>
+						<!-- /Корзина с продукцией -->
+						<!-- Зарегистрированный пользователь -->
+						<li class="hidden">
+							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
+								<span>Мария</span>
+								<img src="/img/fish/avatar.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/profile.html#orders">Заказы</a></li>
+								<li><a href="/profile.html#notifications">Уведомления</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="#confirm" class="modal-trigger waves-effect">Выход</a></li>
+							</ul>
+						</li>
+						<!-- /Зарегистрированный пользователь -->
+						<!-- Гость -->
+						<li>
+							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
+								<span>Войти</span>
+								<img src="/img/incognito.jpg" alt="">
+							</a>
+							<ul>
+								<li><a href="#login" class="modal-trigger waves-effect">Авторизация</a></li>
+								<li><a href="#register" class="modal-trigger waves-effect">Регистрация</a></li>
+							</ul>
+						</li>
+						<!-- /Гость -->
 					</ul>
 				</header>
 				<nav>
@@ -120,6 +176,7 @@
 						<!-- Зарегистрированный пользователь -->
 						<li class="hidden">
 							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
 								<span>Мария</span>
 								<img src="/img/fish/avatar.jpg" alt="">
 							</a>
@@ -137,6 +194,7 @@
 						<!-- Гость -->
 						<li>
 							<a href="" class="icon-link">
+								<i class="bx bxs-user user-icon"></i>
 								<span>Войти</span>
 								<img src="/img/incognito.jpg" alt="">
 							</a>
@@ -347,6 +405,18 @@
 			<a href="https://play.google.com/store/apps/details?id=com.rsm.shop.otido&pli=1" class="bttn"><i class="bx bxl-play-store"></i><span>Play Market</span></a>
 		</li>
 	</ul>
+	<ul class="floating-action-button">
+		<li>
+			<a href="javascript:void(0);">
+				<i class="bx bxs-phone bx-flip-horizontal"></i>
+			</a>
+			<ul>
+				<li><a target="_blank" class="phone" href="tel:+79181277000"><i class="bx bxs-phone-call bx-flip-horizontal"></i></a></li>
+				<li><a target="_blank" class="telegram" href="https://t.me/+79887690030"><i class="bx bxl-telegram"></i></a></li>
+				<li><a target="_blank" class="whatsapp" href="https://wa.me/79887690030"><i class="bx bxl-whatsapp"></i></a></li>
+			</ul>
+		</li>
+	</ul>
 	<main id="service">
 		<section id="hero" class="lazy" data-bg="/img/service-hero-bg.jpg">
 			<div class="container">
@@ -376,22 +446,7 @@
 					<div class="col s12">
 						<h2>Гарантийное обслуживание</h2>
 					</div>
-					<div class="col m6 s12">
-						<div class="icon-header">
-							<div class="icon-wrapper"><img alt="" class="lazy" data-src="/img/icons/exchange.png"></div>
-							<div class="head-wrapper">
-								<h3>Замена</h3>
-							</div>
-						</div>
-						<p>В течение двух недель после покупки возможен обмен неисправного оборудования при наличии следующих условий:</p>
-						<ul class="browser-default">
-							<li>Модель устройства должна быть в наличии на складе;</li>
-							<li>Должны быть представлены документы, подтверждающие покупку товара, такие как товарный или кассовый чек;</li>
-							<li>Гарантийные документы должны быть заполнены;</li>
-						</ul>
-						<p>Устройство должно быть в оригинальной заводской упаковке, без повреждений, полученных в результате эксплуатации, без следов самостоятельного ремонта и без воды в системе.</p>
-					</div>
-					<div class="col m6 s12">
+					<div class="col s12">
 						<div class="icon-header">
 							<div class="icon-wrapper">
 								<img alt="" data-src="/img/icons/service.png" class="lazy responsive-img">
@@ -400,6 +455,8 @@
 								<h3>Обслуживание</h3>
 							</div>
 						</div>
+					</div>
+					<div class="col m6 s12">
 						<p>Мы предоставляем гарантийное обслуживание вышедшей из строя техники. Прием оборудования на гарантийное обслуживание осуществляется при соблюдении следующих условий:</p>
 						<ul class="browser-default">
 							<li>Наличие заполненного гарантийного талона у покупателя.</li>
@@ -408,6 +465,9 @@
 							<li>Отсутствие повреждений, вызванных попаданием внутрь посторонних предметов, животных или насекомых, а также отсутствие чрезмерного загрязнения пыли на составных элементах.</li>
 							<li>Подключении оборудования к сети с напряжением, указанным в инструкции по эксплуатации техники.</li>
 						</ul>
+					</div>
+					<div class="col l5 m6 hide-m-down offset-l1">
+						<img alt="" class="lazy responsive-img" data-src="/img/service-cooler2.jpg">
 					</div>
 					<div class="col s12 center-align">
 						<a href="#contacts-block" class="bttn scroll-link">Заявка</a>
