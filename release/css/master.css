@@ -12659,6 +12659,12 @@ main#main {
       @media (min-width: 900px) {
         main#main section#mobile-app .buttons {
           display: none; } }
+      main#main section#mobile-app .buttons .store-icon {
+        display: inline-block;
+        margin: 0 5px; }
+        main#main section#mobile-app .buttons .store-icon img {
+          display: block;
+          height: 40px; }
     main#main section#mobile-app .section-text {
       height: 100%;
       display: flex;

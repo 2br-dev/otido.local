@@ -19,6 +19,7 @@ const sync = require('browser-sync').init({
 	server: {
 		baseDir: './release/'
 	}
+	// proxy: "https://aqua-gorod.ru"
 });
 
 

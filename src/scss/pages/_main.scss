@@ -1059,6 +1059,16 @@ main#main{
 			@media(min-width: $medium){
 				display: none;
 			}
+
+			& .store-icon{
+				display: inline-block;
+				margin: 0 5px;
+
+				& img{
+					display: block;
+					height: 40px;
+				}
+			}
 		}
 		
 		& .section-text{
